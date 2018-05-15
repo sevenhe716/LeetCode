@@ -51,7 +51,7 @@ class Solution:
 
 
 # Merge two by two solution.
-class Solution(object):
+class Solution1(object):
     def mergeKLists(self, lists):
         """
         :type lists: List[ListNode]

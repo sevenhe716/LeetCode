@@ -7,7 +7,7 @@
 
 
 class Solution:
-    def lengthOfLongestSubstring(self, s):
+    def lengthOfLongestSubstring1(self, s):
         """
         :type s: str
         :rtype: int
@@ -28,16 +28,16 @@ class Solution:
 
     # 本想过用256位的hashtable元组来存储，但感觉丢失了序列索引的信息，所以放弃了这种思路，其实可以维护一个起始指针就可以实现了
     # 空间复杂度降为O(1)
-    def lengthOfLongestSubstring2(self, s):
-        longest, start, visited = 0, 0, (False for _ in range(256))     # 元组的批量初始化方式
-        for i, char in enumerate(s):
-            if visited[ord(char)]:
-                while char != s[start]:
+    def lengthOfLongestSubstring(self, s):
+        longest, start, visited = 0, 0, [False] * 256
+        for i, c in enumerate(s):
+            if visited[ord(c)]:
+                while c != s[start]:
                     visited[ord(s[start])] = False
                     start += 1
                 start += 1
             else:
-                visited[ord(char)] = True
+                visited[ord(c)] = True
             longest = max(longest, i - start + 1)
         return longest
 
@@ -62,6 +62,20 @@ class SolutionF:
             hash_table[c] = i
 
         return max_len
+
+    def lengthOfLongestSubstring2(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        L, res, last = -1, 0, {}
+        for R, char in enumerate(s):
+            if char in last and last[char] > L:
+                L = last[char]
+            elif R - L > res:
+                res = R - L
+            last[char] = R
+        return res
 
 # Given a string, find the length of the longest substring without repeating characters.
 #

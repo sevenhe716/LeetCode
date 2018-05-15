@@ -14,7 +14,7 @@ class Solution:
 
         prefix = ""
 
-        if len(strs) < 1:       # if not strs:
+        if not strs:       # len(strs) < 1
             return prefix
 
         for i in range(len(strs[0])):
@@ -45,7 +45,7 @@ class Solution1(object):
 
 
 class SolutionF:
-    def longestCommonPrefix(self, strs):
+    def longestCommonPrefix1(self, strs):
         """
         :type strs: List[str]
         :rtype: str
@@ -59,6 +59,39 @@ class SolutionF:
                     return shortest[:i]
         return shortest
 
+    # zip
+    def longestCommonPrefix2(self, strs):
+        if not strs:
+            return ""
+
+        for i, letter_group in enumerate(zip(*strs)):
+            if len(set(letter_group)) > 1:
+                return strs[0][:i]
+
+        return min(strs)
+
+    # reduce
+    def longestCommonPrefix(self, strs):
+        """
+        :type strs: List[str]
+        :rtype: str
+        """
+        from functools import reduce
+
+        def matching(str1, str2):
+            j = 0
+            a = min(len(str1), len(str2))
+            for i in range(a):
+                if str1[i] == str2[i]:
+                    j += 1
+                else:
+                    break
+            return str1[:j]
+
+        if len(strs) == 0:
+            return ''
+        else:
+            return reduce(matching, strs)
 
 # Write a function to find the longest common prefix string amongst an array of strings.
 #

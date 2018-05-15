@@ -9,32 +9,32 @@ class Solution:
     digit_letters = {0: [], 1: [], 2: ['a', 'b', 'c'], 3: ['d', 'e', 'f'], 4: ['g', 'h', 'i'], 5: ['j', 'k', 'l'],
                      6: ['m', 'n', 'o'], 7: ['p', 'q', 'r', 's'], 8: ['t', 'u', 'v'], 9: ['w', 'x', 'y', 'z']}      # list即可
 
+    # recursion
     def letterCombinations(self, digits):
         """
         :type digits: str
         :rtype: List[str]
         """
-
         if digits == '':            # not digits or len(digits)
             return []
 
         letters = []
-        Solution.combination(digits, 0, [], letters)
+
+        def combination(index, letter):
+            if index >= len(digits):
+                letters.append(''.join(letter))
+                return
+
+            for l in Solution.digit_letters[int(digits[index])]:
+                letter.append(l)
+                combination(index + 1, letter)
+                letter.pop()
+
+        combination(0, [])
 
         return letters
 
-    @staticmethod
-    def combination(digits, index, letter, letters):
-        if index >= len(digits):
-            letters.append(''.join(letter))
-            return
-
-        for l in Solution.digit_letters[int(digits[index])]:
-            letter.append(l)
-            Solution.combination(digits, index+1, letter, letters)
-            letter.pop()
-
-    # 循环的解法，倒序遍历，pop当前元素并扩充成新的元素集合，缺点是顺序会颠倒，前向加就可以解决这个问题
+    # iterative: 循环的解法，倒序遍历，pop当前元素并扩充成新的元素集合，缺点是顺序会颠倒，前向加就可以解决这个问题
     def letterCombinations1(self, digits):
         if digits == '':
             return []
@@ -42,7 +42,7 @@ class Solution:
         letters = [""]
 
         for i, d in enumerate(digits):
-            for j in range(len(letters))[::-1]:     # 倒序遍历,reversed
+            for j in range(len(letters))[::-1]:     # 倒序遍历, reversed
                 letter = letters.pop(j)
 
                 for l in Solution.digit_letters[int(d)]:

@@ -12,7 +12,7 @@ from common import ListNode
 
 
 class Solution:
-    def addTwoNumbers(self, l1, l2):
+    def addTwoNumbers1(self, l1, l2):
         """
         :type l1: ListNode
         :type l2: ListNode
@@ -46,6 +46,41 @@ class Solution:
 
         return head.next
 
+
+    def addTwoNumbers(self, l1, l2):
+        """
+        :type l1: ListNode
+        :type l2: ListNode
+        :rtype: ListNode
+        """
+        if l1 is None or l1.val is 0 and l1.next is None:
+            return l2
+        elif l2 is None or l2.val is 0 and l2.next is None:
+            return l1
+
+        head = cur = l1
+        carry = 0
+
+        while l1 and l2:
+            # faster than divmod
+            # add = carry + l1.val + l2.val
+            # carry, l1.val = (1, add) if add > 9 else (0, add)
+            carry, l1.val = divmod(carry + l1.val + l2.val, 10)
+            cur, l1, l2 = l1, l1.next, l2.next
+
+        if l2:
+            cur.next = l2
+
+        tail, cur = cur, cur.next   # tail用于记录cur的pre node
+
+        while cur and carry == 1:
+            carry, cur.val = divmod(carry + cur.val, 10)
+            tail, cur = cur, cur.next
+
+        if carry == 1:
+            tail.next = ListNode(1)
+
+        return head
 
 # 快的核心是based on L1，减少了很多初始化ListNode的开销，但是不一定符合题意
 class SolutionF:

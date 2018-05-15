@@ -21,7 +21,6 @@ class Solution:
         :type n: int
         :rtype: ListNode
         """
-
         root = ListNode(0)
         root.next = head
         p1 = p2 = root

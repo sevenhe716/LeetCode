@@ -9,6 +9,7 @@ class TestThreeSum(unittest.TestCase):
     def test_three_sum(self):
         s = SolutionF()
 
+        self.assertEqual(sorted([[-3, -2, 5]]), sorted(s.threeSum([-4, -3, -2, 0, 5, 9])))
         self.assertEqual(sorted([[-5, -1, 6], [-4, -1, 5], [-4, -2, 6]]), sorted(s.threeSum([-4, -1, -5, -2, -5, -2, 6, 5])))
         self.assertEqual(sorted([[0, 0, 0]]), sorted(s.threeSum([0, 0, 0, 0, 0, 0, 0, 0, 0])))
         self.assertEqual(sorted([[0, 0, 0]]), sorted(s.threeSum([0, 0, 0, 0, 0, 0, 0, 0, 0, 1])))

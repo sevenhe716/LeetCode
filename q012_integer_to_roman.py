@@ -5,7 +5,7 @@
 # 整体思路是转换成罗马的进制表示，需要特殊处理的是4和9
 
 class Solution:
-    def intToRoman(self, num):
+    def intToRoman1(self, num):
         """
         :type num: int
         :rtype: str
@@ -13,7 +13,7 @@ class Solution:
 
         roman = ''
         m, num = divmod(num, 1000)
-        roman += 'M' * m                # 字符串拼接的效率不一定比list转string低
+        roman += 'M' * m  # 字符串拼接的效率不一定比list转string低
 
         c, num = divmod(num, 100)
         if c == 9:
@@ -21,8 +21,7 @@ class Solution:
         elif c == 4:
             roman += 'CD'
         elif c >= 5:
-            roman += 'D'
-            roman += 'C' * (c - 5)
+            roman += 'D' + 'C' * (c - 5)
         else:
             roman += 'C' * c
 
@@ -32,8 +31,7 @@ class Solution:
         elif x == 4:
             roman += 'XL'
         elif x >= 5:
-            roman += 'L'
-            roman += 'X' * (x - 5)
+            roman += 'L' + 'X' * (x - 5)
         else:
             roman += 'X' * x
 
@@ -42,12 +40,56 @@ class Solution:
         elif num == 4:
             roman += 'IV'
         elif num >= 5:
-            roman += 'V'
-            roman += 'I' * (num - 5)
+            roman += 'V' + 'I' * (num - 5)
         else:
             roman += 'I' * num
 
         return roman
+
+    # list version
+    def intToRoman(self, num):
+        """
+        :type num: int
+        :rtype: str
+        """
+
+        roman = []
+        m, num = divmod(num, 1000)
+        roman.append('M' * m)
+
+        c, num = divmod(num, 100)
+        if c == 9:
+            roman.append('CM')
+        elif c == 4:
+            roman.append('CD')
+        elif c >= 5:
+            roman.append('D')
+            roman.append('C' * (c - 5))
+        else:
+            roman.append('C' * c)
+
+        x, num = divmod(num, 10)
+        if x == 9:
+            roman.append('XC')
+        elif x == 4:
+            roman.append('XL')
+        elif x >= 5:
+            roman.append('L')
+            roman.append('X' * (x - 5))
+        else:
+            roman.append('X' * x)
+
+        if num == 9:
+            roman.append('IX')
+        elif num == 4:
+            roman.append('IV')
+        elif num >= 5:
+            roman.append('V')
+            roman.append('I' * (num - 5))
+        else:
+            roman.append('I' * num)
+
+        return ''.join(roman)
 
 
 # 把4和9也当作是模，这种方式值得借鉴

@@ -22,7 +22,7 @@ class Solution:
         :rtype: ListNode
         """
 
-        n1 = ListNode(0)
+        n1 = ListNode(0)        # 优化：先找到小的头节点，可以无需添加dummy节点
         n1.next, n2 = l1, l2
         head = n1
 

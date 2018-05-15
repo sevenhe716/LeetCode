@@ -9,8 +9,8 @@ class TestLetterCombinations(unittest.TestCase):
     def test_letter_combinations(self):
         s = Solution()
 
-        self.assertEqual(sorted(["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]), sorted(s.letterCombinations1("23")))
-        self.assertEqual([], s.letterCombinations1(""))
+        self.assertEqual(sorted(["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]), sorted(s.letterCombinations("23")))
+        self.assertEqual([], s.letterCombinations(""))
 
 
 

@@ -170,7 +170,6 @@ class Solution1(object):
 
         while i < len(nums) - 2:
             if i == 0 or nums[i] != nums[i - 1]:
-
                 if sum(nums[i:i+2]) > 0:            # 新增边界判断，用于提前终止提高性能
                     break
 
@@ -225,7 +224,7 @@ class Solution1(object):
 # 比我快的原因有两点，去重减少元素个数，无需排序
 class SolutionF:
     # try to optimize the fastest solution, no sort version
-    def threeSum(self, nums):
+    def threeSum1(self, nums):
         """
         :type nums: List[int]
         :rtype: List[List[int]]
@@ -260,7 +259,7 @@ class SolutionF:
         return rsts
 
     # try to optimize the fastest solution, sort version, check bound to break the loop earlier
-    def threeSum(self, nums):
+    def threeSum2(self, nums):
         """
         :type nums: List[int]
         :rtype: List[List[int]]
@@ -311,6 +310,29 @@ class SolutionF:
                         rsts.append([n, inverse, p])
 
         return rsts
+
+    # 并未提前终止遍历，为什么最快？
+    def threeSum(self, nums):
+        freq = {}
+        for elem in nums:
+            freq[elem] = freq.get(elem, 0) + 1
+        if 0 in freq and freq[0] > 2:
+            res = [[0, 0, 0]]
+        else:
+            res = []
+        neg = sorted((filter(lambda x: x < 0, freq)))
+        nneg = sorted((filter(lambda x: x >= 0, freq)))
+        for elem1 in neg:
+            for elem2 in nneg:
+                src = -(elem1 + elem2)
+                if src in freq:
+                    if src in (elem1, elem2) and freq[src] > 1:
+                        res.append([elem1, src, elem2])
+                    elif src < elem1:
+                        res.append([src, elem1, elem2])
+                    elif src > elem2:
+                        res.append([elem1, elem2, src])
+        return res
 
 
 class SolutionFP:

@@ -8,7 +8,7 @@
 
 
 class Solution:
-    def maxArea(self, height):
+    def maxArea1(self, height):
         """
         :type height: List[int]
         :rtype: int
@@ -37,8 +37,32 @@ class Solution:
 
         return area_max
 
+    def maxArea(self, height):
+        """
+        :type height: List[int]
+        :rtype: int
+        """
 
-# 不单独讨论找比边界小的元素，而是直接统一通过面积来比较
+        left, right = 0, len(height)-1
+        area_max = (right - left) * min(height[left], height[right])
+
+        while left < right:
+            if height[left] <= height[right]:               # 判断左右边界哪个起到面积决定性作用
+                last_height = height[left]
+                while height[left] <= last_height and left < right:     # 找到第一个比左边界大的元素，可以跳过很多没必要的比较
+                    left += 1
+            else:
+                last_height = height[right]
+                while height[right] <= last_height and left < right:    # 找到第一个比右边界小的元素，可以跳过很多没必要的比较
+                    right -= 1
+
+            if left >= right:
+                return area_max
+            area_max = max(area_max, (right - left) * min(height[left], height[right]))
+        return area_max
+
+
+# 不单独讨论找比边界小的元素，而是直接统一通过面积来比较，不如我的解法，因为面积计算次数变多
 class Solution1:
     # @return an integer
     def maxArea(self, height):

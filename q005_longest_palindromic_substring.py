@@ -13,7 +13,7 @@
 # https://www.cnblogs.com/ider/p/longest-common-substring-problem-optimization.html
 # https://blog.csdn.net/hackbuteer1/article/details/6686931
 # 优化一：逆字符串先比较，这样能保证返回第一个匹配的子字符串
-# 优化二：无需创建逆字符串，返向遍历即可
+# 优化二：无需创建逆字符串，反向遍历即可
 # 优化三：还需要保证是同一个子字符串，通过索引位置来判断（正序的起始位置等于逆序的结束位置）
 
 
@@ -25,11 +25,9 @@ class Solution:
         """
 
         n = len(s)
-        start1 = 0
-        start2 = n - 1
+        start1, start2 = 0, n - 1
 
-        end_index = 0
-        cur_len, max_len = 0, 0
+        cur_len, max_len, end_index = 0, 0, 0
 
         while start1 <= n - 1 or start2 > 0:
             count = min(n - start1, n - start2)
@@ -38,14 +36,14 @@ class Solution:
                 if s[start1 + i] == s[-1 - start2 - i]:
                     cur_len += 1
                 else:
-                    if start1 + i - cur_len == n - start2 - i and cur_len > max_len:     # 保证是同一位置
+                    if cur_len > max_len and start1 + i - cur_len == n - start2 - i:     # 保证是同一位置
                         max_len = cur_len
                         end_index = start1 + i
                     cur_len = 0
             i += 1                          # 退出循环时i不会加1
 
             if cur_len > 0:                 # 当遍历完成时，也需要检查一遍是否是最大子串
-                if start1 + i - cur_len == n - start2 - i and cur_len > max_len:
+                if cur_len > max_len and start1 + i - cur_len == n - start2 - i:
                     max_len = cur_len
                     end_index = start1 + i
                 cur_len = 0

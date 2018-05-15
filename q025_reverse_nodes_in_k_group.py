@@ -25,6 +25,21 @@ class Solution:
         cur = dummy = ListNode(0)
         tail = dummy.next = head
 
+        # ensure head is not None and length >= k, return new head
+        def reverse(head, k):
+            n1 = head
+            n2 = n1.next
+
+            while k > 0:
+                next_node = n2
+                n2 = n2.next
+                next_node.next = n1
+                n1 = next_node
+                k -= 1
+
+            head.next = n2
+            return n1
+
         while tail:
             for i in range(k):
                 if not tail:
@@ -32,25 +47,10 @@ class Solution:
                 tail = tail.next
 
             k_head = cur.next
-            cur.next = self.reverse(k_head, k-1)
+            cur.next = reverse(k_head, k-1)
             cur = k_head
 
         return dummy.next
-
-    # ensure head is not None and length >= k, return new head
-    def reverse(self, head, k):
-        n1 = head
-        n2 = n1.next
-
-        while k > 0:
-            next_node = n2
-            n2 = n2.next
-            next_node.next = n1
-            n1 = next_node
-            k -= 1
-
-        head.next = n2
-        return n1
 
 
 class Solution1:
