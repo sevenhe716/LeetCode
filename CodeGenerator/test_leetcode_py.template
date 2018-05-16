@@ -1,0 +1,16 @@
+import unittest
+
+from ${FILE_NAME} import Solution
+
+
+class Test${HUMP_NAME}(unittest.TestCase):
+    """Test ${FILE_NAME}.py"""
+
+    def test_${TITLE_NAME}(self):
+        s = Solution()
+
+        self.assertEqual(0, s.${METHOD_NAME}())
+
+
+if __name__ == '__main__':
+    unittest.main()
