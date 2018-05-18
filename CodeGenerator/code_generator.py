@@ -5,11 +5,12 @@ TemplateTestFile = 'test_leetcode_py.template'
 
 def main():
     config = {}
-    with open('config.template', 'r', encoding='utf8') as f:
+    with open('..\\config.template', 'r', encoding='utf8') as f:
         config['Title'] = f.readline()
         config['TemplateCode'] = f.read()
 
-    method_name = re.match(r'.*def (\w*)\(.*', config['TemplateCode'], re.S).group(1)      # 多个时匹配最后一个？
+    # method_name = re.match(r'.*def (\w*)\(.*', config['TemplateCode'], re.S).group(1)
+    method_name = re.findall(r'def (\w*)\(', config['TemplateCode'], re.S)[-1]
 
     code = '{:0>3d}'.format(int(re.match(r'(\d*)\..*', config['Title']).group(1)))
     title = re.match(r'.*\.\s*(.*)', config['Title']).group(1)

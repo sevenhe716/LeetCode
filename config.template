@@ -1,0 +1,9 @@
+834. Sum of Distances in Tree
+class Solution:
+    def sumOfDistancesInTree(self, N, edges):
+        """
+        :type N: int
+        :type edges: List[List[int]]
+        :rtype: List[int]
+        """
+

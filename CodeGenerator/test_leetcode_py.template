@@ -9,7 +9,7 @@ class Test${HUMP_NAME}(unittest.TestCase):
     def test_${TITLE_NAME}(self):
         s = Solution()
 
-        self.assertEqual(0, s.${METHOD_NAME}())
+        self.assertEqual(, s.${METHOD_NAME}())
 
 
 if __name__ == '__main__':
