@@ -1,9 +1,7 @@
-834. Sum of Distances in Tree
+32. Longest Valid Parentheses
 class Solution:
-    def sumOfDistancesInTree(self, N, edges):
+    def longestValidParentheses(self, s):
         """
-        :type N: int
-        :type edges: List[List[int]]
-        :rtype: List[int]
+        :type s: str
+        :rtype: int
         """
-
