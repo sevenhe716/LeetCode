@@ -20,7 +20,7 @@ def main():
     hump_name = title.title().replace(' ', '')
 
     with open(TemplateFile, encoding='utf8') as tp_file:
-        with open('{}.py'.format(file_name), 'w', encoding='utf8') as g_file:
+        with open('{}.py'.format(file_name), 'x', encoding='utf8') as g_file:
             file_lines = tp_file.readlines()
 
             for file_line in file_lines:
@@ -28,7 +28,7 @@ def main():
                 g_file.writelines(line)
 
     with open(TemplateTestFile, encoding='utf8') as tp_test_file:
-        with open('test_{}.py'.format(file_name), 'w', encoding='utf8') as g_test_file:
+        with open('test_{}.py'.format(file_name), 'x', encoding='utf8') as g_test_file:
             file_lines = tp_test_file.readlines()
 
             for file_line in file_lines:

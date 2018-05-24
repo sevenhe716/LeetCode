@@ -1,7 +1,7 @@
-32. Longest Valid Parentheses
+268. Missing Number
 class Solution:
-    def longestValidParentheses(self, s):
+    def missingNumber(self, nums):
         """
-        :type s: str
+        :type nums: List[int]
         :rtype: int
         """
