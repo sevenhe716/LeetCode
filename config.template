@@ -1,7 +1,7 @@
-268. Missing Number
+55. Jump Game
 class Solution:
-    def missingNumber(self, nums):
+    def canJump(self, nums):
         """
         :type nums: List[int]
-        :rtype: int
+        :rtype: bool
         """

@@ -104,7 +104,7 @@ class Solution:
                 return False
         elif len(p) == 2:
             if p[0] == s[index] or p[0] == '.':
-                # 如果匹配成功则有两种情况，接着用这个模式匹配下一个，或者抛弃这个模式，用下个模式云匹配
+                # 如果匹配成功则有两种情况，接着用这个模式匹配下一个，或者抛弃这个模式，用下个模式去匹配
                 return Solution.isMatchPatterns(s, patterns, index + 1) \
                        or Solution.isMatchPatterns(s, patterns[1:], index)
             else:
