@@ -5,19 +5,12 @@
 # 要求in-place 可以考虑一圈一圈的旋转，这样只用缓存一行
 # 优化思路：其实可以在一个循环内完成，只要保证从最后一个元素开始交换就行
 
-
 class Solution:
     def rotate1(self, matrix):
         """
         :type matrix: List[List[int]]
         :rtype: void Do not return anything, modify matrix in-place instead.
         """
-
-        # def printM():
-        #     for row in matrix:
-        #         print(row)
-        #
-        #     print()
 
         n = len(matrix)
 

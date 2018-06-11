@@ -1,7 +1,8 @@
-52. NQueens II
+62. Unique Paths
 class Solution:
-    def totalNQueens(self, n):
+    def uniquePaths(self, m, n):
         """
+        :type m: int
         :type n: int
         :rtype: int
         """
