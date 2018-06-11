@@ -1,7 +1,7 @@
-55. Jump Game
+52. NQueens II
 class Solution:
-    def canJump(self, nums):
+    def totalNQueens(self, n):
         """
-        :type nums: List[int]
-        :rtype: bool
+        :type n: int
+        :rtype: int
         """

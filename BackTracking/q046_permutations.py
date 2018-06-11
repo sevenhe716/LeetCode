@@ -1,4 +1,4 @@
-# Time:  O(n^2)
+# Time:  O(n!)
 # Space: O(1)
 
 # 解题思路：

@@ -1,13 +1,13 @@
 import unittest
 
-from BackTracking.q046_permutations import Solution2
+from BackTracking.q046_permutations import Solution
 
 
 class TestPermutations(unittest.TestCase):
     """Test q046_permutations.py"""
 
     def test_permutations(self):
-        s = Solution2()
+        s = Solution()
 
         self.assertSequenceEqual(sorted([[1, 2, 3],
                                          [1, 3, 2],

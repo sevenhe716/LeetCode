@@ -6,6 +6,7 @@
 # 遍历顺序应该是从后往前，因为当后面的0已经发现不满足条件时，无需回头重新找下一个0，而是基于当前索引位置继续往前找
 # 因为不满足条件的点也必定会jump这些0，one-pass即可
 # 特殊情况：当0为最后一个时，无需跳过
+# 优化思路：无需特殊讨论0，直接greedy即可
 
 
 class Solution:
@@ -52,6 +53,9 @@ class Solution:
         :rtype: bool
         """
         index = len(nums) - 2
+
+        if 0 not in nums:
+            return True
 
         while index >= 0:
             while index >= 0 and nums[index] != 0:

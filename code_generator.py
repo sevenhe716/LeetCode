@@ -3,6 +3,7 @@ import re
 TemplateFile = 'CodeGenerator/leetcode_py.template'
 TemplateTestFile = 'CodeGenerator/test_leetcode_py.template'
 
+
 def main():
     config = {}
     with open('config.template', 'r', encoding='utf8') as f:
