@@ -1,8 +1,8 @@
-62. Unique Paths
+854. KSimilar Strings
 class Solution:
-    def uniquePaths(self, m, n):
+    def kSimilarity(self, A, B):
         """
-        :type m: int
-        :type n: int
+        :type A: str
+        :type B: str
         :rtype: int
         """

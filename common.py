@@ -1,3 +1,6 @@
+int32_max = 2147483647
+int32_min = -2147483648
+
 class ListNode:
     def __init__(self, x):
         self.val = x
