@@ -1,8 +1,9 @@
-854. KSimilar Strings
+857. Minimum Cost to Hire K Workers
 class Solution:
-    def kSimilarity(self, A, B):
+    def mincostToHireWorkers(self, quality, wage, K):
         """
-        :type A: str
-        :type B: str
-        :rtype: int
+        :type quality: List[int]
+        :type wage: List[int]
+        :type K: int
+        :rtype: float
         """
