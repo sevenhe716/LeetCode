@@ -24,6 +24,31 @@ class Solution(object):
         if not head:
             return None
 
+        fast, slow = head, head
+
+        while fast.next and fast.next.next:
+            fast, slow = fast.next.next, slow.next
+            if fast is slow:
+                break
+
+        if not fast.next or not fast.next.next:
+            return None
+
+        slow = head
+
+        while fast is not slow:
+            fast, slow = fast.next, slow.next
+
+        return fast
+
+    def detectCycle1(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+        if not head:
+            return None
+
         count = 0
         fast, slow = head, head
 
