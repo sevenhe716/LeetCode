@@ -38,6 +38,27 @@ class TreeNode:
         self.left = None
         self.right = None
 
+    def __eq__(self, obj):
+        if obj is None or self.val != obj.val:
+            return False
+        return self.left == obj.left and self.right == obj.right
+
+    def generateR(self, i, nums):
+        if i * 2 - 1 < len(nums) and nums[i * 2 - 1] is not None:
+            self.left = TreeNode(nums[i * 2 - 1])
+            self.left.generateR(i * 2, nums)
+        if i * 2 < len(nums) and nums[i * 2] is not None:
+            self.right = TreeNode(nums[i * 2])
+            self.right.generateR(i * 2 + 1, nums)
+
+    @staticmethod
+    def generate(nums):
+        if not nums:
+            return None
+
+        root = TreeNode(nums[0])
+        root.generateR(1, nums)
+        return root
 
 class Interval:
     def __init__(self, s=0, e=0):

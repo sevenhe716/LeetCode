@@ -1,4 +1,10 @@
-110. Balanced Binary Tree
+# Time:  O(n)
+# Space: O(1)
+
+# 解题思路：
+#
+
+
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, x):
@@ -7,9 +13,10 @@
 #         self.right = None
 
 class Solution:
-    def isBalanced(self, root):
+    def maxDepth(self, root):
         """
         :type root: TreeNode
-        :rtype: bool
+        :rtype: int
         """
+        return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right)) if root else 0
 
