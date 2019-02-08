@@ -1,4 +1,4 @@
-110. Balanced Binary Tree
+235. Lowest Common Ancestor of a Binary Search Tree
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, x):
@@ -7,9 +7,10 @@
 #         self.right = None
 
 class Solution:
-    def isBalanced(self, root):
+    def lowestCommonAncestor(self, root, p, q):
         """
         :type root: TreeNode
-        :rtype: bool
+        :type p: TreeNode
+        :type q: TreeNode
+        :rtype: TreeNode
         """
-
