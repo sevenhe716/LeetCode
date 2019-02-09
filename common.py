@@ -22,6 +22,12 @@ class ListNode:
         if self:
             return "{} -> {}".format(self.val, self.next)
 
+    def find_by_val(self, val):
+        cur = self
+        while cur and cur.val != val:
+            cur = cur.next
+        return cur
+
     @staticmethod
     def generate(nums):
         head = ListNode(0)

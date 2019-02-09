@@ -1,16 +1,3 @@
-235. Lowest Common Ancestor of a Binary Search Tree
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-
+350. Intersection of Two Arrays II
 class Solution:
-    def lowestCommonAncestor(self, root, p, q):
-        """
-        :type root: TreeNode
-        :type p: TreeNode
-        :type q: TreeNode
-        :rtype: TreeNode
-        """
+    def intersect(self, nums1: 'List[int]', nums2: 'List[int]') -> 'List[int]':
