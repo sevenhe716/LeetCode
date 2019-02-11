@@ -21,3 +21,8 @@ class Solution1:
     # bin str的长度来判断
     def isPowerOfFour(self, num: 'int') -> 'bool':
         return num > 0 and num & (num - 1) == 0 and len(bin(num)) % 2 != 0
+
+class Solution2:
+    # 位运算
+    def isPowerOfFour(self, num: 'int') -> 'bool':
+        return num & (num - 1) == 0 and num & 0x55555555 != 0

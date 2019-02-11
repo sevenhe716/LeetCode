@@ -1,6 +1,6 @@
 import unittest
 
-from Temp.q071_simplify_path import Solution
+from String.q071_simplify_path import Solution
 
 
 class TestSimplifyPath(unittest.TestCase):
