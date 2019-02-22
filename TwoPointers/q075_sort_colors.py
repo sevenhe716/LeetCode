@@ -23,7 +23,7 @@ class Solution:
     # 三种元素交换，可以把两个元素看成一种，进行两次两元素加换
     # 也可以把一个元素和非此元素交换，再把一个元素跟非此元素加换
     # 常数时间，但依然是two-pass
-    def sortColors2(self, nums: 'List[int]') -> 'None':
+    def sortColors(self, nums: 'List[int]') -> 'None':
         """
         Do not return anything, modify nums in-place instead.
         """
@@ -46,8 +46,8 @@ class Solution:
                 nums[left], nums[right] = nums[right], nums[left]
 
     # 尝试用四指针，两个遍历指针（->2， <-0），两个标记替换位置的指针(->!0, <-!2)
-    # 貌似是一个吃力不讨好、事半功倍的解法
-    def sortColors(self, nums: 'List[int]') -> 'None':
+    # 貌似是一个吃力不讨好、事半功倍的解法, not finished
+    def sortColors3(self, nums: 'List[int]') -> 'None':
         """
         Do not return anything, modify nums in-place instead.
         """
@@ -96,15 +96,19 @@ class Solution:
             find_right_bound()
             print(left, right, index_not_2, index_not_0)
 
-        #
-        # while index_2 <= index_0:
-        #     while index_2 <= index_0 and nums[index_2] != 2:
-        #         index_2 += 1
-        #
-        #     while nums[index_not_0] == 0:
-        #         index_not_0 += 1
-        #     while index_2 <= index_0 and nums[index_0] != 0:
-        #         index_0 -= 1
-        #
-        #     while nums[index_not_2] == 2:
-        #         index_not_2 -= 1
+
+class Solution:
+    # 1-pass 三指针法，容易理解
+    def sortColors(self, nums):
+        red, white, blue = 0, 0, len(nums) - 1
+
+        while white <= blue:
+            if nums[white] == 0:
+                nums[red], nums[white] = nums[white], nums[red]
+                white += 1
+                red += 1
+            elif nums[white] == 1:
+                white += 1
+            else:
+                nums[white], nums[blue] = nums[blue], nums[white]
+                blue -= 1

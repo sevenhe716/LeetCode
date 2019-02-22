@@ -1,6 +1,6 @@
 import unittest
 
-from Temp.q075_sort_colors import Solution
+from TwoPointers.q075_sort_colors import Solution
 
 
 class TestSortColors(unittest.TestCase):

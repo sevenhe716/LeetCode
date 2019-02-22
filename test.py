@@ -53,7 +53,8 @@ def test_print_sep():
 def test():
     # test_sum()
     # print(test_ret())
-    test_print_sep()
+    # test_print_sep()
+    print((1, 2) + (2, 3))
 
 if __name__ == '__main__':
     test()

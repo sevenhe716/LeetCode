@@ -1,6 +1,6 @@
 import unittest
 
-from Temp.q400_nth_digit import Solution
+from Math.q400_nth_digit import Solution
 
 
 class TestNthDigit(unittest.TestCase):
@@ -9,6 +9,7 @@ class TestNthDigit(unittest.TestCase):
     def test_nth_digit(self):
         s = Solution()
 
+        self.assertEqual(1, s.findNthDigit(10))
         self.assertEqual(3, s.findNthDigit(3))
         self.assertEqual(0, s.findNthDigit(11))
         self.assertEqual(1, s.findNthDigit(12))

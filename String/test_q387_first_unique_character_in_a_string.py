@@ -1,6 +1,6 @@
 import unittest
 
-from Temp.q387_first_unique_character_in_a_string import Solution
+from String.q387_first_unique_character_in_a_string import Solution
 
 
 class TestFirstUniqueCharacterInAString(unittest.TestCase):

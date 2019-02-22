@@ -1,6 +1,6 @@
 import unittest
 
-from Temp.q389_find_the_difference import Solution
+from String.q389_find_the_difference import Solution
 
 
 class TestFindTheDifference(unittest.TestCase):
