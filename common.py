@@ -7,6 +7,7 @@ class ListNode:
         self.val = x
         self.next = None
 
+    # 重载==，对于有环的链表使用==会有问题
     def __eq__(self, obj):
         if obj is None or self.val != obj.val:
             return False

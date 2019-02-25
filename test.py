@@ -54,7 +54,10 @@ def test():
     # test_sum()
     # print(test_ret())
     # test_print_sep()
-    print((1, 2) + (2, 3))
+    # print((1, 2)[-3::-1])
+    print([None])
+    a = [0, 1, 2, 3]
+    print(a[4:])
 
 if __name__ == '__main__':
     test()
