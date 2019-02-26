@@ -1,6 +1,6 @@
 import unittest
 
-from q103_binary_tree_zigzag_level_order_traversal import Solution
+from Tree.q103_binary_tree_zigzag_level_order_traversal import Solution
 from common import TreeNode
 
 

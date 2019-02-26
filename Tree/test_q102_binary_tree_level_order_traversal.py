@@ -1,6 +1,6 @@
 import unittest
 
-from q102_binary_tree_level_order_traversal import Solution
+from Tree.q102_binary_tree_level_order_traversal import Solution
 from common import TreeNode
 
 

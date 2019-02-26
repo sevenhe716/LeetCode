@@ -1,6 +1,6 @@
 import unittest
 
-from q404_sum_of_left_leaves import Solution
+from Tree.q404_sum_of_left_leaves import Solution
 from common import TreeNode
 
 

@@ -1,6 +1,6 @@
 import unittest
 
-from q105_construct_binary_tree_from_preorder_and_inorder_traversal import Solution
+from Tree.q105_construct_binary_tree_from_preorder_and_inorder_traversal import Solution
 from common import TreeNode
 
 

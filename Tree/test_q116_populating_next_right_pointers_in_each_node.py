@@ -1,6 +1,6 @@
 import unittest
 
-from q116_populating_next_right_pointers_in_each_node import Solution
+from Tree.q116_populating_next_right_pointers_in_each_node import Solution
 
 
 class TestPopulatingNextRightPointersInEachNode(unittest.TestCase):

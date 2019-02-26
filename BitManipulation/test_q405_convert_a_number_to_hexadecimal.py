@@ -1,6 +1,6 @@
 import unittest
 
-from q405_convert_a_number_to_hexadecimal import Solution
+from BitManipulation.q405_convert_a_number_to_hexadecimal import Solution
 
 
 class TestConvertANumberToHexadecimal(unittest.TestCase):

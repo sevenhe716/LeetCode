@@ -50,14 +50,25 @@ def test_print_sep():
     arr = [1, 2, 3, 4]
     print(*arr, sep='->')
 
+def test_for():
+    a = [1, 2, 3, 4]
+    for i, v in enumerate(a):
+        a.append(1)
+        a.append(2)
+        print(i, v)
+
+def test_slice():
+    # 倒排索引
+    print((1, 2)[-1::-1])
+    # 支持索引越界
+    a = [0, 1, 2, 3]
+    print(a[4:])
+
 def test():
     # test_sum()
     # print(test_ret())
     # test_print_sep()
-    # print((1, 2)[-3::-1])
-    print([None])
-    a = [0, 1, 2, 3]
-    print(a[4:])
+    test_slice()
 
 if __name__ == '__main__':
     test()

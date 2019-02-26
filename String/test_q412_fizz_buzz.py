@@ -1,6 +1,6 @@
 import unittest
 
-from q412_fizz_buzz import Solution
+from String.q412_fizz_buzz import Solution
 
 
 class TestFizzBuzz(unittest.TestCase):
@@ -8,6 +8,14 @@ class TestFizzBuzz(unittest.TestCase):
 
     def test_fizz_buzz(self):
         s = Solution()
+
+        self.assertEqual([
+            "1",
+            "2",
+            "Fizz",
+            "4",
+            "Buzz",
+        ], s.fizzBuzz(5))
 
         self.assertEqual([
     "1",
