@@ -1,20 +1,16 @@
 import unittest
 
-from Stack.q155_min_stack import MinStack
+from common import test_by_reflect
 
 
 class TestMinStack(unittest.TestCase):
     """Test q155_min_stack.py"""
 
     def test_min_stack(self):
-        min_stack = MinStack()
-        min_stack.push(-2)
-        min_stack.push(0)
-        min_stack.push(-3)
-        self.assertEqual(-3, min_stack.getMin())
-        min_stack.pop()
-        self.assertEqual(0, min_stack.top())
-        self.assertEqual(-2, min_stack.getMin())
+        commands = ["MinStack", "push", "push", "push", "getMin", "pop", "top", "getMin"]
+        params = [[], [-2], [0], [-3], [], [], [], []]
+        res = [None, None, None, None, -3, None, 0, -2]
+        test_by_reflect(self, 'q155_min_stack', commands, params, res)
 
 
 if __name__ == '__main__':

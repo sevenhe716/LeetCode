@@ -1,6 +1,6 @@
 import unittest
 
-from q091_decode_ways import Solution
+from DynamicProgramming.q091_decode_ways import Solution
 
 
 class TestDecodeWays(unittest.TestCase):
@@ -10,6 +10,8 @@ class TestDecodeWays(unittest.TestCase):
         s = Solution()
 
         self.assertEqual(0, s.numDecodings(''))
+        self.assertEqual(1, s.numDecodings('10'))
+        self.assertEqual(1, s.numDecodings('110'))
         self.assertEqual(1, s.numDecodings('2'))
         self.assertEqual(0, s.numDecodings('02'))
         self.assertEqual(0, s.numDecodings('30'))

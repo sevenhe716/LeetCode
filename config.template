@@ -1,4 +1,4 @@
-405. Convert a Number to Hexadecimal
+408. Valid Word Abbreviation
 class Solution:
-    def toHex(self, num: 'int') -> 'str':
+    def validWordAbbreviation(self, word: str, abbr: str) -> bool:
         

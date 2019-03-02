@@ -78,3 +78,10 @@ def print_matrix(matrix):
         print(row)
 
     print()
+
+
+# 根据输入的函数，参数值及返回值列表来做单元测试
+def test_by_reflect(test, module_name, commands, params, res):
+    obj = getattr(__import__(module_name), commands[0])(*params[0])
+    for command, param, ret in zip(commands[1:], params[1:], res[1:]):
+        test.assertEqual(ret, getattr(obj, command)(*param))

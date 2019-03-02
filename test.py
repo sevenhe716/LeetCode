@@ -64,11 +64,30 @@ def test_slice():
     a = [0, 1, 2, 3]
     print(a[4:])
 
+def test_slice_assign():
+    arr = [1, 2, 4, 2]
+    # 允许不等长，可以多赋值或少赋值
+    arr[1:3] = [0]
+    print(arr)
+
+# 允许直接删除某元素
+def test_arr_del():
+    arr = [1, 2, 4, 2]
+    del arr[2]
+    print(arr)
+
 def test():
     # test_sum()
     # print(test_ret())
     # test_print_sep()
-    test_slice()
+    # test_slice()
+    # test_arr_del()
+    # a = arr[::-1]
+    # a.remove(2)
+    # print(a[::-1])
+    a = '0000'
+    print(a[2:2].startswith('0'))
+
 
 if __name__ == '__main__':
     test()
