@@ -87,7 +87,10 @@ def test():
     # print(a[::-1])
     a = '0000'
     print(a[2:2].startswith('0'))
-
+    print('123'.ljust(5, '0'))
+    # s = 'L321e2t1C1o1d1e1'
+    # s.split('')
+    print(int(['1', '2']))
 
 if __name__ == '__main__':
     test()
