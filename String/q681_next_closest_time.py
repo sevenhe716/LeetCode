@@ -159,3 +159,55 @@ class Solution1(object):
                 continue
 
         self.helper(res, time, idx, path + time[i])
+
+
+# fastest
+class Solution:
+    # 跟我思路一样，不使用brute-force遍历，而是直接找到下一个合法的时间，因为他的逻辑条件处理分得更细，所以这种解法效率更高
+    def nextClosestTime(self, time: 'str') -> 'str':
+        H, M = time.split(':')
+
+        n = set()
+        n.add(time[0])
+        n.add(time[1])
+        n.add(time[3])
+        n.add(time[4])
+
+        min_n = min(n)
+        m_tmrw = h_tmrw = min_n + min_n
+        m_today = h_today = None
+
+        # attempt to find next minute today
+        one = self.find_next(n, M[1], '0', '9')
+        if one:
+            m_today = M[0] + one
+        else:
+            ten = self.find_next(n, M[0], '0', '5')
+            if ten:
+                m_today = ten + min_n
+
+        # attempt to find next hour today
+        if not m_today:
+            if H[0] < '2':
+                one = self.find_next(n, H[1], '0', '9')
+            else:
+                one = self.find_next(n, H[1], '0', '4')
+            if one:
+                h_today = H[0] + one
+            else:
+                ten = self.find_next(n, H[0], '0', '2')
+                if ten:
+                    h_today = ten + min_n
+
+        if m_today:
+            # if there is a later minute today
+            return H + ':' + m_today
+        elif h_today:
+            # if there is a later hour today
+            return h_today + ':' + m_tmrw
+        else:
+            # otherwise, return the minimum hour and minute tomorrow
+            return h_tmrw + ':' + m_tmrw
+
+    def find_next(self, n, t, min_i, max_i):
+        return min([i for i in n if i > t and min_i <= i and i <= max_i], default=None)
