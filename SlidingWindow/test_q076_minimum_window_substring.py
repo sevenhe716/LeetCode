@@ -1,6 +1,6 @@
 import unittest
 
-from TwoPointers.q076_minimum_window_substring import Solution
+from SlidingWindow.q076_minimum_window_substring import Solution
 
 
 class TestMinimumWindowSubstring(unittest.TestCase):

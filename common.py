@@ -50,6 +50,17 @@ class TreeNode:
             return False
         return self.left == obj.left and self.right == obj.right
 
+    def __str__(self, indent=""):
+        right_tree = self.right.__str__(indent + "    ") if self.right else ""
+        left_tree = self.left.__str__(indent + "    ") if self.left else ""
+        return right_tree + "{}{}\n".format(indent, str(self.val)) + left_tree
+
+    def __repr__(self):
+        return self.__str__()
+        # return "BinaryTree({}, {}, {})".format(repr(self.val),
+        #                                        repr(self.left),
+        #                                        repr(self.right))
+
     def generateR(self, i, nums):
         if i * 2 - 1 < len(nums) and nums[i * 2 - 1] is not None:
             self.left = TreeNode(nums[i * 2 - 1])

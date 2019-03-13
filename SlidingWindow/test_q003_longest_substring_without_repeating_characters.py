@@ -1,6 +1,6 @@
 import unittest
 
-from HashTable.q003_longest_substring_without_repeating_characters import Solution
+from SlidingWindow.q003_longest_substring_without_repeating_characters import Solution
 
 
 class TestLengthOfLongestSubstring(unittest.TestCase):

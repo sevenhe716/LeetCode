@@ -1,6 +1,8 @@
 import random
 import time
 from functools import reduce
+from collections import Counter
+
 
 def test_zip_sum():
     arr = [random.random() for _ in range(1000)]
@@ -29,6 +31,7 @@ def test_zip_sum():
 def test_three_oper(a, b):
     return a - b if a - b > 0 else 0
 
+
 def test_slice():
     arr = [1, 2, 3, 4, 5]
     slice = arr[:3]
@@ -36,19 +39,23 @@ def test_slice():
     print(slice)
     print(arr)
 
+
 def test_sum():
     a1 = [1, 2]
     a2 = [2, 3, 4]
     # print(sum([a1, a2], key=len))
     print(reduce(lambda x, y: x + len(y), [a1, a2], 0))
 
+
 def test_ret():
     if False:
         return 1
 
+
 def test_print_sep():
     arr = [1, 2, 3, 4]
     print(*arr, sep='->')
+
 
 def test_for():
     a = [1, 2, 3, 4]
@@ -57,6 +64,7 @@ def test_for():
         a.append(2)
         print(i, v)
 
+
 def test_slice():
     # 倒排索引
     print((1, 2)[-1::-1])
@@ -64,17 +72,30 @@ def test_slice():
     a = [0, 1, 2, 3]
     print(a[4:])
 
+
 def test_slice_assign():
     arr = [1, 2, 4, 2]
     # 允许不等长，可以多赋值或少赋值
     arr[1:3] = [0]
     print(arr)
 
+
 # 允许直接删除某元素
 def test_arr_del():
     arr = [1, 2, 4, 2]
     del arr[2]
     print(arr)
+
+
+# 当counter计数为0时，依然在counter中
+def test_counter():
+    cnt = Counter({2: 1})
+    print(1 in cnt)
+    print(2 in cnt)
+    cnt[2] -= 1
+    print(2 in cnt)
+    print(cnt[2])
+
 
 def test():
     # test_sum()
@@ -85,12 +106,13 @@ def test():
     # a = arr[::-1]
     # a.remove(2)
     # print(a[::-1])
-    a = '0000'
-    print(a[2:2].startswith('0'))
-    print('123'.ljust(5, '0'))
+    # a = '0000'
+    # print(a[2:2].startswith('0'))
+    # print('123'.ljust(5, '0'))
     # s = 'L321e2t1C1o1d1e1'
     # s.split('')
-    print(int(['1', '2']))
+    test_counter()
+
 
 if __name__ == '__main__':
     test()

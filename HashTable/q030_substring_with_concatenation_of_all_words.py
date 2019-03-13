@@ -7,9 +7,11 @@
 # 优化思路：
 # 其实直接用hashtable，string作key即可，无需再自己生成hash值，然后需要注意的是words可能会重复，所以需要用counter来计数
 # 利用滑动窗口算法，遍历word长度次，用counter和left指针来维护当前滑动窗口的位置和进度
+from collections import Counter
+
 
 class Solution:
-    def findSubstring(self, s, words):
+    def findSubstring1(self, s, words):
         """
         :type s: str
         :type words: List[str]

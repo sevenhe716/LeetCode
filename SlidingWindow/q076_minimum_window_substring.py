@@ -74,7 +74,7 @@ class Solution:
 
         return s[min_left:min_right]
 
-    def minWindow(self, s: 'str', t: 'str') -> 'str':
+    def minWindow2(self, s: 'str', t: 'str') -> 'str':
         if not t or not s:
             return ""
 
@@ -113,6 +113,29 @@ class Solution:
 
         return s[ans[1]:ans[2] + 1] if ans[0] != float('inf') else ''
 
+    # sliding window, substring template
+    def minWindow(self, s: 'str', t: 'str') -> 'str':
+        counter = Counter(t)
+        count, start, end, res = len(t), 0, 0, [float('inf'), 0]
+        while end < len(s):
+            # 只统计在t中出现的字符
+            if s[end] in counter:
+                counter[s[end]] -= 1
+                # 考虑到t中有重复元素的情况
+                if counter[s[end]] >= 0:
+                    count -= 1
+            end += 1
+            while count == 0:
+                if end - start < res[0]:
+                    res = (end - start, start)
+
+                # 只统计在t中出现的字符
+                if s[start] in counter:
+                    counter[s[start]] += 1
+                    if counter[s[start]] > 0:
+                        count += 1
+                start += 1
+        return s[res[1]:res[0] + res[1]] if res[0] != float('inf') else ''
 
 class Solution1:
     # 用mem统一处理在t中和不在t中的字符，通过mem跟0比较以及t_len来判断，非常巧妙的做法
