@@ -1,3 +1,4 @@
-159. Longest Substring with At Most Two Distinct Characters
+302. Interview 3 2
 class Solution:
-    def lengthOfLongestSubstringTwoDistinct(self, s: str) -> int:
+    def kEmptySlots(self, flowers: List[int], k: int) -> int:
+        

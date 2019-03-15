@@ -15,10 +15,11 @@ https://leetcode.com/problems/find-all-anagrams-in-a-string/discuss/254365/Bidir
 [681] Next Closest Time:
 https://leetcode.com/problems/next-closest-time/discuss/248657/addition-simulator-solution-clear-and-fast-11-lines
 
+[711] Number of Distinct Islands II
+https://leetcode.com/problems/number-of-distinct-islands-ii/discuss/255021/use-anchor-and-set-python-beat-100-no-sort-orc
+
 [758] Bold Words in String:
 https://leetcode.com/problems/bold-words-in-string/discuss/247076/optimized-python-solution-using-trie-tree-and-merge-intervals
 
 [760] Find Anagram Mappings:
 https://leetcode.com/problems/find-anagram-mappings/discuss/247097/support-unique-index-when-duplicated-one-to-one-map-version
-
-

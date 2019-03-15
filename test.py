@@ -2,6 +2,7 @@ import random
 import time
 from functools import reduce
 from collections import Counter
+from collections import deque
 
 
 def test_zip_sum():
@@ -97,6 +98,19 @@ def test_counter():
     print(cnt[2])
 
 
+def test_set_edit_traverse():
+    s = [1, -1]
+    for i in s:
+        s.append(i+1)
+        print(i)
+        if i > 10:
+            return
+
+def test_mix_list():
+    a = [1] + [1.1]
+    print(type(a[0]))
+    print(type(a[1]))
+
 def test():
     # test_sum()
     # print(test_ret())
@@ -111,8 +125,19 @@ def test():
     # print('123'.ljust(5, '0'))
     # s = 'L321e2t1C1o1d1e1'
     # s.split('')
-    test_counter()
+    # test_counter()
+    # test_set_edit_traverse()
+    # test_mix_list()
+    queue = deque()
+    queue.append(1)
+    queue.append(2)
+    queue.append(3)
+    a = [1]
+    print(a[-2::-1])
+    print('00 11 88 69 96'.split())
+    print(int(True))
 
+    's\\n'
 
 if __name__ == '__main__':
     test()

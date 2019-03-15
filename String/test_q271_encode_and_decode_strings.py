@@ -1,6 +1,6 @@
 import unittest
 
-from q271_encode_and_decode_strings import Codec
+from String.q271_encode_and_decode_strings import Codec
 
 
 class TestEncodeAndDecodeStrings(unittest.TestCase):
@@ -9,7 +9,7 @@ class TestEncodeAndDecodeStrings(unittest.TestCase):
     def test_encode_and_decode_strings(self):
         s = Codec()
 
-        self.assertEqual(["Hello","World"], s.decode(s.encode(["Hello","World"])))
+        self.assertEqual(["Hello", "World"], s.decode(s.encode(["Hello", "World"])))
 
 
 if __name__ == '__main__':
