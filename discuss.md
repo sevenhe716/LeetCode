@@ -23,3 +23,11 @@ https://leetcode.com/problems/bold-words-in-string/discuss/247076/optimized-pyth
 
 [760] Find Anagram Mappings:
 https://leetcode.com/problems/find-anagram-mappings/discuss/247097/support-unique-index-when-duplicated-one-to-one-map-version
+
+
+Comments:
+https://leetcode.com/problems/walls-and-gates/discuss/72758/Java-easiest-DFS-quicker-than-BFS
+
+https://leetcode.com/problems/design-log-storage-system/discuss/232354/python-solution-using-binary-search
+
+
