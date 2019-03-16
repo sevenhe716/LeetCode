@@ -1,11 +1,11 @@
 import unittest
 
-from Mock.q1222_google import Solution
+from Mock.m1222_google import Solution
 from common import TreeNode
 
 
 class TestGoogle(unittest.TestCase):
-    """Test q1222_google.py"""
+    """Test m1222_google.py"""
 
     def test_google(self):
         s = Solution()

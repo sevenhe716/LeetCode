@@ -1,10 +1,10 @@
 import unittest
 
-from Mock.q1131_google import Solution
+from Mock.m1131_google import Solution
 
 
 class TestInterview31(unittest.TestCase):
-    """Test q1131_google.py"""
+    """Test m1131_google.py"""
 
     def test_interview_3_1(self):
         s = Solution()

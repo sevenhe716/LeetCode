@@ -6,7 +6,7 @@
 
 
 class Solution1:
-    def search(self, nums, target):
+    def search1(self, nums, target):
         """
         :type nums: List[int]
         :type target: int
@@ -58,9 +58,49 @@ class Solution1:
                     hi = mid
                 else:
                     lo = mid + 1
-
         return -1
 
+    def search2(self, nums: 'List[int]', target: int) -> int:
+        lo, hi = 0, len(nums) - 1
+        while lo <= hi:
+            if nums[lo] == target:
+                return lo
+            if nums[hi] == target:
+                return hi
+            mid = lo + (hi - lo) // 2
+            if nums[mid] == target:
+                return mid
+
+            if nums[lo] < nums[mid]:
+                if nums[lo] < target < nums[mid]:
+                    hi = mid - 1
+                else:
+                    lo = mid + 1
+            else:
+                if nums[mid] < target < nums[hi]:
+                    lo = mid + 1
+                else:
+                    hi = mid - 1
+        return -1
+
+    def search(self, nums: 'List[int]', target: int) -> int:
+        lo, hi = 0, len(nums) - 1
+        while lo <= hi:
+            mid = lo + (hi - lo) // 2
+            if nums[mid] == target:
+                return mid
+
+            if nums[lo] <= nums[mid]:
+                if nums[lo] <= target < nums[mid]:
+                    hi = mid - 1
+                else:
+                    lo = mid + 1
+            else:
+                if nums[mid] < target <= nums[hi]:
+                    lo = mid + 1
+                else:
+                    hi = mid - 1
+        return -1
 
 # Let's say nums looks like this: [12, 13, 14, 15, 16, 17, 18, 19, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 #
@@ -91,7 +131,6 @@ class Solution:
         while lo < hi:
             mid = (lo + hi) // 2
 
-            # 比较运算符优先级高于等于运算符？？经测试是同一优先级
             num = nums[mid] if (nums[mid] < nums[0]) == (target < nums[0]) else MIN_INT32 if target < nums[0] else MAX_INT32
 
             if target > num:

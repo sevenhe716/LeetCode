@@ -1,4 +1,3 @@
-1223. Google
+2233. Amazon
 class Solution:
-    def longestLine(self, M: List[List[int]]) -> int:
-
+    def productExceptSelf(self, nums: List[int]) -> List[int]:

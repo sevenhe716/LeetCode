@@ -4,7 +4,7 @@ from common import test_by_reflect
 
 
 class TestGoogle(unittest.TestCase):
-    """Test q1211_google.py"""
+    """Test m1211_google.py"""
 
     def test_google(self):
         commands = ["MovingAverage", "next", "next", "next", "next"]
