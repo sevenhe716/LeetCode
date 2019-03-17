@@ -4,6 +4,7 @@
 # Ideas:
 # binary search
 # for [lo, mid], [mid, hi], find sorted interval and check this side
+# mark
 
 
 class Solution:

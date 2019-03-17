@@ -3,6 +3,7 @@
 
 # Ideas:
 # try to find the last point in last level, didn't find a solution better than dfs or bfs
+# mark
 
 
 # Definition for a binary tree node.

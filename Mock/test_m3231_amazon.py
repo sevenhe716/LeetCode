@@ -1,11 +1,11 @@
 import unittest
 
-from Mock.m2231_amazon import Solution
+from Mock.m3231_amazon import Solution
 from common import TreeNode
 
 
 class TestAmazon(unittest.TestCase):
-    """Test m2231_amazon.py"""
+    """Test m3231_amazon.py"""
 
     def test_amazon(self):
         s = Solution()

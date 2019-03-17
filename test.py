@@ -136,8 +136,10 @@ def test():
     print(a[-2::-1])
     print('00 11 88 69 96'.split())
     print(int(True))
-
-    's\\n'
+    for i in range(10):
+        print(i)
+    s = 'abc  abe'
+    print(s.split())
 
 if __name__ == '__main__':
     test()

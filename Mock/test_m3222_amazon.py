@@ -1,11 +1,11 @@
 import unittest
 
-from Mock.m2222_amazon import Solution
+from Mock.m3222_amazon import Solution
 from common import ListNode
 
 
 class TestAmazon(unittest.TestCase):
-    """Test m2222_amazon.py"""
+    """Test m3222_amazon.py"""
 
     def test_amazon(self):
         s = Solution()

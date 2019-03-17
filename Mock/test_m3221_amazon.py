@@ -1,10 +1,10 @@
 import unittest
 
-from Mock.m2221_amazon import Solution
+from Mock.m3221_amazon import Solution
 
 
 class TestAmazon(unittest.TestCase):
-    """Test m2221_amazon.py"""
+    """Test m3221_amazon.py"""
 
     def test_amazon(self):
         s = Solution()

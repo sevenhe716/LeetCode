@@ -4,7 +4,7 @@ from common import test_by_reflect
 
 
 class TestAmazon(unittest.TestCase):
-    """Test m2212_amazon.py"""
+    """Test m3212_amazon.py"""
 
     def test_amazon(self):
         commands = ["MinStack", "push", "push", "push", "getMin", "pop", "top", "getMin"]

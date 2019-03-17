@@ -1,13 +1,13 @@
 import unittest
 
-from DynamicProgramming.q562_longest_line_of_consecutive_one_in_matrix import Solution1
+from DynamicProgramming.q562_longest_line_of_consecutive_one_in_matrix import Solution
 
 
 class TestLongestLineOfConsecutiveOneInMatrix(unittest.TestCase):
     """Test q562_longest_line_of_consecutive_one_in_matrix.py"""
 
     def test_longest_line_of_consecutive_one_in_matrix(self):
-        s = Solution1()
+        s = Solution()
 
         self.assertEqual(3, s.longestLine([[0, 1, 1, 0],
                                            [0, 1, 1, 0],
