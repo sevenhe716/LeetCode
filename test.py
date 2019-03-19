@@ -140,6 +140,7 @@ def test():
         print(i)
     s = 'abc  abe'
     print(s.split())
+    print(-2 % 26)
 
 if __name__ == '__main__':
     test()
