@@ -196,7 +196,6 @@ class Solution1(object):
         return result
 
     # 性能还不如我的算法
-
     def threeSum2(self, nums):
         """
         :type nums: List[int]
@@ -361,7 +360,7 @@ class SolutionFP:
 
         rsts = []
         rst = []                    # 无需提前声明，实际被覆盖
-        if 0 in dictkey and diction[0] > 2:     # 0 in dictkey效率很低，直接在dict中get加入默认值即可
+        if 0 in dictkey and diction[0] > 2:
             rsts.append([0, 0, 0])
         pos.reverse()               # 依然等于什么事都没做，依然是乱序
         for p in pos:

@@ -111,6 +111,14 @@ def test_mix_list():
     print(type(a[0]))
     print(type(a[1]))
 
+def test_inf():
+    print(0 - float('inf'))
+
+def test_and():
+    print(3 and 5)
+    print(None and 5)
+    print(3 and None)
+
 def test():
     # test_sum()
     # print(test_ret())
@@ -141,6 +149,10 @@ def test():
     s = 'abc  abe'
     print(s.split())
     print(-2 % 26)
+    print(sorted((3, 1, 2)))
+    test_inf()
+    print([1] + [0]*-2)
+    test_and()
 
 if __name__ == '__main__':
     test()

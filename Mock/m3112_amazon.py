@@ -44,3 +44,4 @@ class Solution:
                 if v == idx:
                     return list(map(int, list('{:08b}'.format(k))))
 
+

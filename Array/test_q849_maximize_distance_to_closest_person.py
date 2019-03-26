@@ -1,13 +1,13 @@
 import unittest
 
-from Array.q849_maximize_distance_to_closest_person import Solution1
+from Array.q849_maximize_distance_to_closest_person import Solution
 
 
 class TestMaximizeDistanceToClosestPerson(unittest.TestCase):
     """Test q849_maximize_distance_to_closest_person.py"""
 
     def test_maximize_distance_to_closest_person(self):
-        s = Solution1()
+        s = Solution()
 
         self.assertEqual(2, s.maxDistToClosest([1, 0, 0, 0, 1, 0, 1]))
         self.assertEqual(3, s.maxDistToClosest([1, 0, 0, 0]))

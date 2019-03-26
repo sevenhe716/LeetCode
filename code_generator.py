@@ -17,7 +17,7 @@ def main():
     title = re.match(r'.*\.\s*(.*)', config['Title']).group(1)
     title_name = title.lower().replace(' ', '_')
 
-    file_name = 'm{}_{}'.format(code, title_name)
+    file_name = 'q{}_{}'.format(code, title_name)
     hump_name = title.title().replace(' ', '')
 
     with open(TemplateFile, encoding='utf8') as tp_file:

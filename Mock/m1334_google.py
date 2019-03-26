@@ -26,6 +26,7 @@ class UnionFind:
 
     def find(self, x):
         cur = x
+
         while cur.root != cur:
             cur = cur.root
         root = cur

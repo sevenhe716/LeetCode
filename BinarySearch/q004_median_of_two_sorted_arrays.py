@@ -23,6 +23,7 @@
 # 每次可以减少min(m+2)/2个元素，所以复杂度是log(m+n)
 # 取双中位数比较区间重叠关系的好处是，对于命中条件的集合，可以极大减少运行时间（同时增加了miss的计算成本），这里不予保留
 # 还有一个注意点是，奇偶需要分开处理，当长度为奇数时，不能移除中位数本身
+import bisect
 
 
 class Solution:
@@ -352,6 +353,21 @@ class Solution:
 
         return binary_search(arrays, left, right, k, match)
 
+    def findMedianSortedArrays3(self, nums1, nums2):
+        # 短长数组
+        a, b = sorted((nums1, nums2), key=len)
+        m, n = len(a), len(b)
+        after = (m + n - 1) // 2
+
+        class Range:
+            def __getitem__(self, i):
+                return after - i - 1 < 0 or a[i] >= b[after - i - 1]
+
+        # getitem构造
+        i = bisect.bisect_left(Range(), True, 0, m)
+        nextfew = sorted(a[i:i + 2] + b[after - i:after - i + 2])
+        # 统一奇数和偶数的情况
+        return (nextfew[0] + nextfew[1 - (m + n) % 2]) / 2.0
 
 # There are two sorted arrays nums1 and nums2 of size m and n respectively.
 #

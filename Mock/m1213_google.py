@@ -3,7 +3,6 @@
 
 # Ideas:
 # trie tree
-# mark
 
 
 class Solution:

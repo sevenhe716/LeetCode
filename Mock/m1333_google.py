@@ -18,7 +18,6 @@ class Solution:
         firsts = [0]
         while condition:
             if remain >= word_len[idx]:
-                print(sentence[idx], end=' ')
                 remain -= word_len[idx] + 1
                 idx = idx + 1
                 if idx == len(word_len):
@@ -26,7 +25,6 @@ class Solution:
                     idx = 0
                 # idx = (idx + 1) % len(word_len)
             else:
-                print()
                 remain = cols
                 line_count.append(count)
 
@@ -36,10 +34,6 @@ class Solution:
                     repeat_index = idx
                 else:
                     firsts.append(idx)
-
-        print(repeat_index)
-        print(line_count)
-        print(firsts)
 
         rows -= 1
         if rows < len(line_count):

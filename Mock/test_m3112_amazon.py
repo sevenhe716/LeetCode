@@ -9,7 +9,7 @@ class TestAmazon(unittest.TestCase):
     def test_amazon(self):
         s = Solution()
 
-        # self.assertEqual([0, 0, 1, 1, 0, 0, 0, 0], s.prisonAfterNDays(cells=[0, 1, 0, 1, 1, 0, 0, 1], N=7))
+        self.assertEqual([0, 0, 1, 1, 0, 0, 0, 0], s.prisonAfterNDays(cells=[0, 1, 0, 1, 1, 0, 0, 1], N=7))
         self.assertEqual([0, 0, 1, 1, 1, 1, 1, 0], s.prisonAfterNDays(cells=[1, 0, 0, 1, 0, 0, 1, 0], N=1000000000))
 
 

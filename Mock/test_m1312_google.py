@@ -30,5 +30,5 @@ class TestGoogle(unittest.TestCase):
                                                          ["keep", "own"], ["have", "own"], ["extremely", "very"],
                                                          ["actually", "very"], ["really", "very"], ["super", "very"]]))
 
-    if __name__ == '__main__':
-        unittest.main()
+if __name__ == '__main__':
+    unittest.main()

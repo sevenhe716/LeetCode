@@ -6,7 +6,10 @@
 
 
 class Solution:
-    def isPalindrome(self, s: str) -> bool:
+    def isPalindrome1(self, s: str) -> bool:
         alphanumeric = ''.join(c for c in s.lower() if c.isalpha() or c.isdigit())
-        # alphanumeric = ''.join(str.isalpha or str.isdigit, list(s.lower())))
+        return alphanumeric == alphanumeric[::-1]
+
+    def isPalindrome(self, s: str) -> bool:
+        alphanumeric = ''.join(filter(str.isalnum, s.lower()))
         return alphanumeric == alphanumeric[::-1]

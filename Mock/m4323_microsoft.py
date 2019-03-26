@@ -1,20 +1,22 @@
 # Time:  O(n)
 # Space: O(1)
 
-# Ideas:
+# 解题思路：
 #
 
 
-class TicTacToe(object):
+# 不验证操作，默认都是合法的
+class TicTacToe:
 
-    def __init__(self, n):
+    def __init__(self, n: int):
         """
         Initialize your data structure here.
-        :type n: int
         """
+        self.size = n
+        self.marks = [[0] * n for _ in range(n)]
+        self.player_mark = {1: -1, 2: 1}
 
-
-    def move(self, row, col, player):
+    def move(self, row: int, col: int, player: int) -> int:
         """
         Player {player} makes a move at ({row}, {col}).
         @param row The row of the board.
@@ -24,13 +26,16 @@ class TicTacToe(object):
                 0: No one wins.
                 1: Player 1 wins.
                 2: Player 2 wins.
-        :type row: int
-        :type col: int
-        :type player: int
-        :rtype: int
         """
 
-
+        self.marks[row][col] = self.player_mark[player]
+        if abs(sum(self.marks[row])) == self.size or \
+                abs(sum(self.marks[i][col] for i in range(self.size))) == self.size or \
+                row == col and abs(sum(self.marks[i][i] for i in range(self.size))) == self.size or \
+                row == self.size - 1 - col and abs(sum(self.marks[i][self.size - i - 1] for i in range(self.size))) == self.size:
+            return 2 if self.marks[row][col] == 1 else 1
+        else:
+            return 0
 
 # Your TicTacToe object will be instantiated and called as such:
 # obj = TicTacToe(n)

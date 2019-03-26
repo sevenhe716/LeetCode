@@ -60,8 +60,9 @@ class MinStack:
 # param_3 = obj.top()
 # param_4 = obj.getMin()
 
-class MinStack1:
 
+# store gap between current and min
+class MinStack1:
     def __init__(self):
         """
         initialize your data structure here.
@@ -93,3 +94,7 @@ class MinStack1:
 
     def getMin(self) -> 'int':
         return self.min
+
+
+# store old minimum value when the current minimum value changes after pushing the new value x
+

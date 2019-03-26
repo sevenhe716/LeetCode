@@ -30,7 +30,7 @@ class Solution(object):
                     find = True
                     break
 
-        for i in range(n):
+        for i in range(candidate):
             if i != candidate and knows(candidate, i):
                 return -1
 

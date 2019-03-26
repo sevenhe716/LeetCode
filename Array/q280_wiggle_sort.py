@@ -18,7 +18,7 @@ class Solution:
                 nums[i], nums[i + 1] = nums[i + 1], nums[i]
 
 
-class Solution:
+class Solution1:
     def wiggleSort(self, nums):
         # neat, brilliant and beautiful trick
         for i in range(len(nums)):

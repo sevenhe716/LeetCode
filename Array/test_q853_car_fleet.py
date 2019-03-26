@@ -15,5 +15,6 @@ class TestCarFleet(unittest.TestCase):
         self.assertEqual(2, s.carFleet(10, [0, 4, 2], [0.01, 1, 3]))
         self.assertEqual(1, s.carFleet(10, [0], [2]))
 
-        if __name__ == '__main__':
-            unittest.main()
+
+if __name__ == '__main__':
+    unittest.main()

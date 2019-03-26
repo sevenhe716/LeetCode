@@ -56,7 +56,7 @@ class Solution(object):
             if knows(candidate, i):
                 return -1
 
-        if i in range(n):
+        for i in range(n):
             if not knows(i, candidate):
                 return -1
 

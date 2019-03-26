@@ -17,6 +17,8 @@ class Solution:
             if idx < len(blooms):
                 if blooms[idx] - f - 1 == k:
                     return i + 1
-            bisect.insort_left(blooms, f)
+            # 这里不需要再次使用bisect，会有两次二分查找的开销，直接insert
+            # bisect.insort_left(blooms, f)
+            blooms.insert(idx, f)
 
         return -1

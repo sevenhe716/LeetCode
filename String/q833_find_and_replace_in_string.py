@@ -6,7 +6,7 @@
 # 注意：index并不一定是有序的，source target中可能有重复的元素
 
 class Solution:
-    def findReplaceString(self, S, indexes, sources, targets):
+    def findReplaceString1(self, S, indexes, sources, targets):
         """
         :type S: str
         :type indexes: List[int]
@@ -14,8 +14,6 @@ class Solution:
         :type targets: List[str]
         :rtype: str
         """
-        from itertools import count
-
         s_list = list(S)
 
         # 不能这样排序，因为sources和targets可能有重复的情况
@@ -41,6 +39,15 @@ class Solution:
 
         return ''.join(s_list)
 
+    def findReplaceString(self, S: str, indexes: 'List[int]', sources: 'List[str]', targets: 'List[str]') -> str:
+        offset = 0
+        for idx, src, tar in sorted(zip(indexes, sources, targets), key=lambda x:x[0]):
+            start = idx + offset
+            if S.startswith(src, start):
+                # replace
+                S = S[:start] + tar + S[len(src) + start:]
+                offset += len(tar) - len(src)
+        return S
 
 class SolutionF(object):
     def findReplaceString(self, S, indexes, sources, targets):

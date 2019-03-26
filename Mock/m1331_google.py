@@ -7,7 +7,7 @@ from itertools import groupby
 
 
 class Solution:
-    # group
+    # group by
     def groupStrings(self, strings: 'List[str]') -> 'List[List[str]]':
         res = []
         strings.sort(key=len)
@@ -20,9 +20,5 @@ class Solution:
             shift_group = groupby(sorted(len_grp, key=lambda_shift), key=lambda_shift)
 
             for i, j in shift_group:
-                print(i, j)
                 res.append([g for g in j])
         return res
-
-    # dict
-

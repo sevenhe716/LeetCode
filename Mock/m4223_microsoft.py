@@ -34,3 +34,22 @@ class Solution:
                 idx2 += 1
         res = ''.join(map(str, res[::-1])).lstrip('0')
         return res if res != '' else '0'
+
+
+class Solution1:
+    def multiply(self, num1: str, num2: str) -> str:
+        product = [0] * (len(num1) + len(num2))
+        pos = len(product) - 1
+
+        for n1 in reversed(num1):
+            tempPos = pos
+            for n2 in reversed(num2):
+                product[tempPos] += int(n1) * int(n2)
+                # 这里不需要考虑连续进位的问题，因为product中存的数可以大于9
+                product[tempPos], r = divmod(product[tempPos], 10)
+                product[tempPos - 1] += r
+                tempPos -= 1
+            pos -= 1
+
+        res = ''.join(map(str, product)).lstrip('0')
+        return res if res != '' else '0'
