@@ -8,6 +8,7 @@
 # The guess API is already defined for you.
 # @param num, your guess
 # @return -1 if my number is lower, 1 if my number is higher, otherwise return 0
+import bisect
 pick = 0
 
 
@@ -62,3 +63,7 @@ class Solution1:
             else:
                 low, high = mid1 + 1, mid2 - 1
         return -1
+
+    def guessNumber1(self, n):
+        class C: __getitem__ = lambda _, i: -guess(i)
+        return bisect.bisect(C(), -1, 1, n)

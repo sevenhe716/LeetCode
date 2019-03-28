@@ -57,7 +57,7 @@ class Solution1:
         lo = start
         hi = len(matrix[0]) - 1 if vertical else len(matrix) - 1
 
-        while hi >= lo:
+        while lo <= hi:
             mid = (lo + hi) // 2
             if vertical:  # searching a column
                 if matrix[start][mid] < target:

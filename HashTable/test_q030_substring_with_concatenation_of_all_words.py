@@ -9,6 +9,7 @@ class TestSubstringWithConcatenationOfAllWords(unittest.TestCase):
     def test_substring_with_concatenation_of_all_words(self):
         s = Solution()
 
+        self.assertEqual(sorted([0, 1, 2]), sorted(s.findSubstring("aaaaaaaa", ["aa","aa","aa"])))
         self.assertEqual([0, 9], s.findSubstring('barfoothefoobarman', ["foo", "bar"]))
         self.assertEqual([], s.findSubstring('wordgoodstudentgoodword', ["word", "student"]))
         self.assertEqual([8], s.findSubstring("wordgoodgoodgoodbestword", ["word", "good", "best", "good"]))

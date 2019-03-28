@@ -146,3 +146,30 @@ class Solution1:
             if hs == hp:
                 ans.append(left + 1)
         return ans
+
+    def findAnagrams(self, s: 'str', p: 'str') -> 'List[int]':
+        # split all words without space and punctuation
+        text_words = s
+        counter = Counter(p)
+        start, end, count = 0, 0, len(p)
+        res = []
+
+        while end < len(text_words):
+            counter[text_words[end]] -= 1
+            if counter[text_words[end]] >= 0:
+                count -= 1
+            end += 1
+
+            # if you want all the index of match, you can change here
+            if count == 0:
+                # res.append(start)
+                return True
+
+            if end - start == len(p):
+                counter[text_words[start]] += 1
+                if counter[text_words[start]] > 0:
+                    count += 1
+                start += 1
+
+        # return res
+        return False

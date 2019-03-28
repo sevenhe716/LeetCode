@@ -84,7 +84,8 @@ class AutocompleteSystem:
                 if heap[i].word == word_item.word:
                     heap[i].count += 1
                     # heapq.heapify(heap)
-                    heapq._siftup(heap, i)
+                    # heapq._siftup(heap, i)
+                    heapq._siftdown(heap, 0, i)
                     break
             else:
                 if len(heap) < self.size:

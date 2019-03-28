@@ -3,6 +3,7 @@ import time
 from functools import reduce
 from collections import Counter
 from collections import deque
+import heapq
 
 
 def test_zip_sum():
@@ -119,6 +120,28 @@ def test_and():
     print(None and 5)
     print(3 and None)
 
+def test_mutilple_assign():
+    nums = [2, 0, 1]
+    tmp = nums[0]
+    nums[0], nums[tmp] = nums[tmp], nums[0]     # nums=[1, 0, 2] right
+    print(nums)
+    nums = [2, 0, 1]
+    nums[nums[0]], nums[0] = nums[0], nums[nums[0]] # nums=[1, 2, 1] wrong
+    print(nums)
+    nums = [2, 0, 1]
+    nums[0], nums[2] = nums[2], nums[0] # nums=[1, 2, 1] wrong
+    print(nums)
+
+def test_siftup():
+    data = [10, 5, 18, 2, 37, 3, 8, 7, 19, 1]
+    heapq.heapify(data)
+    print(data)
+    old, new = 3, 100  # increase the 8 to 22
+    i = data.index(old)
+    data[i] = new
+    heapq._siftup(data, 0, i)
+    print(data)
+
 def test():
     # test_sum()
     # print(test_ret())
@@ -136,23 +159,29 @@ def test():
     # test_counter()
     # test_set_edit_traverse()
     # test_mix_list()
-    queue = deque()
-    queue.append(1)
-    queue.append(2)
-    queue.append(3)
-    a = [1]
-    print(a[-2::-1])
-    print('00 11 88 69 96'.split())
-    print(int(True))
-    for i in range(10):
-        print(i)
-    s = 'abc  abe'
-    print(s.split())
-    print(-2 % 26)
-    print(sorted((3, 1, 2)))
-    test_inf()
-    print([1] + [0]*-2)
-    test_and()
+    # queue = deque()
+    # queue.append(1)
+    # queue.append(2)
+    # queue.append(3)
+    # a = [1]
+    # print(a[-2::-1])
+    # print('00 11 88 69 96'.split())
+    # print(int(True))
+    # for i in range(10):
+    #     print(i)
+    # s = 'abc  abe'
+    # print(s.split())
+    # print(-2 % 26)
+    # print(sorted((3, 1, 2)))
+    # test_inf()
+    # print([1] + [0]*-2)
+    # test_and()
+    test_mutilple_assign()
+    counter = Counter('abc')
+    # counter['d'] -= 1
+    print(counter['a'])
+    print(counter['d'])
+    print('d' in counter)
 
 if __name__ == '__main__':
     test()

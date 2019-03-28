@@ -19,9 +19,10 @@ class Solution:
         dummy.next = head
         cur = dummy
         while cur.next and cur.next.next:
-            pre = cur.next
-            post = cur.next.next
-            cur.next, post.next, pre.next = post, pre, post.next
+            # pre = cur.next
+            # post = cur.next.next
+            # cur.next, post.next, pre.next = post, pre, post.next
+            cur.next.next.next, cur.next.next, cur.next = cur.next, cur.next.next.next, cur.next.next
             cur = cur.next.next
             # cur.next, cur.next.next.next, cur.next.next = cur.next.next, cur.next, cur.next.next.next
             # cur = cur.next.next
