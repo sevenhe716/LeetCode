@@ -67,9 +67,7 @@ class Solution2:
         for w in words:
             cur = trie
             for c in w:
-                if c not in cur:
-                    cur[c] = {}
-                cur = cur[c]
+                cur = cur.setdefault(c, {})
             # 无需将word存入终止符的set中
             cur["#"] = cur.get("#", set()) | {w}
         for i in range(n):
@@ -97,9 +95,7 @@ class Solution3:
         for w in words:
             cur = trie
             for c in w:
-                if c not in cur:
-                    cur[c] = {}
-                cur = cur[c]
+                cur = cur.setdefault(c, {})
             cur["#"] = 0
 
         # interval merge

@@ -16,9 +16,7 @@ class Solution:
         for w in words:
             cur = trie
             for c in w:
-                if c not in cur:
-                    cur[c] = {}
-                cur = cur[c]
+                cur = cur.setdefault(c, {})
             # record the whole words
             cur['#'] = w
 
@@ -48,9 +46,9 @@ class Solution1:
     # complex number
     def findWords(self, board, words):
 
-        root = {}
+        trie = {}
         for word in words:
-            node = root
+            node = trie
             for c in word:
                 node = node.setdefault(c, {})
             node[None] = True
@@ -72,6 +70,6 @@ class Solution1:
                 board[z] = c
 
         for z in board:
-            search(root, z, '')
+            search(trie, z, '')
 
         return found

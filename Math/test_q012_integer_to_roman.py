@@ -9,6 +9,7 @@ class TestIntegerToRoman(unittest.TestCase):
     def test_integer_to_roman(self):
         s = Solution()
 
+        self.assertEqual('LVIII', s.intToRoman(58))
         self.assertEqual('I', s.intToRoman(1))
         self.assertEqual('III', s.intToRoman(3))
         self.assertEqual('IV', s.intToRoman(4))

@@ -137,5 +137,4 @@ def searchMatrix(matrix, target):
         horizontal_found = binary_search(i, False)
         if vertical_found or horizontal_found:
             return True
-
     return False

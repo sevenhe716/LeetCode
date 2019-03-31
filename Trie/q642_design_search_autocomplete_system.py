@@ -36,10 +36,8 @@ class AutocompleteSystem:
 
         for s, t in zip(sentences, times):
             cur = self.trie
-            for w in s:
-                if w not in cur:
-                    cur[w] = {}
-                cur = cur[w]
+            for c in s:
+                cur = cur.setdefault(c, {})
             cur['#'] = HeapItem(t, s)
 
         def dfs(trie):
@@ -84,8 +82,7 @@ class AutocompleteSystem:
                 if heap[i].word == word_item.word:
                     heap[i].count += 1
                     # heapq.heapify(heap)
-                    # heapq._siftup(heap, i)
-                    heapq._siftdown(heap, 0, i)
+                    heapq._siftup(heap, i)
                     break
             else:
                 if len(heap) < self.size:

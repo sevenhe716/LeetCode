@@ -5,7 +5,6 @@
 # the left pointer of the tree node should point to its predecessor, and the right pointer should point to its successor
 
 
-
 # Definition for a Node.
 class Node:
     def __init__(self, val, left, right):
@@ -13,21 +12,21 @@ class Node:
         self.left = left
         self.right = right
 
+
 class Solution:
     def treeToDoublyList(self, root: 'Node') -> 'Node':
+        if not root:
+            return None
         pre = dummy = Node(0, None, None)
-        cur = root
-        next = None
-        stack, ans = [], []
+        cur, stack = root, []
         while stack or cur:
             while cur:
-                pre.right, cur.left, cur = cur, pre, next
                 stack.append(cur)
                 cur = cur.left
             cur = stack.pop()
-            next = cur.right
-            pre.right, cur.left = cur, pre
-            pre, cur = cur, next
+            pre.right, cur.left, pre = cur, pre, cur
+            cur = cur.right
+        pre.right, dummy.right.left = dummy.right, pre
         return dummy.right
 
 

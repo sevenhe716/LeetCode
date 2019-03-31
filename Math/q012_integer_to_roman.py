@@ -47,7 +47,7 @@ class Solution:
         return roman
 
     # list version
-    def intToRoman(self, num):
+    def intToRoman2(self, num):
         """
         :type num: int
         :rtype: str
@@ -90,6 +90,18 @@ class Solution:
             roman.append('I' * num)
 
         return ''.join(roman)
+
+    def intToRoman(self, num):
+        numerals = {1: "I", 4: "IV", 5: "V", 9: "IX", 10: "X", 40: "XL",
+                    50: "L", 90: "XC", 100: "C", 400: "CD", 500: "D", 900: "CM", 1000: "M"}
+
+        roman = ''
+        for k, v in numerals.items()[::-1]:
+            while num >= k:
+                roman = roman + v
+                num = num - k
+
+        return roman
 
 
 # 把4和9也当作是模，这种方式值得借鉴

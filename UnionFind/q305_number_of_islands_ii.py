@@ -121,4 +121,4 @@ class Solution1:
                     union(x, y)
             return count
 
-        return map(add, positions)
+        return list(map(add, positions))

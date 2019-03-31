@@ -14,9 +14,7 @@ class Solution:
         for w in dict:
             cur = trie
             for c in w:
-                if c not in cur:
-                    cur[c] = {}
-                cur = cur[c]
+                cur = cur.setdefault(c, {})
             cur["#"] = 1
 
         # interval merge

@@ -27,7 +27,7 @@ class Solution:
     # recursively
     def invertTree1(self, root):
         if root:
-            root.left, root.right = self.invertTree(root.right), self.invertTree(root.left)
+            root.left, root.right = self.invertTree1(root.right), self.invertTree1(root.left)
             return root
         # 很漂亮的写法，不返回的分支等效于return None
 

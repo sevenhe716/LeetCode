@@ -10,6 +10,11 @@ class TreeNode:
         self.right = None
 
 
+'''
+binary tree examples
+'''
+
+
 # [101] https://leetcode.com/problems/symmetric-tree/
 # check whether it is a mirror of itself
 def isSymmetric(root):
@@ -137,16 +142,16 @@ def invertTree3(root: 'TreeNode') -> 'TreeNode':
 # [236] https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
 # find the lowest common ancestor (LCA) of two given nodes in binary tree
 # recursively
-def lowestCommonAncestor1(self, root, p, q):
+def lowestCommonAncestor1(root, p, q):
     if root in (None, p, q): return root
-    left, right = (self.lowestCommonAncestor(kid, p, q)
+    left, right = (lowestCommonAncestor1(kid, p, q)
                    for kid in (root.left, root.right))
     return root if left and right else left or right
 
 
 # [236] https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
-# iteratively, use common path
-def lowestCommonAncestor2(self, root, p, q):
+# iteratively, use common path, find first intersection point
+def lowestCommonAncestor2(root, p, q):
     def path(root, goal):
         path, stack = [], [root]
         while True:
@@ -164,7 +169,7 @@ def lowestCommonAncestor2(self, root, p, q):
 
 
 # [545] https://leetcode.com/problems/boundary-of-binary-tree
-# get the boundary of binary tree
+# get the boundary of binary tree, anti-clockwise direction
 def boundaryOfBinaryTree(root):
     res = []
 
@@ -191,3 +196,185 @@ def boundaryOfBinaryTree(root):
 
     preorder(root, True, True)
     return res
+
+
+'''
+binary search tree examples
+'''
+
+
+# [270] https://leetcode.com/problems/closest-binary-search-tree-value/
+# recursively
+def closestValue1(root: 'TreeNode', target: float) -> int:
+    def dfs(root, diff, closest):
+        if abs(target - root.val) < diff:
+            diff = abs(target - root.val)
+            closest = root.val
+        if root.val > target and root.left:
+            return dfs(root.left, diff, closest)
+        elif root.val < target and root.right:
+            return dfs(root.right, diff, closest)
+        return closest
+
+    return dfs(root, float('inf'), None)
+
+
+# [270] https://leetcode.com/problems/closest-binary-search-tree-value/
+# iteratively
+def closestValue(root: 'TreeNode', target: float) -> int:
+    diff, closest = float('inf'), None
+    while root:
+        if abs(target - root.val) < diff:
+            diff = abs(target - root.val)
+            closest = root.val
+        if root.val > target:
+            root = root.left
+        else:
+            root = root.right
+    return closest
+
+
+# [098] https://leetcode.com/problems/validate-binary-search-tree/
+# determine if it is a valid binary search tree
+# in-order traversal iteratively
+def isValidBST1(root: 'TreeNode') -> 'bool':
+    stack, inorder = [], float('-inf')
+    while stack or root:
+        while root:
+            stack.append(root)
+            root = root.left
+        root = stack.pop()
+        # If next element in inorder traversal is smaller than the previous one, that's not BST.
+        if root.val <= inorder:
+            return False
+        inorder = root.val
+        root = root.right
+    return True
+
+
+# [098] https://leetcode.com/problems/validate-binary-search-tree/
+# DFS，use parameter or return value
+def isValidBST2(root: 'TreeNode') -> 'bool':
+    if not root:
+        return True
+
+    def isBSTHelper(node, lower_limit, upper_limit):
+        if lower_limit is not None and node.val <= lower_limit:
+            return False
+        if upper_limit is not None and upper_limit <= node.val:
+            return False
+
+        left = isBSTHelper(node.left, lower_limit, node.val) if node.left else True
+        if left:
+            right = isBSTHelper(node.right, node.val, upper_limit) if node.right else True
+            return right
+        else:
+            return False
+
+    return isBSTHelper(root, None, None)
+
+
+# [098] https://leetcode.com/problems/validate-binary-search-tree/
+# BFS
+def isValidBST3(root: 'TreeNode') -> 'bool':
+    if not root:
+        return True
+
+    stack = [(root, None, None), ]
+    while stack:
+        root, lower_limit, upper_limit = stack.pop()
+        if root.right:
+            if root.right.val > root.val:
+                if upper_limit and root.right.val >= upper_limit:
+                    return False
+                stack.append((root.right, root.val, upper_limit))
+            else:
+                return False
+        if root.left:
+            if root.left.val < root.val:
+                if lower_limit and root.left.val <= lower_limit:
+                    return False
+                stack.append((root.left, lower_limit, root.val))
+            else:
+                return False
+    return True
+
+
+# [285] https://leetcode.com/problems/inorder-successor-in-bst/
+# find the in-order successor of that node in the BST
+# iteratively
+def inorderSuccessor(root: 'TreeNode', p: 'TreeNode') -> 'TreeNode':
+    # if has right child, get left-most leaf directly
+    if p.right:
+        p = p.right
+        while p.left:
+            p = p.left
+        return p
+    else:
+        # use in-order traversal
+        stack, find = [], False
+        while stack or root:
+            while root:
+                stack.append(root)
+                root = root.left
+            root = stack.pop()
+            if find:
+                return root
+            if root == p:
+                find = True
+            root = root.right
+    if find:
+        return None
+
+
+# [285] https://leetcode.com/problems/inorder-successor-in-bst/
+# recursively
+def inorderSuccessor(root, p):
+    res = None
+
+    def dfs(root, p):
+        nonlocal res
+        if not root:
+            return
+        if p.val < root.val:
+            res = root
+            dfs(root.left, p)
+        else:
+            dfs(root.right, p)
+
+    dfs(root, p)
+    return res
+
+# [669] https://leetcode.com/problems/trim-a-binary-search-tree/
+# trim the tree so that all its elements lies in [L, R]
+# recursively
+def trimBST(self, root: 'TreeNode', L: int, R: int) -> 'TreeNode':
+    if not root:
+        return
+    if root.val < L:
+        return self.trimBST(root.right, L, R)
+    elif root.val > R:
+        return self.trimBST(root.left, L, R)
+    else:
+        root.left = self.trimBST(root.left, L, R)
+        root.right = self.trimBST(root.right, L, R)
+        return root
+
+
+# [426] https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list
+# convert bst to sorted doubly linked list
+# inorder traversal iteratively
+def treeToDoublyList(root: 'Node') -> 'Node':
+    if not root:
+        return None
+    pre = dummy = TreeNode(0, None, None)
+    cur, stack = root, []
+    while stack or cur:
+        while cur:
+            stack.append(cur)
+            cur = cur.left
+        cur = stack.pop()
+        pre.right, cur.left, pre = cur, pre, cur
+        cur = cur.right
+    pre.right, dummy.right.left = dummy.right, pre
+    return dummy.right
