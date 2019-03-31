@@ -1,6 +1,6 @@
 # binary search requires sorted iterator. Common variation is find left-most or right-most index.
 #
-# Time: O(log(n))
+# Time:  O(log(n))
 # Space: O(1)
 
 

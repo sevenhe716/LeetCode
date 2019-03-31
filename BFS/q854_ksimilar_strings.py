@@ -8,6 +8,7 @@
 # 回溯，还是遵循前面的规则，遍历所有的可能性，若已经超过了目前最少的步骤，则提前终止
 # 优化思路：可以考虑memorized
 from common import ListNode
+from collections import Counter
 
 
 class Solution:
@@ -79,13 +80,8 @@ class Solution:
 
         return step
 
-    # backtracking:
+    # backtracking
     def kSimilarity(self, A, B):
-        """
-        :type A: str
-        :type B: str
-        :rtype: int
-        """
         n = len(A)
         b = list(B)
         min_step = 2147483647
@@ -110,8 +106,7 @@ class Solution:
                     if A[j] == b[i]:
                         pos = [j]
                         break
-                    elif A[j] != b[
-                        j]:  # if A[j] == b[j], this swap also remain one mis-match, exclude this situation
+                    elif A[j] != b[j]:  # if A[j] == b[j], this swap also remain one mis-match, exclude this situation
                         pos.append(j)
 
             for k in pos:
@@ -125,38 +120,48 @@ class Solution:
 
 
 class Solution1:
-    # BFS:
-    def kSimilarity(self, A, B):
-        """
-        :type A: str
-        :type B: str
-        :rtype: int
-        """
-        if A == B:
-            return 0
+    # fastest 40ms
+    def kSimilarity(self, A: str, B: str) -> int:
+        def bfs(s, e):
+            layer = [[s]]
+            while True:
+                next_layer = []
+                while layer:
+                    path = layer.pop()
+                    curr = path[-1]
+                    if (curr, e) in counter:
+                        return path + [e]
+                    for i in range(6):
+                        if i not in path and (curr, i) in counter:
+                            next_layer.append(path + [i])
+                layer = next_layer
 
-        def swap(s, i, j):
-            s_list = list(s)
-            s_list[i], s_list[j] = s_list[j], s_list[i]
-            return ''.join(s_list)
-
-        vis = set()
-        q = []
-        vis.add(A)
-        q.append(A)
+        counter = Counter()
+        for i in range(len(A)):
+            p, q = ord(A[i]) - 97, ord(B[i]) - 97
+            if p != q:
+                counter[(p, q)] += 1
         res = 0
-        while q:
-            res += 1
-            for _ in range(len(q)):
-                s = q.pop(0)
-                i = 0
-                while s[i] == B[i]: i += 1
-                for j in range(i + 1, len(s)):
-                    if s[j] == B[j] or s[i] != B[j]: continue
-                    temp = swap(s, i, j)
-                    if temp == B: return res
-                    if temp not in vis:
-                        q.append(temp)
-                    vis.add(temp)
-
+        while counter:
+            keys = list(counter.keys())
+            best = [0] * 7
+            for a, b in keys:
+                path = bfs(b, a)
+                if len(path) == 2:
+                    best = path
+                    break
+                if len(best) > len(path):
+                    best = path
+            a, b = best[-1], best[0]
+            path = bfs(b, a)
+            res += len(path) - 1
+            for i in range(len(path) - 1):
+                if counter[(path[i], path[i + 1])] <= 1:
+                    counter.pop((path[i], path[i + 1]))
+                else:
+                    counter[(path[i], path[i + 1])] -= 1
+            if counter[(a, b)] > 1:
+                counter[(a, b)] -= 1
+            else:
+                counter.pop((a, b))
         return res

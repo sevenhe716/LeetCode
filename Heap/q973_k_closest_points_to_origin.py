@@ -28,7 +28,7 @@ class Solution:
 # Divide and Conquer, thoughts from quick sort
 class Solution1:
     def kClosest(self, points, K):
-        dist = lambda i: points[i][0]**2 + points[i][1]**2
+        dist = lambda i: points[i][0] ** 2 + points[i][1] ** 2
 
         def sort(i, j, K):
             # Partially sorts A[i:j+1] so the first K elements are

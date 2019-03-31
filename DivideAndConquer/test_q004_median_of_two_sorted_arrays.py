@@ -1,6 +1,6 @@
 import unittest
 
-from BinarySearch.q004_median_of_two_sorted_arrays import Solution
+from DivideAndConquer.q004_median_of_two_sorted_arrays import Solution
 
 
 class TestFindMedianSortedArrays(unittest.TestCase):

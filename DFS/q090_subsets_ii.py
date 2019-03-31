@@ -18,13 +18,12 @@ class Solution:
             paths = new_paths
         return paths
 
-    # recusively, dfs
+    # recursively, dfs
     def subsetsWithDup(self, nums: 'List[int]') -> 'List[List[int]]':
         res = []
         nums.sort()
 
         def dfs(start, path):
-            nonlocal res
             # 抛弃后续元素
             res.append(path)
             for i in range(start, len(nums)):

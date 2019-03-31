@@ -1,3 +1,7 @@
+# Classification: binary tree, complete binary tree, full binary tree, binary search tree, AVL tree(self-balancing)
+#
+# Time:  O(n)
+# Space: O(h) h: height of tree
 from collections import deque
 
 

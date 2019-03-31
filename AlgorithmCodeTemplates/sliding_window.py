@@ -2,7 +2,7 @@
 # It uses two-pointer as boundary of sliding window to traverse, and use a counter(dict) maintain current state,
 # and a count as condition checker, update it when trigger some key changes.
 #
-# Time: O(n)
+# Time:  O(n)
 # Space: O(k) k = len(set(p))
 
 from collections import Counter

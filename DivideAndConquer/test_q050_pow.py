@@ -1,6 +1,6 @@
 import unittest
 
-from Math.q050_pow import Solution
+from DivideAndConquer.q050_pow import Solution
 
 
 class TestPow(unittest.TestCase):

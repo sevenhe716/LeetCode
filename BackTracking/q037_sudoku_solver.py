@@ -19,7 +19,6 @@ class Solution:
     #     # print('')
     #     return r // 3 * 3 + c // 3, r % 3 * 3 + c % 3
 
-
     def solveSudoku(self, board):
         """
         :type board: List[List[str]]
@@ -33,7 +32,7 @@ class Solution:
         col_remain = [set([i for i in range(1, 10)]) for _ in range(9)]
         box_remain = [set([i for i in range(1, 10)]) for _ in range(9)]
 
-        index_queue = []     # 遍历顺序
+        index_queue = []  # 遍历顺序
         remain = 0
 
         def remove_index(r, c):
@@ -92,10 +91,10 @@ class Solution:
                 #     min_r = i
                 #     min_c = next(iter(rr))
 
-                    # RNG based set
-                    # next(iter(s))
-                    # random.sample(s, 1)
-                    # for first_item in muh_set: break
+                # RNG based set
+                # next(iter(s))
+                # random.sample(s, 1)
+                # for first_item in muh_set: break
             #
             # for i, cc in enumerate(col_index):
             #     if 0 < len(cc) < min_count:
@@ -142,7 +141,30 @@ class Solution:
                     return
 
             # print('backtracking')
+
         solve(0)
 
 
+class Solution1:
+    # easy-understanding version, not a efficient solution
+    # optimize: use priority queue and bit-manipulation
+    def solveSudoku(self, board):
+        stack = [(i, j) for i in range(9) for j in range(9) if board[i][j] == "."]
 
+        def dfs():
+            if not stack:
+                return
+            x, y = stack.pop()
+            box = [board[x // 3 * 3 + i][y // 3 * 3 + j] for i in range(3) for j in range(3)]
+            row = [board[x][j] for j in range(9)]
+            col = [board[i][y] for i in range(9)]
+            for i in "123456789":
+                if not any([i in box, i in col, i in row]):
+                    board[x][y] = i
+                    dfs()
+                    if not stack:
+                        return
+            board[x][y] = "."
+            stack.append((x, y))
+
+        dfs()

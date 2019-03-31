@@ -1,20 +1,28 @@
 # refer to https://time.geekbang.org/course/detail/130-42710
-'''
-def recursion(level, param1, param2, ...):
+
+
+MAX_LEVEL = 10
+
+
+# param such as current path, result, visited set
+def recursion(level, *params):
     # recursion terminator
     if level > MAX_LEVEL:
-        print_result
+        '''
+        terminator logic here
+        '''
         return
 
-    # process logic in current level
-    process_data(level, data...)
+    '''
+    process logic in current level, such as update state (params)
+    '''
 
     # drill down
-    recursion(level+1, param1, param2, ...)
+    recursion(level + 1, params)
 
-    # reverse the current level status if needed
-    reverse_state(level)
-'''
+    '''
+    reverse the current level status if needed, such as revert the params (opposite operation of upper code block) 
+    '''
 
 
 # interval merge
@@ -25,5 +33,3 @@ def add_interval(new_interval, intervals):
             intervals[-1][1] = new_interval[1]
     else:
         intervals.append(new_interval)
-
-

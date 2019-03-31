@@ -369,17 +369,27 @@ class Solution:
         # 统一奇数和偶数的情况
         return (nextfew[0] + nextfew[1 - (m + n) % 2]) / 2.0
 
-# There are two sorted arrays nums1 and nums2 of size m and n respectively.
-#
-# Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
-#
-# Example 1:
-# nums1 = [1, 3]
-# nums2 = [2]
-#
-# The median is 2.0
-# Example 2:
-# nums1 = [1, 2]
-# nums2 = [3, 4]
-#
-# The median is (2 + 3)/2 = 2.5
+    def medianSortedArrays5(self, a, b):
+        def select(s, k):
+            pivot = s[len(s) // 2]
+            sl, sp, sr = [], [], []
+            for i in s:
+                if i < pivot:
+                    sl.append(i)
+                elif i == pivot:
+                    sp.append(i)
+                else:
+                    sr.append(i)
+            if k <= len(sl):
+                return select(sl, k)
+            elif len(sl) < k <= len(sl) + len(sp):
+                return pivot
+            elif k > len(sl) + len(sp):
+                return select(sr, k - len(sl) - len(sp))
+        c = a + b
+        length = len(c)
+        odd_median = select(c, 1 + length // 2)
+        if length % 2 != 0:
+            return odd_median
+        even_median = select(c, length // 2)
+        return (odd_median + even_median) / 2

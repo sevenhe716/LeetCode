@@ -3,7 +3,7 @@
 # Scenario: autocomplete, spell checker, IP routing, T9 predictive text, solving word games.
 #
 # words list has k words, the max word len is m
-# Time: O(m) to match once
+# Time:  O(m) for match once
 # Space: O(mk)
 
 
