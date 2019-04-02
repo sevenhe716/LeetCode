@@ -1,13 +1,13 @@
 import unittest
 
-from Matrix.q059_spiral_matrix_ii import Solution
+from Matrix.q059_spiral_matrix_ii import Solution1
 
 
 class TestSpiralMatrixIi(unittest.TestCase):
     """Test q059_spiral_matrix_ii.py"""
 
     def test_spiral_matrix_ii(self):
-        s = Solution()
+        s = Solution1()
 
         self.assertEqual([
             [1, 2, 3],

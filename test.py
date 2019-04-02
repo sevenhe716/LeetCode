@@ -4,6 +4,7 @@ from functools import reduce
 from collections import Counter
 from collections import deque
 import heapq
+from itertools import islice
 
 
 def test_zip_sum():
@@ -141,6 +142,12 @@ def test_siftup():
     data[i] = new
     heapq._siftup(data, 0, i)
     print(data)
+
+def test_islice():
+    n = 3
+    iter = iter(range(n ** 2))
+    board = [list(islice(iter, n)) for _ in range(n)]
+    print(board)
 
 def test():
     # test_sum()

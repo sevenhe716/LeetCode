@@ -54,6 +54,7 @@ class Solution:
             mask = scan()
         return board
 
+
 # Rotate the board will make the drop operation much easier. That being said, instead of move all non-zero value to the
 #  end of each column, the drop operation becomes move all non-zero value to the beginning of each row.
 class Solution1:

@@ -5,12 +5,18 @@
 # words list has k words, the max word len is m
 # Time:  O(m) for match once
 # Space: O(mk)
+from collections import defaultdict
 
 
 # dict version
 def trie_tree_template(word_to_match: str, words_to_build: 'List[str]'):
     # create trie tree
     trie = {}
+    # or use autovivification
+    # trie_tree = lambda: defaultdict(trie_tree)
+    # def trie_tree(): return defaultdict(trie_tree)
+    # trie = trie_tree()
+
     # add words recursively
     for w in words_to_build:
         cur = trie

@@ -25,7 +25,7 @@ class Vector2D:
 # param_1 = obj.next()
 # param_2 = obj.hasNext()
 
-class Vector2D:
+class Vector2D1:
     def __init__(self, v: 'List[List[int]]'):
         self.iter = 0
         self.vec = [v[i][j] for i in range(len(v)) for j in range(len(v[i]))]
@@ -39,3 +39,21 @@ class Vector2D:
         if self.iter < len(self.vec):
             return True
         return False
+
+
+class Vector2D2:
+    def __init__(self, a):
+        def it():
+            for line in a:
+                for val in line:
+                    self.size -= 1
+                    yield val
+
+        self.it = it()
+        self.size = sum(len(line) for line in a)
+
+    def next(self):
+        return next(self.it)
+
+    def hasNext(self):
+        return self.size

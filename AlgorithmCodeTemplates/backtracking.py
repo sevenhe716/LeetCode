@@ -6,13 +6,18 @@
 # traverse in solution space vs. traverse in data structure space, pruned of dfs
 
 
-def backtracking(self, P, c):
-    if self.reject(P, c):
+def backtracking(self, data, candidate):
+    # pruning
+    if self.reject(data, candidate):
         return
 
-    if self.accept(P, c):
-        return self.output(P, c)
+    # reach the end
+    if self.accept(data, candidate):
+        return self.output(data, candidate)
 
-    for s in self.all_extension(P, c):
-        backtracking(s)
+    # drill down
+    for s in self.all_extension(data, candidate):
+        # or you can choose to prune here, recursion depth - 1
+        if not self.need_to_prune(candidate):
+            backtracking(s)
 

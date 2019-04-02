@@ -8,7 +8,7 @@
 
 class Solution:
     def numberOfPatterns(self, m: int, n: int) -> int:
-        througth_dict = {(1, 3): 2, (4, 6): 5, (7, 9): 8, (1, 7): 4, (2, 8): 5, (3, 9): 6, (1, 9): 5, (3, 7): 5}
+        through_dict = {(1, 3): 2, (4, 6): 5, (7, 9): 8, (1, 7): 4, (2, 8): 5, (3, 9): 6, (1, 9): 5, (3, 7): 5}
         self.res = 0
 
         def dfs(last, used: set, left: set):
@@ -20,8 +20,8 @@ class Solution:
             for num in left:
                 if last:
                     key = (last, num) if last < num else (num, last)
-                    if key in througth_dict:
-                        if througth_dict[key] in left:
+                    if key in through_dict:
+                        if through_dict[key] in left:
                             continue
                 used.add(num)
                 left.remove(num)

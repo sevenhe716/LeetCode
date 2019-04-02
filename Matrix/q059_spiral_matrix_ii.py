@@ -23,20 +23,41 @@ class Solution:
                 matrix[i][i] = index
                 break
 
-            for j in range(n_size-1):
+            for j in range(n_size - 1):
                 index += 1
                 matrix[i][i + j] = index
 
-            for j in range(n_size-1):
+            for j in range(n_size - 1):
                 index += 1
                 matrix[i + j][n - 1 - i] = index
 
-            for j in range(n_size-1):
+            for j in range(n_size - 1):
                 index += 1
                 matrix[n - 1 - i][n - 1 - i - j] = index
 
-            for j in range(n_size-1):
+            for j in range(n_size - 1):
                 index += 1
                 matrix[n - 1 - i - j][i] = index
 
         return matrix
+
+
+class Solution1:
+    def generateMatrix(self, n):
+        A, lo = [], n * n + 1
+        while lo > 1:
+            lo, hi = lo - len(A), lo
+            A = [[*range(lo, hi)]] + list(map(list, zip(*A[::-1])))
+        return A
+
+    def generateMatrix2(self, n):
+        M = [[0] * n for _ in range(n)]
+        i, j, di, dj = 0, 0, 0, 1
+        for k in range(n * n):
+            M[i][j] = k + 1
+            # also include reaching boundary edge case
+            if M[(i + di) % n][(j + dj) % n]:
+                di, dj = dj, -di
+            i += di
+            j += dj
+        return M

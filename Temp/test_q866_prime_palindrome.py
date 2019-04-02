@@ -1,10 +1,10 @@
 import unittest
 
-from Temp.q867_prime_palindrome import Solution1
+from Temp.q866_prime_palindrome import Solution1
 
 
 class TestPrimePalindrome(unittest.TestCase):
-    """Test q867_prime_palindrome.py"""
+    """Test q866_prime_palindrome.py"""
 
     def test_prime_palindrome(self):
         s = Solution1()

@@ -55,11 +55,8 @@ class Solution1:
     def validWordSquare4(self, words):
         return map("".join, zip_longest(*words, fillvalue='')) == words
 
-
     def validWordSquare5(self, words):
         other = list(zip_longest(*words))
         return not any(i >= len(other) or j >= len(other[i]) or other[i][j] != char
                        for i, word in enumerate(words)
                        for j, char in enumerate(word))
-
-

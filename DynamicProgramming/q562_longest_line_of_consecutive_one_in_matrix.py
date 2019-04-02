@@ -56,7 +56,7 @@ class Solution:
         if self.res >= s:
             return self.res
 
-        # check diagonal
+        # check analog
         for i, j in [(i, 0) for i in range(m)] + [(0, j) for j in range(1, n)]:
             # 计算斜线的长度
             size = min(m - i, n - j)
@@ -75,7 +75,7 @@ class Solution:
         if self.res >= s:
             return self.res
 
-        # check anti-diagonal
+        # check anti-analog
         for i, j in [(i, n - 1) for i in range(m)] + [(0, j) for j in range(n - 1)]:
             size = min(m - i, n - m + j + 1)
             if size <= self.res:

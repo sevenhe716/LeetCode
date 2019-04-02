@@ -9,6 +9,7 @@ class TestRegularExpressionMatching(unittest.TestCase):
     def test_regular_expression_matching(self):
         s = Solution()
 
+        self.assertEqual(True, s.isMatch('aba', '.*.*'))
         self.assertEqual(False, s.isMatch('aa', 'a'))
         self.assertEqual(True, s.isMatch('aa', 'a*'))
         self.assertEqual(True, s.isMatch('ab', '.*'))

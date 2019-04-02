@@ -21,3 +21,8 @@ class Solution:
                 AT[j][i] = A[i][j]
 
         return AT
+
+
+class Solution1:
+    def transpose(self, A):
+        return list(map(list, zip(*A)))

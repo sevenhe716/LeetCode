@@ -97,7 +97,7 @@ def findAnagrams(s: str, p: str) -> 'List[int]':
 
 # [30] https://leetcode.com/problems/substring-with-concatenation-of-all-words/
 # variation with complex match policy
-def findSubstring(self, s: str, words: 'List[str]') -> 'List[int]':
+def findSubstring(s: str, words: 'List[str]') -> 'List[int]':
     if not words:
         return []
 

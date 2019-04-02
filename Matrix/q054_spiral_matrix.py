@@ -138,4 +138,4 @@ class SolutionF:
     # |7 8 9|      |4 7|
     def spiralOrder1(self, matrix):
         # [*zip(*arr)]转置矩阵的方法，and返回右值
-        return matrix and [*matrix.pop(0)] + self.spiralOrder([*zip(*matrix)][::-1])
+        return matrix and [*matrix.pop(0)] + self.spiralOrder1([*zip(*matrix)][::-1])

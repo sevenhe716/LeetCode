@@ -35,56 +35,6 @@ def depthSum(nestedList: 'List[NestedInteger]') -> int:
     return dfs(1, nestedList)
 
 
-# [351] https://leetcode.com/problems/android-unlock-patterns/
-# Given an Android 3x3 key lock screen and two integers m and n, where 1 ≤ m ≤ n ≤ 9, count the total number of
-# unlock patterns of the Android lock screen, which consist of minimum of m keys and maximum n keys.
-def numberOfPatterns(m: int, n: int) -> int:
-    througth_dict = {(1, 3): 2, (4, 6): 5, (7, 9): 8, (1, 7): 4, (2, 8): 5, (3, 9): 6, (1, 9): 5, (3, 7): 5}
-    res = 0
-
-    def dfs(last, used: set, left: set):
-        nonlocal res
-        if len(used) > n:
-            return
-        if m <= len(used) <= n:
-            res += 1
-
-        for num in left:
-            if last:
-                key = (last, num) if last < num else (num, last)
-                if key in througth_dict:
-                    if througth_dict[key] in left:
-                        continue
-            used.add(num)
-            left.remove(num)
-            dfs(num, used, left)
-            left.add(num)
-            used.remove(num)
-
-    dfs(None, set(), {i for i in range(1, 10)})
-    return res
-
-
-# [90] https://leetcode.com/problems/subsets-ii/
-# Given a collection of integers that might contain duplicates, nums, return all possible subsets (the power set).
-def subsetsWithDup(nums: 'List[int]') -> 'List[List[int]]':
-    res = []
-    nums.sort()
-
-    def dfs(start, path):
-        # abandon rest numbers
-        res.append(path)
-        for i in range(start, len(nums)):
-            # duplicate element will only add the first one, and skip all nums after it.
-            # Equivalent to internal serial number for same element
-            if i > start and nums[i] == nums[i - 1]:
-                continue
-            dfs(i + 1, path + [nums[i]])
-
-    dfs(0, [])
-    return res
-
-
 # [47] https://leetcode.com/problems/permutations-ii/
 # Given a collection of numbers that might contain duplicates, return all possible unique permutations.
 def permuteUnique(nums):

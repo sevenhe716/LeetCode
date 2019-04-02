@@ -11,106 +11,77 @@ import re
 
 class Solution:
     def isMatch(self, s, p):
-        """
-        :type s: str
-        :type p: str
-        :rtype: bool
-        """
-
-        pattern = re.compile(r'[a-z\.]\*?')
+        pattern = re.compile(r'[a-z.]\*?')
         patterns = re.findall(pattern, p)
 
-        patterns = Solution.preProcess(patterns)
+        # specific optimization, not scalable, but efficient for this solution
+        # pre-process patterns, merge same or including patterns
+        def preProcess(patterns):
+            # .* merge all adjacent x* pattern
+            p_count, p_index = 0, -1
+            # count every time after update patterns
+            while p_count < patterns.count('.*'):
+                index = patterns.index('.*', p_index + 1)
+                index_l, index_r = index - 1, index + 1
+                while index_l >= 0 and len(patterns[index_l]) == 2:
+                    index_l -= 1
+                while index_r < len(patterns) and len(patterns[index_r]) == 2:
+                    index_r += 1
 
-        return Solution.isMatchPatterns(s, patterns, 0)
+                patterns = patterns[0:index_l + 1] + patterns[index:index + 1] + patterns[index_r:]
+                # update p_index after merge
+                p_index = patterns.index('.*', p_index + 1)
+                p_count += 1
 
-    @staticmethod
-    def preProcess(patterns):
-        # patterns预处理，合并相同或者包含的模式
-        # .*合并所有相邻的x*
-        # a-z*合并所有相邻的a-z及a-z*
-        p_count = 0
-        p_index = -1
-        while p_count < patterns.count('.*'):
-            index = patterns.index('.*', p_index + 1)
-            index_l = index - 1
-            index_r = index + 1
-            while index_l >= 0 and len(patterns[index_l]) == 2:
-                index_l -= 1
-            while index_r < len(patterns) and len(patterns[index_r]) == 2:
-                index_r += 1
+            # merge a-z* merge all adjacent corresponding a-z and a-z*
+            start_index, i, flag, pattern_ch, new_patterns = 0, 0, False, '', []
+            for i, pat in enumerate(patterns):
+                if pattern_ch != pat or pattern_ch[0] == '.':
+                    if flag:
+                        new_patterns.append(pattern_ch)
+                    else:
+                        new_patterns.extend(patterns[start_index:i])
 
-            patterns = patterns[0:index_l + 1] + patterns[index:index + 1] + patterns[index_r:]
-
-            # 移除之后再更新p_index
-            p_index = patterns.index('.*', p_index + 1)
-            p_count += 1
-
-        flag = False
-        pattern_ch = ' '
-        start_index = 0
-        new_patterns = []
-
-        i = 0
-
-        for i, pat in enumerate(patterns):
-            if pattern_ch != pat or pattern_ch[0] == '.':
-                if flag:
-                    new_patterns.append(pattern_ch)
-                else:
-                    new_patterns.extend(patterns[start_index:i])
-
-                if len(pat) == 2:
+                    flag = len(pat) == 2
+                    start_index = i
+                    pattern_ch = pat
+                elif not flag and len(pat) == 2:
                     flag = True
+
+            if flag:
+                new_patterns.append(pattern_ch)
+            else:
+                new_patterns.extend(patterns[start_index:i + 1])
+
+            return new_patterns
+
+        # match pattern by backtracking
+        def isMatchPatterns(s, patterns, index):
+            # if patterns has been matched out, check whether reach the end of s
+            if len(patterns) == 0:
+                return index >= len(s)
+
+            # if there are remain patterns, if all the remains like x*, match success, otherwise failed.
+            if index >= len(s):
+                return all(len(p) > 1 for p in patterns)
+
+            p = patterns[0]
+            if len(p) == 1:
+                # when single pattern, if encounter same char or '.', match success, otherwise failed
+                if p[0] == s[index] or p[0] == '.':
+                    return isMatchPatterns(s, patterns[1:], index + 1)
                 else:
-                    flag = False
-
-                start_index = i
-                pattern_ch = pat
-            else:
-                if not flag:
-                    if len(pat) == 2:
-                        flag = True
-
-        if flag:
-            new_patterns.append(pattern_ch)
-        else:
-            new_patterns.extend(patterns[start_index:i + 1])
-
-        return new_patterns
-
-    @staticmethod
-    def isMatchPatterns(s, patterns, index):
-        # 如果Pattern已经匹配完成，判断是否已经抵达终点
-        if len(patterns) == 0:
-            if index < len(s):
-                return False
-            else:
-                return True
-
-        # 如果还有剩余的模式没有匹配，如果剩余都是带*，则应该匹配成功，否则匹配失败
-        if index >= len(s):
-            for p in patterns:
-                if len(p) == 1:
                     return False
-            return True
+            elif len(p) == 2:
+                # when pattern with *, if encounter same char or '.', match success, otherwise failed
+                if p[0] == s[index] or p[0] == '.':
+                    # when match success, you can continue to use this pattern, or abandon this and match next pattern.
+                    return isMatchPatterns(s, patterns, index + 1) or isMatchPatterns(s, patterns[1:], index)
+                # when it failed, match next pattern, not return false, because * can match zero char.
+                else:
+                    return isMatchPatterns(s, patterns[1:], index)
 
-        p = patterns[0]
-
-        if len(p) == 1:
-            if p[0] == s[index] or p[0] == '.':
-                return Solution.isMatchPatterns(s, patterns[1:], index + 1)
-            else:
-                return False
-        elif len(p) == 2:
-            if p[0] == s[index] or p[0] == '.':
-                # 如果匹配成功则有两种情况，接着用这个模式匹配下一个，或者抛弃这个模式，用下个模式去匹配
-                return Solution.isMatchPatterns(s, patterns, index + 1) \
-                       or Solution.isMatchPatterns(s, patterns[1:], index)
-            else:
-                return Solution.isMatchPatterns(s, patterns[1:], index)
-        else:
-            return False
+        return isMatchPatterns(s, preProcess(patterns), 0)
 
 
 # dp with rolling window
@@ -133,7 +104,7 @@ class Solution1:
                     result[i % k][j] = result[(i - 1) % k][j - 1] and (s[i - 1] == p[j - 1] or p[j - 1] == '.')
                 else:
                     result[i % k][j] = result[i % k][j - 2] or (
-                                result[(i - 1) % k][j] and (s[i - 1] == p[j - 2] or p[j - 2] == '.'))
+                            result[(i - 1) % k][j] and (s[i - 1] == p[j - 2] or p[j - 2] == '.'))
 
         return result[len(s) % k][len(p)]
 
@@ -217,7 +188,7 @@ class Solution4:
 
 
 # Recursion
-class Solution(object):
+class Solution1(object):
     def isMatch(self, text, pattern):
         if not pattern:
             return not text

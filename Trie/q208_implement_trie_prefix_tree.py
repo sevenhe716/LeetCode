@@ -3,6 +3,7 @@
 
 # Ideas:
 #
+from collections import defaultdict
 
 
 class Trie:
@@ -11,7 +12,8 @@ class Trie:
         """
         Initialize your data structure here.
         """
-        self.trie = {}
+        trie_tree = lambda: defaultdict(trie_tree)
+        self.trie = trie_tree()
 
     def insert(self, word: str) -> None:
         """
@@ -19,7 +21,7 @@ class Trie:
         """
         cur = self.trie
         for c in word:
-            cur = cur.setdefault(c, {})
+            cur = cur[c]
         cur['#'] = True
 
     def search(self, word: str) -> bool:
@@ -43,7 +45,6 @@ class Trie:
                 return False
             cur = cur[c]
         return True
-
 
 # Your Trie object will be instantiated and called as such:
 # obj = Trie()

@@ -1,10 +1,10 @@
 import unittest
 
-from Temp.q866_smallest_subtree_with_all_the_deepest_nodes import Solution
+from Temp.q865_smallest_subtree_with_all_the_deepest_nodes import Solution
 
 
 class TestSmallestSubtreeWithAllTheDeepestNodes(unittest.TestCase):
-    """Test q866_smallest_subtree_with_all_the_deepest_nodes.py"""
+    """Test q865_smallest_subtree_with_all_the_deepest_nodes.py"""
 
     def test_smallest_subtree_with_all_the_deepest_nodes(self):
         s = Solution()
