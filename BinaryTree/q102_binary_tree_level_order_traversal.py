@@ -13,6 +13,7 @@
 #         self.right = None
 from collections import deque
 
+
 class Solution:
     def levelOrder(self, root: 'TreeNode') -> 'List[List[int]]':
         if not root:
@@ -32,6 +33,7 @@ class Solution:
                     queue.append(cur.right)
             level += 1
         return ans
+
 
 class Solution1:
     # 将level也打包加入队列，可以一次遍历完成

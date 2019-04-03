@@ -123,16 +123,6 @@ class SolutionF:
             str_list = self.letterCombinations(digits[1:])  # 基于原函数的递归
             return [a + b for a in self.dt[digits[0]] for b in str_list]    # 简洁
 
-# Given a digit string, return all possible letter combinations that the number could represent.
-#
-# A mapping of digit to letters (just like on the telephone buttons) is given below.
-#
-# lookup = ["", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"]
-#
-# Input:Digit string "23"
-# Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
-# Note:
-# Although the above answer is in lexicographical order, your answer could be in any order you want.
 
 
 

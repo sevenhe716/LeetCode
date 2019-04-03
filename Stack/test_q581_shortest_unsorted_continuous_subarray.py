@@ -1,6 +1,6 @@
 import unittest
 
-from TwoPointers.q581_shortest_unsorted_continuous_subarray import Solution
+from Stack.q581_shortest_unsorted_continuous_subarray import Solution
 
 
 class TestShortestUnsortedContinuousSubarray(unittest.TestCase):

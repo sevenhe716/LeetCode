@@ -98,7 +98,7 @@ class Solution:
                     dp_dict[i] = dp[i]
 
                 # 判断是否能与其它节点合并，需要考虑左合并
-                j = i + dp[i]   # 右合并，是否需要考虑左合并？暂时先不考虑，在最后统一进行一次合并
+                j = i + dp[i]  # 右合并，是否需要考虑左合并？暂时先不考虑，在最后统一进行一次合并
                 while j < n and dp[j] > 0:
                     dp[i] += dp[j]
                     dp_dict.pop(j)
@@ -121,9 +121,21 @@ class Solution:
 
         return max(dp)
 
+
 # https://leetcode.com/problems/longest-valid-parentheses/solution/
 # 解题思路：
 # 1. dp: longest valid substring ending at iith index, '()'dp[i]=dp[i-2]+2 '))' dp[i]=dp[i-1]+dp[i-dp[i-1]-2]+2
 # 2. stack: 索引压栈，距离则为长度，起始压-1
 # 3. 和我的思路很像，但是我卡在最后未完成的字符串不知道如何处理，解题思路是从右到左再遍历一次，这样就能解决最后一段字符串的问题
 
+class Solution1:
+    def longestValidParentheses(self, s):
+        dp, stack = [0] * (len(s) + 1), []
+        for i in range(len(s)):
+            if s[i] == '(':
+                stack.append(i)
+            else:
+                if stack:
+                    p = stack.pop()
+                    dp[i + 1] = dp[p] + i - p + 1
+        return max(dp)

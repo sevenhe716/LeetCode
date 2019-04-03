@@ -97,7 +97,7 @@ class Solution:
             print(left, right, index_not_2, index_not_0)
 
 
-class Solution:
+class Solution1:
     # 1-pass 三指针法，容易理解
     def sortColors(self, nums):
         red, white, blue = 0, 0, len(nums) - 1

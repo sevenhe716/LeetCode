@@ -135,13 +135,12 @@ def medianSortedArrays(a, b):
 
 # [23] https://leetcode.com/problems/merge-k-sorted-lists/
 # Merge k sorted linked lists and return it as one sorted list
-class ListNode:
-    def __init__(self, x):
-        self.val = x
-        self.next = None
-
-
 def mergeKLists(lists):
+    class ListNode:
+        def __init__(self, x):
+            self.val = x
+            self.next = None
+
     def merge2Lists(l1, l2):
         head = point = ListNode(0)
         while l1 and l2:

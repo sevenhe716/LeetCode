@@ -116,7 +116,7 @@ class Solution2(object):
             for d in range(c+1, len(nums)):
                 if target - nums[c] - nums[d] in lookup:
                     for [a, b] in lookup[target - nums[c] - nums[d]]:
-                        if b < c:           # 限定a<b<c<d，没有等于吗？？？
+                        if b < c:           # 限定a<b<c<d，没有等于吗？
                             quad = [nums[a], nums[b], nums[c], nums[d]]
                             quad_hash = " ".join(str(quad))     # 用str来代替list比较，作为hash值
                             if quad_hash not in ans:
@@ -198,15 +198,3 @@ class SolutionF:
                     else:
                         right -= 1
         return result
-
-# Note:
-# Elements in a quadruplet (a,b,c,d) must be in non-descending order.
-# (ie, a <= b <= c <= d)
-# The solution set must not contain duplicate quadruplets.
-# For example, given array S = {1 0 -1 0 -2 2}, and target = 0.
-#
-#   A solution set is:
-#    (-1,  0, 0, 1)
-#    (-2, -1, 1, 2)
-#    (-2,  0, 0, 2)
-#

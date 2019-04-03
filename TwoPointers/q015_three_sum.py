@@ -310,7 +310,6 @@ class SolutionF:
 
         return rsts
 
-    # 并未提前终止遍历，为什么最快？
     def threeSum(self, nums):
         freq = {}
         for elem in nums:
@@ -319,6 +318,7 @@ class SolutionF:
             res = [[0, 0, 0]]
         else:
             res = []
+        # 使用库函数更快
         neg = sorted((filter(lambda x: x < 0, freq)))
         nneg = sorted((filter(lambda x: x >= 0, freq)))
         for elem1 in neg:
@@ -332,46 +332,3 @@ class SolutionF:
                     elif src > elem2:
                         res.append([elem1, elem2, src])
         return res
-
-
-class SolutionFP:
-    def threeSum(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: List[List[int]]
-        """
-        diction = {}
-        for num in nums:            # 直接使用collections.Counter
-            if num in diction:
-                diction[num] += 1
-            else:
-                diction[num] = 1
-
-        dictkey = diction.keys()
-        pos, neg = [], []
-        for p in dictkey:
-            if p >= 0:
-                pos.append(p)
-            else:
-                neg.append(p)
-
-        sorted(pos)                 # 等于是什么事情都没做
-        sorted(neg)
-
-        rsts = []
-        rst = []                    # 无需提前声明，实际被覆盖
-        if 0 in dictkey and diction[0] > 2:
-            rsts.append([0, 0, 0])
-        pos.reverse()               # 依然等于什么事都没做，依然是乱序
-        for p in pos:
-            for n in neg:
-                inverse = -(p + n)
-                if inverse in dictkey:
-                    if (inverse == p or inverse == n) and diction[inverse] > 1:
-                        rst = [inverse, p, n]
-                        rsts.append(sorted(rst))        # 既然知道大小关系了，完全没有必要再排序
-                    if inverse > p or inverse < n:
-                        rst = [inverse, p, n]
-                        rsts.append(sorted(rst))
-
-        return rsts

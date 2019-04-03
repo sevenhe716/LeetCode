@@ -21,7 +21,7 @@ class Solution:
         if max_sum <= target:
             return max_sum
 
-        if min_sum >= target:       # 处理特殊情况，在某些小的数组中，可以更快的得出结果
+        if min_sum >= target:  # 处理特殊情况，在某些小的数组中，可以更快的得出结果
             return min_sum
 
         closest = 2147483647
@@ -149,7 +149,7 @@ class SolutionF(object):
                     return target
                 if nums[j] + nums[k] > tmp:
                     if nums[j] + nums[j + 1] >= tmp:
-                        if nums[j] + nums[j + 1] - tmp < abs(ans - target):     # 提前终止循环，优化的关键
+                        if nums[j] + nums[j + 1] - tmp < abs(ans - target):  # 提前终止循环，优化的关键
                             ans = nums[i] + nums[j] + nums[j + 1]
                         break
                     tmpans = nums[i] + nums[j] + nums[k]
@@ -158,7 +158,7 @@ class SolutionF(object):
                     k -= 1
                 else:
                     if nums[k] + nums[k - 1] <= tmp:
-                        if tmp - nums[k] - nums[k - 1] < abs(ans - target):     # 提前终止循环，优化的关键
+                        if tmp - nums[k] - nums[k - 1] < abs(ans - target):  # 提前终止循环，优化的关键
                             ans = nums[i] + nums[k - 1] + nums[k]
                         break
                     tmpans = nums[i] + nums[j] + nums[k]
@@ -169,13 +169,3 @@ class SolutionF(object):
             if ans == target:
                 return target
         return ans
-
-# Given an array S of n integers,
-# find three integers in S such that the sum is closest to a given number,
-# target.
-# Return the sum of the three integers.
-# You may assume that each input would have exactly one solution.
-#
-# For example, given array S = {-1 2 1 -4}, and target = 1.
-#
-# The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).

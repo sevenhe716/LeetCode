@@ -16,7 +16,7 @@ def coinChange(coins, amount):
 
 # [300] https://leetcode.com/problems/longest-increasing-subsequence/
 # Given an unsorted array of integers, find the length of longest increasing subsequence.
-# dp
+# dp O(n^2)
 def lengthOfLIS1(nums: 'List[int]') -> int:
     if not nums: return 0
     n = len(nums)
@@ -31,7 +31,7 @@ def lengthOfLIS1(nums: 'List[int]') -> int:
 
 
 # [300] https://leetcode.com/problems/longest-increasing-subsequence/
-# dp with binary search
+# dp with binary search O(nlog(n))
 def lengthOfLIS2(nums: 'List[int]') -> int:
     dp = [0] * len(nums)
 
@@ -176,3 +176,21 @@ def maxProfit2(k: int, prices: 'List[int]') -> int:
             local_max[j] = max(local_max[j], global_max[j - 1]) + diff
             global_max[j] = max(local_max[j], global_max[j])
     return global_max[k]
+
+
+# [32] https://leetcode.com/problems/longest-valid-parentheses/
+# Given a string containing just the characters '(' and ')',
+# find the length of the longest valid (well-formed) parentheses substring.
+def longestValidParentheses(s):
+    # let dp[i] is the number of longest valid Parentheses ended with the i - 1 position of s,
+    # then we have the following relationship:
+    # dp[i + 1] = dp[p] + i - p + 1 where p is the position of '(' which can matches current ')' in the stack.
+    dp, stack = [0] * (len(s) + 1), []
+    for i in range(len(s)):
+        if s[i] == '(':
+            stack.append(i)
+        else:
+            if stack:
+                p = stack.pop()
+                dp[i + 1] = dp[p] + i - p + 1
+    return max(dp)
