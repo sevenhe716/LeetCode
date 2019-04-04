@@ -1,12 +1,9 @@
-# Time:  O(n)
-# Space: O(1)
-
-# 解题思路：
-# dict存储保证存取O(1)，双向链表保证先进先出，当访问节点时需要将其从双向链表中移动到尾部
-from collections import OrderedDict
 
 
-# 双向链表
+# [146] https://leetcode.com/problems/lru-cache/
+# Design and implement a data structure for Least Recently Used (LRU) cache.
+#
+# dict + double linked list
 class DLinkedNode:
     def __init__(self, key, val):
         self.pre = None
@@ -73,43 +70,6 @@ class LRUCache:
             self.dict[key] = node
             self.queue.push(node)
 
-
-# Your LRUCache object will be instantiated and called as such:
-# obj = LRUCache(capacity)
-# param_1 = obj.get(key)
-# obj.put(key,value)
-
-
-class LRUCache1(OrderedDict):
-
-    def __init__(self, capacity):
-        """
-        :type capacity: int
-        """
-        self.capacity = capacity
-
-    def get(self, key):
-        """
-        :type key: int
-        :rtype: int
-        """
-        if key not in self:
-            return - 1
-
-        self.move_to_end(key)
-        return self[key]
-
-    def put(self, key, value):
-        """
-        :type key: int
-        :type value: int
-        :rtype: void
-        """
-        if key in self:
-            self.move_to_end(key)
-        self[key] = value
-        if len(self) > self.capacity:
-            self.popitem(last=False)
 
 # Your LRUCache object will be instantiated and called as such:
 # obj = LRUCache(capacity)
