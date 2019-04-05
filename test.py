@@ -149,6 +149,34 @@ def test_islice():
     board = [list(islice(iter, n)) for _ in range(n)]
     print(board)
 
+def postorder_traversal_iteratively(root: 'TreeNode'):
+    if not root:
+        return []
+    stack = [root]
+    # used to record whether left or right child has been visited
+    last = None
+
+    while stack:
+        root = stack[-1]
+        # if current node has no left right child, or left child or right child has been visited, then process and pop it
+        if not root.left and not root.right or last and (root.left == last or root.right == last):
+            '''
+            add current node logic here
+            '''
+            print(root.val)
+
+            stack.pop()
+            last = root
+        # if not, push right and left child in stack
+        else:
+            # push right first because of FILO
+            if root.right:
+                stack.append(root.right)
+            if root.left:
+                stack.append(root.left)
+
+from common import TreeNode
+
 def test():
     # test_sum()
     # print(test_ret())
@@ -183,12 +211,14 @@ def test():
     # test_inf()
     # print([1] + [0]*-2)
     # test_and()
-    test_mutilple_assign()
-    counter = Counter('abc')
-    # counter['d'] -= 1
-    print(counter['a'])
-    print(counter['d'])
-    print('d' in counter)
+    # test_mutilple_assign()
+    # counter = Counter('abc')
+    # # counter['d'] -= 1
+    # print(counter['a'])
+    # print(counter['d'])
+    # print('d' in counter)
+
+    postorder_traversal_iteratively(TreeNode.generate([1, 2, 3, 4, 5, 6, 7]))
 
 if __name__ == '__main__':
     test()

@@ -3,6 +3,7 @@
 
 # 解题思路：
 # counter计数器加索引排序
+import collections
 
 
 class Solution:
@@ -12,7 +13,6 @@ class Solution:
         :type W: int
         :rtype: bool
         """
-        import collections
 
         # fast verify
         if len(hand) % W:
@@ -72,7 +72,7 @@ class Solution1:
         for i in range(l // W):
             # first we find the starting number of current group
             start = heappop(hand)
-            while cnt[head] == 0:  # if the number is no loner available
+            while cnt[hand] == 0:  # if the number is no loner available
                 start = heappop(hand)  # we pop again
 
             # Now we find the all other numbers in the group
@@ -84,8 +84,8 @@ class Solution1:
         return True
 
 
-# 效率低，但是有点意思
 class SolutionL:
+    # 效率低，但是有点意思
     def isNStraightHand(self, hand, W):
         hand.sort()
         while hand:
@@ -96,3 +96,26 @@ class SolutionL:
             except:
                 return False
         return True
+
+    # O(MlogM + MW)
+    def isNStraightHand2(self, hand, W):
+        c = collections.Counter(hand)
+        for i in sorted(c):
+            if c[i] > 0:
+                for j in range(W)[::-1]:
+                    c[i + j] -= c[i]
+                    if c[i + j] < 0:
+                        return False
+        return True
+
+    # deque O(MlogM)
+    def isNStraightHand3(self, hand, W):
+        c = collections.Counter(hand)
+        start = collections.deque()
+        last_checked, opened = -1, 0
+        for i in sorted(c):
+            if opened > c[i] or opened > 0 and i > last_checked + 1: return False
+            start.append(c[i] - opened)
+            last_checked, opened = i, c[i]
+            if len(start) == W: opened -= start.popleft()
+        return opened == 0

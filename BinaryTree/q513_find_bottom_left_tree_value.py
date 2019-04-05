@@ -56,7 +56,7 @@ class SolutionF:
                     queue.append(node.left)
             return node.val
 
-        return self.bfs()
+        return bfs()
 
     # DFS non-recursion
     def findBottomLeftValue2(self, root):

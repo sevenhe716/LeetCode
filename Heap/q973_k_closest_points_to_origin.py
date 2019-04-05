@@ -13,15 +13,17 @@ class Solution:
     def kClosest1(self, points: 'List[List[int]]', K: int) -> 'List[List[int]]':
         return heapq.nsmallest(K, points, key=lambda x: x[0] * x[0] + x[1] * x[1])
 
-    # 更省空间的做法
+    # without using nsmallest
     def kClosest(self, points: 'List[List[int]]', K: int) -> 'List[List[int]]':
         heap = [(-p[0] * p[0] - p[1] * p[1], p) for p in points[:K]]
         heapq.heapify(heap)
 
         for p in points[K:]:
-            score = -p[0] * p[0] - p[1] * p[1]
-            if score > heap[0][0]:
-                heapq.heapreplace(heap, (score, p))
+            # score = -p[0] * p[0] - p[1] * p[1]
+            # if score > heap[0][0]:
+            #     heapq.heapreplace(heap, (score, p))
+            # 直接使用heappushpop
+            heapq.heappushpop(heap, (-p[0] * p[0] - p[1] * p[1], p))
         return [h[1] for h in heap]
 
 

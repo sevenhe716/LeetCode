@@ -10,7 +10,7 @@
 #     def __init__(self, x):
 #         self.val = x
 #         self.next = None
-
+import heapq
 from common import ListNode
 
 
@@ -57,6 +57,7 @@ class Solution1(object):
         :type lists: List[ListNode]
         :rtype: ListNode
         """
+
         def mergeTwoLists(l1, l2):
             curr = dummy = ListNode(0)
             while l1 and l2:
@@ -163,3 +164,40 @@ class SolutionF2:
 
         else:
             return nodelist[0]
+
+    def mergeKLists2(self, lists):
+        def gen(node):
+            while node:
+                yield node.val, node
+                node = node.next
+
+        dummy = last = ListNode(None)
+        for _, last.next in heapq.merge(*map(gen, lists), key=lambda x: x[0]):
+            last = last.next
+        return dummy.next
+
+    def mergeKLists3(self, lists):
+        # should use wrapper class to override __lt__
+        class Wrapper:
+            def __init__(self, node):
+                self.node = node
+
+            def __lt__(self, other):
+                return self.node.val < other.node.val
+
+        head = point = ListNode(0)
+        q = []
+        for l in lists:
+            if l:
+                heapq.heappush(q, Wrapper(l))
+        while q:
+            node = q[0].node
+            point.next = node
+            point = point.next
+            node = node.next
+            if node:
+                # fast version than pop & push
+                heapq.heapreplace(q, Wrapper(node))
+            else:
+                heapq.heappop(q)
+        return head.next
