@@ -1,0 +1,1183 @@
+C:\Users\SevenHe\AppData\Local\Programs\Python\Python36\python.exe C:/Users/SevenHe/PycharmProjects/Code_Templates/spider.py
+Login succeeded
+finish: Two Sum
+finish: Add Two Numbers
+[627]	<Longest Substring Without Repeating Characters>	11-line simple Java solution, O(n) with explanation
+https://leetcode.com/problems/longest-substring-without-repeating-characters/discuss/1729/11-line-simple-Java-solution-O(n)-with-explanation
+
+finish: Longest Substring Without Repeating Characters
+[1500]	<Median of Two Sorted Arrays>	Share my O(log(min(m,n)) solution with explanation
+https://leetcode.com/problems/median-of-two-sorted-arrays/discuss/2481/Share-my-O(log(min(mn))-solution-with-explanation
+
+[656]	<Median of Two Sorted Arrays>	Very concise O(log(min(M,N))) iterative solution with detailed explanation
+https://leetcode.com/problems/median-of-two-sorted-arrays/discuss/2471/Very-concise-O(log(min(MN)))-iterative-solution-with-detailed-explanation
+
+finish: Median of Two Sorted Arrays
+finish: Longest Palindromic Substring
+finish: ZigZag Conversion
+[607]	<Reverse Integer>	My accepted 15 lines of code for Java
+https://leetcode.com/problems/reverse-integer/discuss/4060/My-accepted-15-lines-of-code-for-Java
+
+finish: Reverse Integer
+finish: String to Integer (atoi)
+[577]	<Palindrome Number>	9-line accepted Java code, without the need of handling overflow
+https://leetcode.com/problems/palindrome-number/discuss/5127/9-line-accepted-Java-code-without-the-need-of-handling-overflow
+
+finish: Palindrome Number
+finish: Regular Expression Matching
+[732]	<Container With Most Water>	Yet another way to see what happens in the O(n) algorithm
+https://leetcode.com/problems/container-with-most-water/discuss/6099/Yet-another-way-to-see-what-happens-in-the-O(n)-algorithm
+
+finish: Container With Most Water
+[1100]	<Integer to Roman>	Simple Solution
+https://leetcode.com/problems/integer-to-roman/discuss/6274/Simple-Solution
+
+finish: Integer to Roman
+finish: Roman to Integer
+finish: Longest Common Prefix
+[765]	<3Sum>	Concise O(N^2) Java solution
+https://leetcode.com/problems/3sum/discuss/7380/Concise-O(N2)-Java-solution
+
+finish: 3Sum
+finish: 3Sum Closest
+[628]	<Letter Combinations of a Phone Number>	My java solution with FIFO queue
+https://leetcode.com/problems/letter-combinations-of-a-phone-number/discuss/8064/My-java-solution-with-FIFO-queue
+
+finish: Letter Combinations of a Phone Number
+finish: 4Sum
+finish: Remove Nth Node From End of List
+finish: Valid Parentheses
+finish: Merge Two Sorted Lists
+finish: Generate Parentheses
+finish: Merge k Sorted Lists
+finish: Swap Nodes in Pairs
+finish: Reverse Nodes in k-Group
+finish: Remove Duplicates from Sorted Array
+finish: Remove Element
+finish: Implement strStr()
+[533]	<Divide Two Integers>	C++ bit manipulations
+https://leetcode.com/problems/divide-two-integers/discuss/13407/C%2B%2B-bit-manipulations
+
+finish: Divide Two Integers
+finish: Substring with Concatenation of All Words
+finish: Next Permutation
+finish: Longest Valid Parentheses
+finish: Search in Rotated Sorted Array
+finish: Find First and Last Position of Element in Sorted Array
+finish: Search Insert Position
+[505]	<Valid Sudoku>	Short+Simple Java using Strings
+https://leetcode.com/problems/valid-sudoku/discuss/15472/Short%2BSimple-Java-using-Strings
+
+finish: Valid Sudoku
+finish: Sudoku Solver
+[806]	<Count and Say>	Please change the misleading description
+https://leetcode.com/problems/count-and-say/discuss/16015/Please-change-the-misleading-description
+
+finish: Count and Say
+[937]	<Combination Sum>	A general approach to backtracking questions in Java (Subsets, Permutations, Combination Sum, Palindrome Partitioning)
+https://leetcode.com/problems/combination-sum/discuss/16502/A-general-approach-to-backtracking-questions-in-Java-(Subsets-Permutations-Combination-Sum-Palindrome-Partitioning)
+
+finish: Combination Sum
+finish: Combination Sum II
+[626]	<First Missing Positive>	My short c++ solution, O(1) space, and O(n) time
+https://leetcode.com/problems/first-missing-positive/discuss/17071/My-short-c%2B%2B-solution-O(1)-space-and-O(n)-time
+
+finish: First Missing Positive
+[549]	<Trapping Rain Water>	Sharing my simple c++ code: O(n) time, O(1) space
+https://leetcode.com/problems/trapping-rain-water/discuss/17357/Sharing-my-simple-c%2B%2B-code%3A-O(n)-time-O(1)-space
+
+finish: Trapping Rain Water
+[1200]	<Multiply Strings>	Easiest JAVA Solution with Graph Explanation
+https://leetcode.com/problems/multiply-strings/discuss/17605/Easiest-JAVA-Solution-with-Graph-Explanation
+
+finish: Multiply Strings
+finish: Wildcard Matching
+finish: Jump Game II
+[1300]	<Permutations>	A general approach to backtracking questions in Java (Subsets, Permutations, Combination Sum, Palindrome Partioning)
+https://leetcode.com/problems/permutations/discuss/18239/A-general-approach-to-backtracking-questions-in-Java-(Subsets-Permutations-Combination-Sum-Palindrome-Partioning)
+
+finish: Permutations
+finish: Permutations II
+finish: Rotate Image
+finish: Group Anagrams
+finish: Pow(x, n)
+finish: N-Queens
+finish: N-Queens II
+[826]	<Maximum Subarray>	DP solution & some thoughts
+https://leetcode.com/problems/maximum-subarray/discuss/20193/DP-solution-and-some-thoughts
+
+[523]	<Maximum Subarray>	Accepted O(n) solution in java
+https://leetcode.com/problems/maximum-subarray/discuss/20211/Accepted-O(n)-solution-in-java
+
+finish: Maximum Subarray
+[551]	<Spiral Matrix>	Super Simple and Easy to Understand Solution
+https://leetcode.com/problems/spiral-matrix/discuss/20599/Super-Simple-and-Easy-to-Understand-Solution
+
+finish: Spiral Matrix
+finish: Jump Game
+finish: Merge Intervals
+finish: Insert Interval
+finish: Length of Last Word
+finish: Spiral Matrix II
+[533]	<Permutation Sequence>	"Explain-like-I'm-five" Java Solution in O(n)
+https://leetcode.com/problems/permutation-sequence/discuss/22507/%22Explain-like-I'm-five%22-Java-Solution-in-O(n)
+
+finish: Permutation Sequence
+finish: Rotate List
+finish: Unique Paths
+finish: Unique Paths II
+finish: Minimum Path Sum
+[511]	<Valid Number>	The worst problem i have ever met in this oj
+https://leetcode.com/problems/valid-number/discuss/23741/The-worst-problem-i-have-ever-met-in-this-oj
+
+finish: Valid Number
+finish: Plus One
+finish: Add Binary
+finish: Text Justification
+finish: Sqrt(x)
+finish: Climbing Stairs
+finish: Simplify Path
+finish: Edit Distance
+[761]	<Set Matrix Zeroes>	Any shorter O(1) space solution?
+https://leetcode.com/problems/set-matrix-zeroes/discuss/26014/Any-shorter-O(1)-space-solution
+
+finish: Set Matrix Zeroes
+finish: Search a 2D Matrix
+[568]	<Sort Colors>	Share my at most two-pass constant space 10-line solution
+https://leetcode.com/problems/sort-colors/discuss/26472/Share-my-at-most-two-pass-constant-space-10-line-solution
+
+finish: Sort Colors
+[2100]	<Minimum Window Substring>	Here is a 10-line template that can solve most 'substring' problems
+https://leetcode.com/problems/minimum-window-substring/discuss/26808/Here-is-a-10-line-template-that-can-solve-most-'substring'-problems
+
+finish: Minimum Window Substring
+finish: Combinations
+[901]	<Subsets>	A general approach to backtracking questions in Java (Subsets, Permutations, Combination Sum, Palindrome Partitioning)
+https://leetcode.com/problems/subsets/discuss/27281/A-general-approach-to-backtracking-questions-in-Java-(Subsets-Permutations-Combination-Sum-Palindrome-Partitioning)
+
+finish: Subsets
+finish: Word Search
+finish: Remove Duplicates from Sorted Array II
+finish: Search in Rotated Sorted Array II
+finish: Remove Duplicates from Sorted List II
+finish: Remove Duplicates from Sorted List
+finish: Largest Rectangle in Histogram
+[773]	<Maximal Rectangle>	Share my DP solution
+https://leetcode.com/problems/maximal-rectangle/discuss/29054/Share-my-DP-solution
+
+finish: Maximal Rectangle
+finish: Partition List
+finish: Scramble String
+finish: Merge Sorted Array
+finish: Gray Code
+finish: Subsets II
+finish: Decode Ways
+finish: Reverse Linked List II
+finish: Restore IP Addresses
+finish: Binary Tree Inorder Traversal
+finish: Unique Binary Search Trees II
+[1600]	<Unique Binary Search Trees>	DP Solution in 6 lines with explanation. F(i, n) = G(i-1) * G(n-i)
+https://leetcode.com/problems/unique-binary-search-trees/discuss/31666/DP-Solution-in-6-lines-with-explanation.-F(i-n)-G(i-1)-*-G(n-i)
+
+finish: Unique Binary Search Trees
+finish: Interleaving String
+[903]	<Validate Binary Search Tree>	Learn one iterative inorder traversal, apply it to multiple tree questions (Java Solution)
+https://leetcode.com/problems/validate-binary-search-tree/discuss/32112/Learn-one-iterative-inorder-traversal-apply-it-to-multiple-tree-questions-(Java-Solution)
+
+finish: Validate Binary Search Tree
+[632]	<Recover Binary Search Tree>	No Fancy Algorithm, just Simple and Powerful In-Order Traversal
+https://leetcode.com/problems/recover-binary-search-tree/discuss/32535/No-Fancy-Algorithm-just-Simple-and-Powerful-In-Order-Traversal
+
+finish: Recover Binary Search Tree
+finish: Same Tree
+finish: Symmetric Tree
+finish: Binary Tree Level Order Traversal
+finish: Binary Tree Zigzag Level Order Traversal
+finish: Maximum Depth of Binary Tree
+finish: Construct Binary Tree from Preorder and Inorder Traversal
+finish: Construct Binary Tree from Inorder and Postorder Traversal
+finish: Binary Tree Level Order Traversal II
+finish: Convert Sorted Array to Binary Search Tree
+finish: Convert Sorted List to Binary Search Tree
+finish: Balanced Binary Tree
+finish: Minimum Depth of Binary Tree
+finish: Path Sum
+finish: Path Sum II
+[801]	<Flatten Binary Tree to Linked List>	My short post order traversal Java solution for share
+https://leetcode.com/problems/flatten-binary-tree-to-linked-list/discuss/36977/My-short-post-order-traversal-Java-solution-for-share
+
+finish: Flatten Binary Tree to Linked List
+finish: Distinct Subsequences
+finish: Populating Next Right Pointers in Each Node
+finish: Populating Next Right Pointers in Each Node II
+finish: Pascal's Triangle
+finish: Pascal's Triangle II
+[527]	<Triangle>	DP Solution for Triangle
+https://leetcode.com/problems/triangle/discuss/38730/DP-Solution-for-Triangle
+
+finish: Triangle
+[693]	<Best Time to Buy and Sell Stock>	Kadane's Algorithm - Since no one has mentioned about this so far :) (In case if interviewer twists the input)
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock/discuss/39038/Kadane's-Algorithm-Since-no-one-has-mentioned-about-this-so-far-%3A)-(In-case-if-interviewer-twists-the-input)
+
+finish: Best Time to Buy and Sell Stock
+finish: Best Time to Buy and Sell Stock II
+finish: Best Time to Buy and Sell Stock III
+finish: Binary Tree Maximum Path Sum
+finish: Valid Palindrome
+finish: Word Ladder II
+finish: Word Ladder
+[627]	<Longest Consecutive Sequence>	My really simple Java O(n) solution - Accepted
+https://leetcode.com/problems/longest-consecutive-sequence/discuss/41055/My-really-simple-Java-O(n)-solution-Accepted
+
+finish: Longest Consecutive Sequence
+finish: Sum Root to Leaf Numbers
+finish: Surrounded Regions
+finish: Palindrome Partitioning
+finish: Palindrome Partitioning II
+finish: Clone Graph
+finish: Gas Station
+finish: Candy
+[743]	<Single Number>	My O(n) solution using XOR
+https://leetcode.com/problems/single-number/discuss/42997/My-O(n)-solution-using-XOR
+
+finish: Single Number
+[727]	<Single Number II>	Challenge me , thx
+https://leetcode.com/problems/single-number-ii/discuss/43294/Challenge-me-thx
+
+[725]	<Single Number II>	Detailed explanation and generalization of the bitwise operation method for single numbers
+https://leetcode.com/problems/single-number-ii/discuss/43295/Detailed-explanation-and-generalization-of-the-bitwise-operation-method-for-single-numbers
+
+finish: Single Number II
+[577]	<Copy List with Random Pointer>	A solution with constant space complexity O(1) and linear time complexity O(N)
+https://leetcode.com/problems/copy-list-with-random-pointer/discuss/43491/A-solution-with-constant-space-complexity-O(1)-and-linear-time-complexity-O(N)
+
+finish: Copy List with Random Pointer
+finish: Word Break
+finish: Word Break II
+finish: Linked List Cycle
+finish: Linked List Cycle II
+finish: Reorder List
+finish: Binary Tree Preorder Traversal
+[605]	<Binary Tree Postorder Traversal>	Preorder, Inorder, and Postorder Iteratively Summarization
+https://leetcode.com/problems/binary-tree-postorder-traversal/discuss/45551/Preorder-Inorder-and-Postorder-Iteratively-Summarization
+
+finish: Binary Tree Postorder Traversal
+finish: LRU Cache
+finish: Insertion Sort List
+finish: Sort List
+finish: Max Points on a Line
+finish: Evaluate Reverse Polish Notation
+finish: Reverse Words in a String
+[798]	<Maximum Product Subarray>	Possibly simplest solution with O(n) time complexity
+https://leetcode.com/problems/maximum-product-subarray/discuss/48230/Possibly-simplest-solution-with-O(n)-time-complexity
+
+finish: Maximum Product Subarray
+finish: Find Minimum in Rotated Sorted Array
+finish: Find Minimum in Rotated Sorted Array II
+[633]	<Min Stack>	Java accepted solution using one stack
+https://leetcode.com/problems/min-stack/discuss/49014/Java-accepted-solution-using-one-stack
+
+[535]	<Min Stack>	Share my Java solution with ONLY ONE stack
+https://leetcode.com/problems/min-stack/discuss/49031/Share-my-Java-solution-with-ONLY-ONE-stack
+
+finish: Min Stack
+finish: Binary Tree Upside Down
+finish: Read N Characters Given Read4
+finish: Read N Characters Given Read4 II - Call multiple times
+finish: Longest Substring with At Most Two Distinct Characters
+[1300]	<Intersection of Two Linked Lists>	Java solution without knowing the difference in len!
+https://leetcode.com/problems/intersection-of-two-linked-lists/discuss/49785/Java-solution-without-knowing-the-difference-in-len!
+
+finish: Intersection of Two Linked Lists
+finish: One Edit Distance
+finish: Find Peak Element
+finish: Missing Ranges
+finish: Maximum Gap
+finish: Compare Version Numbers
+finish: Fraction to Recurring Decimal
+finish: Two Sum II - Input array is sorted
+finish: Excel Sheet Column Title
+[801]	<Majority Element>	O(n) time O(1) space fastest solution
+https://leetcode.com/problems/majority-element/discuss/51613/O(n)-time-O(1)-space-fastest-solution
+
+finish: Majority Element
+finish: Two Sum III - Data structure design
+finish: Excel Sheet Column Number
+finish: Factorial Trailing Zeroes
+finish: Binary Search Tree Iterator
+finish: Dungeon Game
+finish: Largest Number
+finish: Reverse Words in a String II
+finish: Repeated DNA Sequences
+finish: Best Time to Buy and Sell Stock IV
+[510]	<Rotate Array>	Easy to read Java solution
+https://leetcode.com/problems/rotate-array/discuss/54250/Easy-to-read-Java-solution
+
+finish: Rotate Array
+finish: Reverse Bits
+finish: Number of 1 Bits
+[956]	<House Robber>	From good to great. How to approach most of DP problems.
+https://leetcode.com/problems/house-robber/discuss/156523/From-good-to-great.-How-to-approach-most-of-DP-problems.
+
+finish: House Robber
+finish: Binary Tree Right Side View
+finish: Number of Islands
+finish: Bitwise AND of Numbers Range
+[805]	<Happy Number>	My solution in C( O(1) space and no magic math property involved )
+https://leetcode.com/problems/happy-number/discuss/56917/My-solution-in-C(-O(1)-space-and-no-magic-math-property-involved-)
+
+finish: Happy Number
+finish: Remove Linked List Elements
+finish: Count Primes
+finish: Isomorphic Strings
+finish: Reverse Linked List
+finish: Course Schedule
+finish: Implement Trie (Prefix Tree)
+finish: Minimum Size Subarray Sum
+finish: Course Schedule II
+finish: Add and Search Word - Data structure design
+[705]	<Word Search II>	Java 15ms Easiest Solution (100.00%)
+https://leetcode.com/problems/word-search-ii/discuss/59780/Java-15ms-Easiest-Solution-(100.00)
+
+finish: Word Search II
+finish: House Robber II
+finish: Shortest Palindrome
+[578]	<Kth Largest Element in an Array>	Solution explained
+https://leetcode.com/problems/kth-largest-element-in-an-array/discuss/60294/Solution-explained
+
+finish: Kth Largest Element in an Array
+finish: Combination Sum III
+finish: Contains Duplicate
+[686]	<The Skyline Problem>	(Guaranteed) Really Detailed and Good (Perfect) Explanation of The Skyline Problem
+https://leetcode.com/problems/the-skyline-problem/discuss/61197/(Guaranteed)-Really-Detailed-and-Good-(Perfect)-Explanation-of-The-Skyline-Problem
+
+finish: The Skyline Problem
+finish: Contains Duplicate II
+finish: Contains Duplicate III
+finish: Maximal Square
+finish: Count Complete Tree Nodes
+finish: Rectangle Area
+finish: Basic Calculator
+finish: Implement Stack using Queues
+finish: Invert Binary Tree
+finish: Basic Calculator II
+finish: Summary Ranges
+finish: Majority Element II
+finish: Kth Smallest Element in a BST
+finish: Power of Two
+finish: Implement Queue using Stacks
+finish: Number of Digit One
+finish: Palindrome Linked List
+finish: Lowest Common Ancestor of a Binary Search Tree
+[588]	<Lowest Common Ancestor of a Binary Tree>	4 lines C++/Java/Python/Ruby
+https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/discuss/65225/4-lines-C%2B%2BJavaPythonRuby
+
+finish: Lowest Common Ancestor of a Binary Tree
+finish: Delete Node in a Linked List
+[800]	<Product of Array Except Self>	Simple Java solution in O(n) without extra space
+https://leetcode.com/problems/product-of-array-except-self/discuss/65622/Simple-Java-solution-in-O(n)-without-extra-space
+
+finish: Product of Array Except Self
+finish: Sliding Window Maximum
+[651]	<Search a 2D Matrix II>	My concise O(m+n) Java solution
+https://leetcode.com/problems/search-a-2d-matrix-ii/discuss/66140/My-concise-O(m%2Bn)-Java-solution
+
+finish: Search a 2D Matrix II
+finish: Different Ways to Add Parentheses
+finish: Valid Anagram
+finish: Shortest Word Distance
+finish: Shortest Word Distance II
+finish: Shortest Word Distance III
+finish: Strobogrammatic Number
+finish: Strobogrammatic Number II
+finish: Strobogrammatic Number III
+finish: Group Shifted Strings
+finish: Count Univalue Subtrees
+finish: Flatten 2D Vector
+finish: Meeting Rooms
+finish: Meeting Rooms II
+finish: Factor Combinations
+finish: Verify Preorder Sequence in Binary Search Tree
+finish: Paint House
+finish: Binary Tree Paths
+finish: Add Digits
+finish: 3Sum Smaller
+[691]	<Single Number III>	Accepted C++/Java O(n)-time O(1)-space Easy Solution with Detail Explanations
+https://leetcode.com/problems/single-number-iii/discuss/68900/Accepted-C%2B%2BJava-O(n)-time-O(1)-space-Easy-Solution-with-Detail-Explanations
+
+finish: Single Number III
+finish: Graph Valid Tree
+finish: Ugly Number
+finish: Ugly Number II
+finish: Paint House II
+finish: Palindrome Permutation
+finish: Palindrome Permutation II
+finish: Missing Number
+finish: Alien Dictionary
+finish: Closest Binary Search Tree Value
+finish: Encode and Decode Strings
+finish: Closest Binary Search Tree Value II
+finish: Integer to English Words
+finish: H-Index
+finish: H-Index II
+finish: Paint Fence
+finish: Find the Celebrity
+finish: First Bad Version
+finish: Perfect Squares
+finish: Wiggle Sort
+finish: Zigzag Iterator
+finish: Expression Add Operators
+finish: Move Zeroes
+finish: Peeking Iterator
+finish: Inorder Successor in BST
+finish: Walls and Gates
+[733]	<Find the Duplicate Number>	My easy understood solution with O(n) time and O(1) space without modifying the array. With clear explanation.
+https://leetcode.com/problems/find-the-duplicate-number/discuss/72846/My-easy-understood-solution-with-O(n)-time-and-O(1)-space-without-modifying-the-array.-With-clear-explanation.
+
+finish: Find the Duplicate Number
+finish: Unique Word Abbreviation
+[929]	<Game of Life>	Easiest JAVA solution with explanation
+https://leetcode.com/problems/game-of-life/discuss/73223/Easiest-JAVA-solution-with-explanation
+
+finish: Game of Life
+finish: Word Pattern
+finish: Word Pattern II
+finish: Nim Game
+finish: Flip Game
+finish: Flip Game II
+finish: Find Median from Data Stream
+finish: Best Meeting Point
+finish: Serialize and Deserialize Binary Tree
+finish: Binary Tree Longest Consecutive Sequence
+finish: Bulls and Cows
+finish: Longest Increasing Subsequence
+[653]	<Remove Invalid Parentheses>	Easy, Short, Concise and Fast Java DFS 3 ms solution
+https://leetcode.com/problems/remove-invalid-parentheses/discuss/75027/Easy-Short-Concise-and-Fast-Java-DFS-3-ms-solution
+
+finish: Remove Invalid Parentheses
+finish: Smallest Rectangle Enclosing Black Pixels
+finish: Range Sum Query - Immutable
+finish: Range Sum Query 2D - Immutable
+finish: Number of Islands II
+finish: Additive Number
+finish: Range Sum Query - Mutable
+finish: Range Sum Query 2D - Mutable
+[1100]	<Best Time to Buy and Sell Stock with Cooldown>	Share my thinking process
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/discuss/75927/Share-my-thinking-process
+
+[969]	<Best Time to Buy and Sell Stock with Cooldown>	Share my DP solution (By State Machine Thinking)
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/discuss/75928/Share-my-DP-solution-(By-State-Machine-Thinking)
+
+finish: Best Time to Buy and Sell Stock with Cooldown
+[642]	<Minimum Height Trees>	Share some thoughts
+https://leetcode.com/problems/minimum-height-trees/discuss/76055/Share-some-thoughts
+
+finish: Minimum Height Trees
+finish: Sparse Matrix Multiplication
+[784]	<Burst Balloons>	Share some analysis and explanations
+https://leetcode.com/problems/burst-balloons/discuss/76228/Share-some-analysis-and-explanations
+
+finish: Burst Balloons
+finish: Super Ugly Number
+finish: Binary Tree Vertical Order Traversal
+finish: Count of Smaller Numbers After Self
+finish: Remove Duplicate Letters
+finish: Shortest Distance from All Buildings
+finish: Maximum Product of Word Lengths
+[669]	<Bulb Switcher>	Math solution..
+https://leetcode.com/problems/bulb-switcher/discuss/77104/Math-solution..
+
+finish: Bulb Switcher
+finish: Generalized Abbreviation
+finish: Create Maximum Number
+finish: Coin Change
+finish: Number of Connected Components in an Undirected Graph
+finish: Wiggle Sort II
+finish: Maximum Size Subarray Sum Equals k
+finish: Power of Three
+finish: Count of Range Sum
+finish: Odd Even Linked List
+finish: Longest Increasing Path in a Matrix
+[544]	<Patching Array>	Solution + explanation
+https://leetcode.com/problems/patching-array/discuss/78488/Solution-%2B-explanation
+
+finish: Patching Array
+finish: Verify Preorder Serialization of a Binary Tree
+finish: Reconstruct Itinerary
+finish: Largest BST Subtree
+finish: Increasing Triplet Subsequence
+finish: Self Crossing
+finish: Palindrome Pairs
+[1600]	<House Robber III>	Step by step tackling of the problem
+https://leetcode.com/problems/house-robber-iii/discuss/79330/Step-by-step-tackling-of-the-problem
+
+finish: House Robber III
+[556]	<Counting Bits>	Three-Line Java Solution
+https://leetcode.com/problems/counting-bits/discuss/79539/Three-Line-Java-Solution
+
+finish: Counting Bits
+finish: Nested List Weight Sum
+finish: Longest Substring with At Most K Distinct Characters
+finish: Flatten Nested List Iterator
+finish: Power of Four
+finish: Integer Break
+finish: Reverse String
+finish: Reverse Vowels of a String
+finish: Moving Average from Data Stream
+finish: Top K Frequent Elements
+finish: Design Tic-Tac-Toe
+finish: Intersection of Two Arrays
+finish: Intersection of Two Arrays II
+finish: Android Unlock Patterns
+finish: Data Stream as Disjoint Intervals
+finish: Design Snake Game
+finish: Russian Doll Envelopes
+finish: Design Twitter
+finish: Line Reflection
+finish: Count Numbers with Unique Digits
+finish: Rearrange String k Distance Apart
+finish: Logger Rate Limiter
+finish: Sort Transformed Array
+finish: Bomb Enemy
+finish: Design Hit Counter
+finish: Max Sum of Rectangle No Larger Than K
+finish: Nested List Weight Sum II
+finish: Water and Jug Problem
+finish: Find Leaves of Binary Tree
+finish: Valid Perfect Square
+finish: Largest Divisible Subset
+finish: Plus One Linked List
+finish: Range Addition
+[1500]	<Sum of Two Integers>	A summary: how to use bit manipulation to solve problems easily and efficiently
+https://leetcode.com/problems/sum-of-two-integers/discuss/84278/A-summary%3A-how-to-use-bit-manipulation-to-solve-problems-easily-and-efficiently
+
+finish: Sum of Two Integers
+finish: Super Pow
+finish: Find K Pairs with Smallest Sums
+finish: Guess Number Higher or Lower
+finish: Guess Number Higher or Lower II
+finish: Wiggle Subsequence
+finish: Combination Sum IV
+[518]	<Kth Smallest Element in a Sorted Matrix>	Share my thoughts and Clean Java Code
+https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/discuss/85173/Share-my-thoughts-and-Clean-Java-Code
+
+finish: Kth Smallest Element in a Sorted Matrix
+finish: Design Phone Directory
+finish: Insert Delete GetRandom O(1)
+finish: Insert Delete GetRandom O(1) - Duplicates allowed
+finish: Linked List Random Node
+finish: Ransom Note
+finish: Shuffle an Array
+finish: Mini Parser
+finish: Lexicographical Numbers
+finish: First Unique Character in a String
+finish: Longest Absolute File Path
+finish: Find the Difference
+finish: Elimination Game
+finish: Perfect Rectangle
+finish: Is Subsequence
+finish: UTF-8 Validation
+finish: Decode String
+finish: Longest Substring with At Least K Repeating Characters
+finish: Rotate Function
+finish: Integer Replacement
+finish: Random Pick Index
+finish: Evaluate Division
+finish: Nth Digit
+finish: Binary Watch
+finish: Remove K Digits
+finish: Frog Jump
+finish: Sum of Left Leaves
+finish: Convert a Number to Hexadecimal
+finish: Queue Reconstruction by Height
+finish: Trapping Rain Water II
+finish: Valid Word Abbreviation
+finish: Longest Palindrome
+finish: Split Array Largest Sum
+finish: Minimum Unique Word Abbreviation
+finish: Fizz Buzz
+finish: Arithmetic Slices
+finish: Third Maximum Number
+finish: Add Strings
+finish: Partition Equal Subset Sum
+finish: Pacific Atlantic Water Flow
+finish: Sentence Screen Fitting
+finish: Battleships in a Board
+finish: Strong Password Checker
+finish: Maximum XOR of Two Numbers in an Array
+finish: Valid Word Square
+finish: Reconstruct Original Digits from English
+finish: Longest Repeating Character Replacement
+finish: Word Squares
+finish: Convert Binary Search Tree to Sorted Doubly Linked List
+finish: Construct Quad Tree
+finish: Serialize and Deserialize N-ary Tree
+finish: N-ary Tree Level Order Traversal
+finish: Flatten a Multilevel Doubly Linked List
+finish: Encode N-ary Tree to Binary Tree
+finish: All O`one Data Structure
+finish: Minimum Genetic Mutation
+finish: Number of Segments in a String
+finish: Non-overlapping Intervals
+finish: Find Right Interval
+finish: Path Sum III
+[695]	<Find All Anagrams in a String>	Sliding Window algorithm template to solve all the Leetcode substring search problem.
+https://leetcode.com/problems/find-all-anagrams-in-a-string/discuss/92007/Sliding-Window-algorithm-template-to-solve-all-the-Leetcode-substring-search-problem.
+
+finish: Find All Anagrams in a String
+finish: Ternary Expression Parser
+finish: K-th Smallest in Lexicographical Order
+finish: Arranging Coins
+finish: Find All Duplicates in an Array
+finish: String Compression
+finish: Sequence Reconstruction
+finish: Add Two Numbers II
+finish: Arithmetic Slices II - Subsequence
+finish: Number of Boomerangs
+finish: Find All Numbers Disappeared in an Array
+finish: Serialize and Deserialize BST
+finish: Delete Node in a BST
+finish: Sort Characters By Frequency
+finish: Minimum Number of Arrows to Burst Balloons
+finish: Minimum Moves to Equal Array Elements
+finish: 4Sum II
+finish: Assign Cookies
+finish: 132 Pattern
+finish: Circular Array Loop
+finish: Poor Pigs
+finish: Repeated Substring Pattern
+finish: LFU Cache
+finish: Hamming Distance
+finish: Minimum Moves to Equal Array Elements II
+finish: Island Perimeter
+finish: Can I Win
+finish: Optimal Account Balancing
+finish: Count The Repetitions
+finish: Unique Substrings in Wraparound String
+finish: Validate IP Address
+finish: Convex Polygon
+finish: Implement Rand10() Using Rand7()
+finish: Encode String with Shortest Length
+finish: Concatenated Words
+finish: Matchsticks to Square
+finish: Ones and Zeroes
+finish: Heaters
+finish: Number Complement
+finish: Total Hamming Distance
+finish: Generate Random Point in a Circle
+finish: Largest Palindrome Product
+finish: Sliding Window Median
+finish: Magical String
+finish: License Key Formatting
+finish: Smallest Good Base
+finish: Find Permutation
+finish: Max Consecutive Ones
+finish: Predict the Winner
+finish: Max Consecutive Ones II
+finish: Zuma Game
+finish: Robot Room Cleaner
+finish: The Maze
+finish: Increasing Subsequences
+finish: Construct the Rectangle
+[511]	<Reverse Pairs>	General principles behind problems similar to "Reverse Pairs"
+https://leetcode.com/problems/reverse-pairs/discuss/97268/General-principles-behind-problems-similar-to-%22Reverse-Pairs%22
+
+finish: Reverse Pairs
+finish: Target Sum
+finish: Teemo Attacking
+finish: Next Greater Element I
+finish: Random Point in Non-overlapping Rectangles
+finish: Diagonal Traverse
+finish: The Maze III
+finish: Keyboard Row
+finish: Find Mode in Binary Search Tree
+finish: IPO
+finish: Next Greater Element II
+finish: Base 7
+finish: The Maze II
+finish: Relative Ranks
+finish: Perfect Number
+finish: Most Frequent Subtree Sum
+finish: Fibonacci Number
+finish: Inorder Successor in BST II
+finish: Find Bottom Left Tree Value
+finish: Freedom Trail
+finish: Find Largest Value in Each Tree Row
+finish: Longest Palindromic Subsequence
+finish: Super Washing Machines
+finish: Coin Change 2
+finish: Random Flip Matrix
+finish: Detect Capital
+finish: Longest Uncommon Subsequence I
+finish: Longest Uncommon Subsequence II
+finish: Continuous Subarray Sum
+finish: Longest Word in Dictionary through Deleting
+finish: Contiguous Array
+finish: Beautiful Arrangement
+finish: Word Abbreviation
+finish: Random Pick with Weight
+finish: Minesweeper
+finish: Minimum Absolute Difference in BST
+finish: Lonely Pixel I
+finish: K-diff Pairs in an Array
+finish: Lonely Pixel II
+finish: Encode and Decode TinyURL
+finish: Construct Binary Tree from String
+finish: Complex Number Multiplication
+finish: Convert BST to Greater Tree
+finish: Minimum Time Difference
+finish: Single Element in a Sorted Array
+finish: Reverse String II
+finish: 01 Matrix
+finish: Diameter of Binary Tree
+finish: Output Contest Matches
+finish: Boundary of Binary Tree
+finish: Remove Boxes
+finish: Friend Circles
+finish: Split Array with Equal Sum
+finish: Binary Tree Longest Consecutive Sequence II
+finish: Student Attendance Record I
+finish: Student Attendance Record II
+finish: Optimal Division
+finish: Brick Wall
+finish: Split Concatenated Strings
+finish: Next Greater Element III
+finish: Reverse Words in a String III
+finish: Quad Tree Intersection
+finish: Maximum Depth of N-ary Tree
+finish: Subarray Sum Equals K
+finish: Array Partition I
+finish: Longest Line of Consecutive One in Matrix
+finish: Binary Tree Tilt
+finish: Find the Closest Palindrome
+finish: Array Nesting
+finish: Reshape the Matrix
+finish: Permutation in String
+finish: Maximum Vacation Days
+finish: Subtree of Another Tree
+finish: Squirrel Simulation
+finish: Distribute Candies
+finish: Out of Boundary Paths
+finish: Shortest Unsorted Continuous Subarray
+finish: Kill Process
+finish: Delete Operation for Two Strings
+finish: Erect the Fence
+finish: Design In-Memory File System
+finish: N-ary Tree Preorder Traversal
+finish: N-ary Tree Postorder Traversal
+finish: Tag Validator
+finish: Fraction Addition and Subtraction
+finish: Valid Square
+finish: Longest Harmonious Subsequence
+finish: Range Addition II
+finish: Minimum Index Sum of Two Lists
+finish: Non-negative Integers without Consecutive Ones
+finish: Design Compressed String Iterator
+finish: Can Place Flowers
+finish: Construct String from Binary Tree
+finish: Find Duplicate File in System
+finish: Valid Triangle Number
+finish: Add Bold Tag in String
+finish: Merge Two Binary Trees
+finish: Task Scheduler
+finish: Design Circular Queue
+finish: Add One Row to Tree
+finish: Maximum Distance in Arrays
+finish: Minimum Factorization
+finish: Maximum Product of Three Numbers
+finish: K Inverse Pairs Array
+finish: Course Schedule III
+finish: Design Excel Sum Formula
+finish: Smallest Range
+finish: Sum of Square Numbers
+finish: Find the Derangement of An Array
+finish: Design Log Storage System
+finish: Exclusive Time of Functions
+finish: Average of Levels in Binary Tree
+finish: Shopping Offers
+finish: Decode Ways II
+finish: Solve the Equation
+finish: Design Circular Deque
+finish: Design Search Autocomplete System
+finish: Maximum Average Subarray I
+finish: Maximum Average Subarray II
+finish: Set Mismatch
+finish: Maximum Length of Pair Chain
+finish: Palindromic Substrings
+finish: Replace Words
+finish: Dota2 Senate
+finish: 2 Keys Keyboard
+finish: 4 Keys Keyboard
+finish: Find Duplicate Subtrees
+finish: Two Sum IV - Input is a BST
+finish: Maximum Binary Tree
+finish: Print Binary Tree
+finish: Coin Path
+finish: Robot Return to Origin
+finish: Find K Closest Elements
+finish: Split Array into Consecutive Subsequences
+finish: Remove 9
+finish: Image Smoother
+finish: Maximum Width of Binary Tree
+finish: Equal Tree Partition
+finish: Strange Printer
+finish: Non-decreasing Array
+finish: Path Sum IV
+finish: Beautiful Arrangement II
+finish: Kth Smallest Number in Multiplication Table
+finish: Trim a Binary Search Tree
+finish: Maximum Swap
+finish: Second Minimum Node In a Binary Tree
+finish: Bulb Switcher II
+finish: Number of Longest Increasing Subsequence
+finish: Longest Continuous Increasing Subsequence
+finish: Cut Off Trees for Golf Event
+finish: Implement Magic Dictionary
+finish: Map Sum Pairs
+finish: Valid Parenthesis String
+finish: 24 Game
+finish: Valid Palindrome II
+finish: Next Closest Time
+finish: Baseball Game
+finish: K Empty Slots
+finish: Redundant Connection
+finish: Redundant Connection II
+finish: Repeated String Match
+finish: Longest Univalue Path
+finish: Knight Probability in Chessboard
+finish: Maximum Sum of 3 Non-Overlapping Subarrays
+finish: Employee Importance
+finish: Stickers to Spell Word
+finish: Top K Frequent Words
+finish: Binary Number with Alternating Bits
+finish: Number of Distinct Islands
+finish: Max Area of Island
+finish: Count Binary Substrings
+finish: Degree of an Array
+finish: Partition to K Equal Sum Subsets
+finish: Falling Squares
+finish: Search in a Binary Search Tree
+finish: Insert into a Binary Search Tree
+finish: Search in a Sorted Array of Unknown Size
+finish: Kth Largest Element in a Stream
+finish: Binary Search
+finish: Design HashSet
+finish: Design HashMap
+finish: Design Linked List
+finish: Insert into a Cyclic Sorted List
+finish: To Lower Case
+finish: Random Pick with Blacklist
+finish: Number of Distinct Islands II
+finish: Minimum ASCII Delete Sum for Two Strings
+finish: Subarray Product Less Than K
+[901]	<Best Time to Buy and Sell Stock with Transaction Fee>	Most consistent ways of dealing with the series of stock problems
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/discuss/108870/Most-consistent-ways-of-dealing-with-the-series-of-stock-problems
+
+finish: Best Time to Buy and Sell Stock with Transaction Fee
+finish: Range Module
+finish: Max Stack
+finish: 1-bit and 2-bit Characters
+finish: Maximum Length of Repeated Subarray
+finish: Find K-th Smallest Pair Distance
+finish: Longest Word in Dictionary
+finish: Accounts Merge
+finish: Remove Comments
+finish: Candy Crush
+finish: Find Pivot Index
+finish: Split Linked List in Parts
+finish: Number of Atoms
+finish: Minimum Window Subsequence
+finish: Self Dividing Numbers
+finish: My Calendar I
+finish: Count Different Palindromic Subsequences
+finish: My Calendar II
+finish: My Calendar III
+finish: Flood Fill
+finish: Sentence Similarity
+finish: Asteroid Collision
+finish: Parse Lisp Expression
+finish: Sentence Similarity II
+finish: Monotone Increasing Digits
+finish: Daily Temperatures
+finish: Delete and Earn
+finish: Cherry Pickup
+finish: Closest Leaf in a Binary Tree
+finish: Network Delay Time
+finish: Find Smallest Letter Greater Than Target
+finish: Prefix and Suffix Search
+finish: Min Cost Climbing Stairs
+finish: Largest Number At Least Twice of Others
+finish: Shortest Completing Word
+finish: Contain Virus
+finish: Number Of Corner Rectangles
+finish: IP to CIDR
+finish: Open the Lock
+finish: Cracking the Safe
+finish: Reach a Number
+finish: Pour Water
+finish: Pyramid Transition Matrix
+finish: Set Intersection Size At Least Two
+finish: Bold Words in String
+finish: Employee Free Time
+finish: Find Anagram Mappings
+finish: Special Binary String
+finish: Prime Number of Set Bits in Binary Representation
+finish: Partition Labels
+finish: Largest Plus Sign
+finish: Couples Holding Hands
+finish: Toeplitz Matrix
+finish: Reorganize String
+finish: Max Chunks To Make Sorted II
+finish: Max Chunks To Make Sorted
+finish: Basic Calculator IV
+finish: Jewels and Stones
+finish: Basic Calculator III
+finish: Sliding Puzzle
+finish: Minimize Max Distance to Gas Station
+finish: Global and Local Inversions
+finish: Split BST
+finish: Swap Adjacent in LR String
+finish: Swim in Rising Water
+finish: K-th Symbol in Grammar
+finish: Reaching Points
+finish: Rabbits in Forest
+finish: Transform to Chessboard
+finish: Minimum Distance Between BST Nodes
+finish: Letter Case Permutation
+finish: Is Graph Bipartite?
+finish: K-th Smallest Prime Fraction
+finish: Cheapest Flights Within K Stops
+finish: Rotated Digits
+finish: Escape The Ghosts
+finish: Domino and Tromino Tiling
+finish: Custom Sort String
+finish: Number of Matching Subsequences
+finish: Preimage Size of Factorial Zeroes Function
+finish: Valid Tic-Tac-Toe State
+finish: Number of Subarrays with Bounded Maximum
+finish: Rotate String
+finish: All Paths From Source to Target
+finish: Smallest Rotation with Highest Score
+finish: Champagne Tower
+finish: Similar RGB Color
+finish: Minimum Swaps To Make Sequences Increasing
+finish: Find Eventual Safe States
+finish: Bricks Falling When Hit
+finish: Unique Morse Code Words
+finish: Split Array With Same Average
+finish: Number of Lines To Write String
+finish: Max Increase to Keep City Skyline
+finish: Soup Servings
+finish: Expressive Words
+finish: Chalkboard XOR Game
+finish: Subdomain Visit Count
+finish: Largest Triangle Area
+finish: Largest Sum of Averages
+finish: Binary Tree Pruning
+finish: Bus Routes
+finish: Ambiguous Coordinates
+finish: Linked List Components
+finish: Race Car
+finish: Most Common Word
+finish: Short Encoding of Words
+finish: Shortest Distance to a Character
+finish: Card Flipping Game
+finish: Binary Trees With Factors
+finish: Goat Latin
+finish: Friends Of Appropriate Ages
+finish: Most Profit Assigning Work
+finish: Making A Large Island
+finish: Unique Letter String
+finish: Consecutive Numbers Sum
+finish: Positions of Large Groups
+finish: Masking Personal Information
+finish: Flipping an Image
+finish: Find And Replace in String
+finish: Sum of Distances in Tree
+finish: Image Overlap
+finish: Rectangle Overlap
+finish: New 21 Game
+finish: Push Dominoes
+finish: Similar String Groups
+finish: Magic Squares In Grid
+finish: Keys and Rooms
+finish: Split Array into Fibonacci Sequence
+finish: Guess the Word
+finish: Backspace String Compare
+finish: Longest Mountain in Array
+finish: Hand of Straights
+finish: Shortest Path Visiting All Nodes
+finish: Shifting Letters
+finish: Maximize Distance to Closest Person
+finish: Rectangle Area II
+finish: Loud and Rich
+finish: Peak Index in a Mountain Array
+finish: Car Fleet
+finish: K-Similar Strings
+finish: Exam Room
+finish: Score of Parentheses
+finish: Minimum Cost to Hire K Workers
+finish: Mirror Reflection
+finish: Buddy Strings
+finish: Lemonade Change
+finish: Score After Flipping Matrix
+finish: Shortest Subarray with Sum at Least K
+finish: All Nodes Distance K in Binary Tree
+finish: Shortest Path to Get All Keys
+finish: Smallest Subtree with all the Deepest Nodes
+finish: Prime Palindrome
+finish: Transpose Matrix
+finish: Binary Gap
+finish: Reordered Power of 2
+finish: Advantage Shuffle
+finish: Minimum Number of Refueling Stops
+finish: Leaf-Similar Trees
+finish: Length of Longest Fibonacci Subsequence
+finish: Walking Robot Simulation
+finish: Koko Eating Bananas
+finish: Middle of the Linked List
+finish: Stone Game
+finish: Nth Magical Number
+finish: Profitable Schemes
+finish: Decoded String at Index
+finish: Boats to Save People
+finish: Reachable Nodes In Subdivided Graph
+finish: Projection Area of 3D Shapes
+finish: Uncommon Words from Two Sentences
+finish: Spiral Matrix III
+finish: Possible Bipartition
+finish: Super Egg Drop
+finish: Fair Candy Swap
+finish: Construct Binary Tree from Preorder and Postorder Traversal
+finish: Find and Replace Pattern
+finish: Sum of Subsequence Widths
+finish: Surface Area of 3D Shapes
+finish: Groups of Special-Equivalent Strings
+finish: All Possible Full Binary Trees
+finish: Maximum Frequency Stack
+finish: Monotonic Array
+finish: Increasing Order Search Tree
+finish: Bitwise ORs of Subarrays
+finish: Orderly Queue
+finish: RLE Iterator
+finish: Online Stock Span
+finish: Numbers At Most N Given Digit Set
+finish: Valid Permutations for DI Sequence
+finish: Fruit Into Baskets
+finish: Sort Array By Parity
+finish: Super Palindromes
+finish: Sum of Subarray Minimums
+finish: Smallest Range I
+finish: Snakes and Ladders
+finish: Smallest Range II
+finish: Online Election
+finish: Cat and Mouse
+finish: X of a Kind in a Deck of Cards
+finish: Partition Array into Disjoint Intervals
+finish: Word Subsets
+finish: Reverse Only Letters
+finish: Maximum Sum Circular Subarray
+finish: Complete Binary Tree Inserter
+finish: Number of Music Playlists
+finish: Minimum Add to Make Parentheses Valid
+finish: Sort Array By Parity II
+finish: 3Sum With Multiplicity
+finish: Minimize Malware Spread
+finish: Long Pressed Name
+finish: Flip String to Monotone Increasing
+finish: Three Equal Parts
+finish: Minimize Malware Spread II
+finish: Unique Email Addresses
+finish: Binary Subarrays With Sum
+finish: Minimum Falling Path Sum
+finish: Beautiful Array
+finish: Number of Recent Calls
+finish: Shortest Bridge
+finish: Knight Dialer
+finish: Stamping The Sequence
+finish: Reorder Log Files
+finish: Range Sum of BST
+finish: Minimum Area Rectangle
+finish: Distinct Subsequences II
+finish: Valid Mountain Array
+finish: DI String Match
+finish: Find the Shortest Superstring
+finish: Delete Columns to Make Sorted
+finish: Minimum Increment to Make Array Unique
+finish: Validate Stack Sequences
+finish: Most Stones Removed with Same Row or Column
+finish: Bag of Tokens
+finish: Largest Time for Given Digits
+finish: Reveal Cards In Increasing Order
+finish: Flip Equivalent Binary Trees
+finish: Largest Component Size by Common Factor
+finish: Verifying an Alien Dictionary
+finish: Array of Doubled Pairs
+finish: Delete Columns to Make Sorted II
+finish: Tallest Billboard
+finish: Prison Cells After N Days
+finish: Check Completeness of a Binary Tree
+finish: Regions Cut By Slashes
+finish: Delete Columns to Make Sorted III
+finish: N-Repeated Element in Size 2N Array
+finish: Maximum Width Ramp
+finish: Minimum Area Rectangle II
+finish: Least Operators to Express Number
+finish: Univalued Binary Tree
+finish: Vowel Spellchecker
+finish: Numbers With Same Consecutive Differences
+finish: Binary Tree Cameras
+finish: Pancake Sorting
+finish: Powerful Integers
+finish: Flip Binary Tree To Match Preorder Traversal
+finish: Equal Rational Numbers
+finish: K Closest Points to Origin
+finish: Subarray Sums Divisible by K
+finish: Odd Even Jump
+finish: Largest Perimeter Triangle
+finish: Squares of a Sorted Array
+finish: Longest Turbulent Subarray
+finish: Distribute Coins in Binary Tree
+finish: Unique Paths III
+finish: Time Based Key-Value Store
+finish: Triples with Bitwise AND Equal To Zero
+finish: Minimum Cost For Tickets
+finish: String Without AAA or BBB
+finish: Sum of Even Numbers After Queries
+finish: Interval List Intersections
+finish: Vertical Order Traversal of a Binary Tree
+finish: Smallest String Starting From Leaf
+finish: Add to Array-Form of Integer
+finish: Satisfiability of Equality Equations
+finish: Broken Calculator
+finish: Subarrays with K Different Integers
+finish: Cousins in Binary Tree
+finish: Rotting Oranges
+finish: Minimum Number of K Consecutive Bit Flips
+finish: Number of Squareful Arrays
+finish: Find the Town Judge
+finish: Maximum Binary Tree II
+finish: Available Captures for Rook
+finish: Minimum Cost to Merge Stones
+finish: Grid Illumination
+finish: Find Common Characters
+finish: Check If Word Is Valid After Substitutions
+finish: Max Consecutive Ones III
+finish: Maximize Sum Of Array After K Negations
+finish: Clumsy Factorial
+finish: Minimum Domino Rotations For Equal Row
+finish: Construct Binary Search Tree from Preorder Traversal
+finish: Complement of Base 10 Integer
+finish: Pairs of Songs With Total Durations Divisible by 60
+finish: Capacity To Ship Packages Within D Days
+finish: Numbers With Repeated Digits
+finish: Partition Array Into Three Parts With Equal Sum
+finish: Best Sightseeing Pair
+finish: Smallest Integer Divisible by K
+finish: Binary String With Substrings Representing 1 To N
+finish: Convert to Base -2
+finish: Binary Prefix Divisible By 5
+finish: Next Greater Node In Linked List
+finish: Number of Enclaves
+
+Process finished with exit code 0

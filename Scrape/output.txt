@@ -1,0 +1,210 @@
+[627]	<Longest Substring Without Repeating Characters>	11-line simple Java solution, O(n) with explanation
+https://leetcode.com/problems/longest-substring-without-repeating-characters/discuss/1729/11-line-simple-Java-solution-O(n)-with-explanation
+
+[1500]	<Median of Two Sorted Arrays>	Share my O(log(min(m,n)) solution with explanation
+https://leetcode.com/problems/median-of-two-sorted-arrays/discuss/2481/Share-my-O(log(min(mn))-solution-with-explanation
+
+[656]	<Median of Two Sorted Arrays>	Very concise O(log(min(M,N))) iterative solution with detailed explanation
+https://leetcode.com/problems/median-of-two-sorted-arrays/discuss/2471/Very-concise-O(log(min(MN)))-iterative-solution-with-detailed-explanation
+
+[607]	<Reverse Integer>	My accepted 15 lines of code for Java
+https://leetcode.com/problems/reverse-integer/discuss/4060/My-accepted-15-lines-of-code-for-Java
+
+[577]	<Palindrome Number>	9-line accepted Java code, without the need of handling overflow
+https://leetcode.com/problems/palindrome-number/discuss/5127/9-line-accepted-Java-code-without-the-need-of-handling-overflow
+
+[732]	<Container With Most Water>	Yet another way to see what happens in the O(n) algorithm
+https://leetcode.com/problems/container-with-most-water/discuss/6099/Yet-another-way-to-see-what-happens-in-the-O(n)-algorithm
+
+[1100]	<Integer to Roman>	Simple Solution
+https://leetcode.com/problems/integer-to-roman/discuss/6274/Simple-Solution
+
+[765]	<3Sum>	Concise O(N^2) Java solution
+https://leetcode.com/problems/3sum/discuss/7380/Concise-O(N2)-Java-solution
+
+[628]	<Letter Combinations of a Phone Number>	My java solution with FIFO queue
+https://leetcode.com/problems/letter-combinations-of-a-phone-number/discuss/8064/My-java-solution-with-FIFO-queue
+
+[533]	<Divide Two Integers>	C++ bit manipulations
+https://leetcode.com/problems/divide-two-integers/discuss/13407/C%2B%2B-bit-manipulations
+
+[505]	<Valid Sudoku>	Short+Simple Java using Strings
+https://leetcode.com/problems/valid-sudoku/discuss/15472/Short%2BSimple-Java-using-Strings
+
+[806]	<Count and Say>	Please change the misleading description
+https://leetcode.com/problems/count-and-say/discuss/16015/Please-change-the-misleading-description
+
+[937]	<Combination Sum>	A general approach to backtracking questions in Java (Subsets, Permutations, Combination Sum, Palindrome Partitioning)
+https://leetcode.com/problems/combination-sum/discuss/16502/A-general-approach-to-backtracking-questions-in-Java-(Subsets-Permutations-Combination-Sum-Palindrome-Partitioning)
+
+[626]	<First Missing Positive>	My short c++ solution, O(1) space, and O(n) time
+https://leetcode.com/problems/first-missing-positive/discuss/17071/My-short-c%2B%2B-solution-O(1)-space-and-O(n)-time
+
+[549]	<Trapping Rain Water>	Sharing my simple c++ code: O(n) time, O(1) space
+https://leetcode.com/problems/trapping-rain-water/discuss/17357/Sharing-my-simple-c%2B%2B-code%3A-O(n)-time-O(1)-space
+
+[1200]	<Multiply Strings>	Easiest JAVA Solution with Graph Explanation
+https://leetcode.com/problems/multiply-strings/discuss/17605/Easiest-JAVA-Solution-with-Graph-Explanation
+
+[1300]	<Permutations>	A general approach to backtracking questions in Java (Subsets, Permutations, Combination Sum, Palindrome Partioning)
+https://leetcode.com/problems/permutations/discuss/18239/A-general-approach-to-backtracking-questions-in-Java-(Subsets-Permutations-Combination-Sum-Palindrome-Partioning)
+
+[826]	<Maximum Subarray>	DP solution & some thoughts
+https://leetcode.com/problems/maximum-subarray/discuss/20193/DP-solution-and-some-thoughts
+
+[523]	<Maximum Subarray>	Accepted O(n) solution in java
+https://leetcode.com/problems/maximum-subarray/discuss/20211/Accepted-O(n)-solution-in-java
+
+[551]	<Spiral Matrix>	Super Simple and Easy to Understand Solution
+https://leetcode.com/problems/spiral-matrix/discuss/20599/Super-Simple-and-Easy-to-Understand-Solution
+
+[533]	<Permutation Sequence>	"Explain-like-I'm-five" Java Solution in O(n)
+https://leetcode.com/problems/permutation-sequence/discuss/22507/%22Explain-like-I'm-five%22-Java-Solution-in-O(n)
+
+[511]	<Valid Number>	The worst problem i have ever met in this oj
+https://leetcode.com/problems/valid-number/discuss/23741/The-worst-problem-i-have-ever-met-in-this-oj
+
+[761]	<Set Matrix Zeroes>	Any shorter O(1) space solution?
+https://leetcode.com/problems/set-matrix-zeroes/discuss/26014/Any-shorter-O(1)-space-solution
+
+[568]	<Sort Colors>	Share my at most two-pass constant space 10-line solution
+https://leetcode.com/problems/sort-colors/discuss/26472/Share-my-at-most-two-pass-constant-space-10-line-solution
+
+[2100]	<Minimum Window Substring>	Here is a 10-line template that can solve most 'substring' problems
+https://leetcode.com/problems/minimum-window-substring/discuss/26808/Here-is-a-10-line-template-that-can-solve-most-'substring'-problems
+
+[901]	<Subsets>	A general approach to backtracking questions in Java (Subsets, Permutations, Combination Sum, Palindrome Partitioning)
+https://leetcode.com/problems/subsets/discuss/27281/A-general-approach-to-backtracking-questions-in-Java-(Subsets-Permutations-Combination-Sum-Palindrome-Partitioning)
+
+[773]	<Maximal Rectangle>	Share my DP solution
+https://leetcode.com/problems/maximal-rectangle/discuss/29054/Share-my-DP-solution
+
+[1600]	<Unique Binary Search Trees>	DP Solution in 6 lines with explanation. F(i, n) = G(i-1) * G(n-i)
+https://leetcode.com/problems/unique-binary-search-trees/discuss/31666/DP-Solution-in-6-lines-with-explanation.-F(i-n)-G(i-1)-*-G(n-i)
+
+[903]	<Validate Binary Search Tree>	Learn one iterative inorder traversal, apply it to multiple tree questions (Java Solution)
+https://leetcode.com/problems/validate-binary-search-tree/discuss/32112/Learn-one-iterative-inorder-traversal-apply-it-to-multiple-tree-questions-(Java-Solution)
+
+[632]	<Recover Binary Search Tree>	No Fancy Algorithm, just Simple and Powerful In-Order Traversal
+https://leetcode.com/problems/recover-binary-search-tree/discuss/32535/No-Fancy-Algorithm-just-Simple-and-Powerful-In-Order-Traversal
+
+[801]	<Flatten Binary Tree to Linked List>	My short post order traversal Java solution for share
+https://leetcode.com/problems/flatten-binary-tree-to-linked-list/discuss/36977/My-short-post-order-traversal-Java-solution-for-share
+
+[527]	<Triangle>	DP Solution for Triangle
+https://leetcode.com/problems/triangle/discuss/38730/DP-Solution-for-Triangle
+
+[693]	<Best Time to Buy and Sell Stock>	Kadane's Algorithm - Since no one has mentioned about this so far :) (In case if interviewer twists the input)
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock/discuss/39038/Kadane's-Algorithm-Since-no-one-has-mentioned-about-this-so-far-%3A)-(In-case-if-interviewer-twists-the-input)
+
+[627]	<Longest Consecutive Sequence>	My really simple Java O(n) solution - Accepted
+https://leetcode.com/problems/longest-consecutive-sequence/discuss/41055/My-really-simple-Java-O(n)-solution-Accepted
+
+[743]	<Single Number>	My O(n) solution using XOR
+https://leetcode.com/problems/single-number/discuss/42997/My-O(n)-solution-using-XOR
+
+[727]	<Single Number II>	Challenge me , thx
+https://leetcode.com/problems/single-number-ii/discuss/43294/Challenge-me-thx
+
+[725]	<Single Number II>	Detailed explanation and generalization of the bitwise operation method for single numbers
+https://leetcode.com/problems/single-number-ii/discuss/43295/Detailed-explanation-and-generalization-of-the-bitwise-operation-method-for-single-numbers
+
+[577]	<Copy List with Random Pointer>	A solution with constant space complexity O(1) and linear time complexity O(N)
+https://leetcode.com/problems/copy-list-with-random-pointer/discuss/43491/A-solution-with-constant-space-complexity-O(1)-and-linear-time-complexity-O(N)
+
+[605]	<Binary Tree Postorder Traversal>	Preorder, Inorder, and Postorder Iteratively Summarization
+https://leetcode.com/problems/binary-tree-postorder-traversal/discuss/45551/Preorder-Inorder-and-Postorder-Iteratively-Summarization
+
+[798]	<Maximum Product Subarray>	Possibly simplest solution with O(n) time complexity
+https://leetcode.com/problems/maximum-product-subarray/discuss/48230/Possibly-simplest-solution-with-O(n)-time-complexity
+
+[633]	<Min Stack>	Java accepted solution using one stack
+https://leetcode.com/problems/min-stack/discuss/49014/Java-accepted-solution-using-one-stack
+
+[535]	<Min Stack>	Share my Java solution with ONLY ONE stack
+https://leetcode.com/problems/min-stack/discuss/49031/Share-my-Java-solution-with-ONLY-ONE-stack
+
+[1300]	<Intersection of Two Linked Lists>	Java solution without knowing the difference in len!
+https://leetcode.com/problems/intersection-of-two-linked-lists/discuss/49785/Java-solution-without-knowing-the-difference-in-len!
+
+[801]	<Majority Element>	O(n) time O(1) space fastest solution
+https://leetcode.com/problems/majority-element/discuss/51613/O(n)-time-O(1)-space-fastest-solution
+
+[510]	<Rotate Array>	Easy to read Java solution
+https://leetcode.com/problems/rotate-array/discuss/54250/Easy-to-read-Java-solution
+
+[956]	<House Robber>	From good to great. How to approach most of DP problems.
+https://leetcode.com/problems/house-robber/discuss/156523/From-good-to-great.-How-to-approach-most-of-DP-problems.
+
+[805]	<Happy Number>	My solution in C( O(1) space and no magic math property involved )
+https://leetcode.com/problems/happy-number/discuss/56917/My-solution-in-C(-O(1)-space-and-no-magic-math-property-involved-)
+
+[705]	<Word Search II>	Java 15ms Easiest Solution (100.00%)
+https://leetcode.com/problems/word-search-ii/discuss/59780/Java-15ms-Easiest-Solution-(100.00)
+
+[578]	<Kth Largest Element in an Array>	Solution explained
+https://leetcode.com/problems/kth-largest-element-in-an-array/discuss/60294/Solution-explained
+
+[686]	<The Skyline Problem>	(Guaranteed) Really Detailed and Good (Perfect) Explanation of The Skyline Problem
+https://leetcode.com/problems/the-skyline-problem/discuss/61197/(Guaranteed)-Really-Detailed-and-Good-(Perfect)-Explanation-of-The-Skyline-Problem
+
+[588]	<Lowest Common Ancestor of a Binary Tree>	4 lines C++/Java/Python/Ruby
+https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/discuss/65225/4-lines-C%2B%2BJavaPythonRuby
+
+[800]	<Product of Array Except Self>	Simple Java solution in O(n) without extra space
+https://leetcode.com/problems/product-of-array-except-self/discuss/65622/Simple-Java-solution-in-O(n)-without-extra-space
+
+[651]	<Search a 2D Matrix II>	My concise O(m+n) Java solution
+https://leetcode.com/problems/search-a-2d-matrix-ii/discuss/66140/My-concise-O(m%2Bn)-Java-solution
+
+[691]	<Single Number III>	Accepted C++/Java O(n)-time O(1)-space Easy Solution with Detail Explanations
+https://leetcode.com/problems/single-number-iii/discuss/68900/Accepted-C%2B%2BJava-O(n)-time-O(1)-space-Easy-Solution-with-Detail-Explanations
+
+[733]	<Find the Duplicate Number>	My easy understood solution with O(n) time and O(1) space without modifying the array. With clear explanation.
+https://leetcode.com/problems/find-the-duplicate-number/discuss/72846/My-easy-understood-solution-with-O(n)-time-and-O(1)-space-without-modifying-the-array.-With-clear-explanation.
+
+[929]	<Game of Life>	Easiest JAVA solution with explanation
+https://leetcode.com/problems/game-of-life/discuss/73223/Easiest-JAVA-solution-with-explanation
+
+[653]	<Remove Invalid Parentheses>	Easy, Short, Concise and Fast Java DFS 3 ms solution
+https://leetcode.com/problems/remove-invalid-parentheses/discuss/75027/Easy-Short-Concise-and-Fast-Java-DFS-3-ms-solution
+
+[1100]	<Best Time to Buy and Sell Stock with Cooldown>	Share my thinking process
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/discuss/75927/Share-my-thinking-process
+
+[969]	<Best Time to Buy and Sell Stock with Cooldown>	Share my DP solution (By State Machine Thinking)
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/discuss/75928/Share-my-DP-solution-(By-State-Machine-Thinking)
+
+[642]	<Minimum Height Trees>	Share some thoughts
+https://leetcode.com/problems/minimum-height-trees/discuss/76055/Share-some-thoughts
+
+[784]	<Burst Balloons>	Share some analysis and explanations
+https://leetcode.com/problems/burst-balloons/discuss/76228/Share-some-analysis-and-explanations
+
+[669]	<Bulb Switcher>	Math solution..
+https://leetcode.com/problems/bulb-switcher/discuss/77104/Math-solution..
+
+[544]	<Patching Array>	Solution + explanation
+https://leetcode.com/problems/patching-array/discuss/78488/Solution-%2B-explanation
+
+[1600]	<House Robber III>	Step by step tackling of the problem
+https://leetcode.com/problems/house-robber-iii/discuss/79330/Step-by-step-tackling-of-the-problem
+
+[556]	<Counting Bits>	Three-Line Java Solution
+https://leetcode.com/problems/counting-bits/discuss/79539/Three-Line-Java-Solution
+
+[1500]	<Sum of Two Integers>	A summary: how to use bit manipulation to solve problems easily and efficiently
+https://leetcode.com/problems/sum-of-two-integers/discuss/84278/A-summary%3A-how-to-use-bit-manipulation-to-solve-problems-easily-and-efficiently
+
+[518]	<Kth Smallest Element in a Sorted Matrix>	Share my thoughts and Clean Java Code
+https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/discuss/85173/Share-my-thoughts-and-Clean-Java-Code
+
+[695]	<Find All Anagrams in a String>	Sliding Window algorithm template to solve all the Leetcode substring search problem.
+https://leetcode.com/problems/find-all-anagrams-in-a-string/discuss/92007/Sliding-Window-algorithm-template-to-solve-all-the-Leetcode-substring-search-problem.
+
+[511]	<Reverse Pairs>	General principles behind problems similar to "Reverse Pairs"
+https://leetcode.com/problems/reverse-pairs/discuss/97268/General-principles-behind-problems-similar-to-%22Reverse-Pairs%22
+
+[901]	<Best Time to Buy and Sell Stock with Transaction Fee>	Most consistent ways of dealing with the series of stock problems
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/discuss/108870/Most-consistent-ways-of-dealing-with-the-series-of-stock-problems
+
