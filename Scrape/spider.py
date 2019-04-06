@@ -152,34 +152,6 @@ def scrape_solutions():
     write_to_file(res)
 
 
-def test():
-    driver.get("https://leetcode.com/problems/two-sum/discuss/?currentPage=1&orderBy=most_votes&query=")
-
-    driver.implicitly_wait(10)
-
-    topic_items = driver.find_elements_by_xpath("//div[contains(@class, 'topic-item-wrap')]")
-
-    print(len(topic_items))
-
-    for item in topic_items:
-        score_element = item.find_element_by_xpath('div/div[2]/div[1]/div')
-
-        link_element = item.find_element_by_xpath('div/div[1]/div/a')
-        link = link_element.get_attribute("href")
-
-        title_element = link_element.find_element_by_xpath('div/div')
-        title = title_element.text
-
-        score_text = score_element.text
-        if 'K' in score_text:
-            score = int(float(score_text.replace('K', '')) * 1000)
-        else:
-            score = int(score_text)
-
-        if score >= 500:
-            print(score, title, link)
-
-
 if __name__ == '__main__':
     if (login(NAME, PASSWORD)):
         # scrape_solutions()
