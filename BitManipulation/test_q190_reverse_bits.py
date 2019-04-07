@@ -1,6 +1,6 @@
 import unittest
 
-from String.q190_reverse_bits import Solution
+from BitManipulation.q190_reverse_bits import Solution
 
 
 class TestReverseBits(unittest.TestCase):

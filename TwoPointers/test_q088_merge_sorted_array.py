@@ -1,6 +1,6 @@
 import unittest
 
-from Array.q088_merge_sorted_array import Solution
+from TwoPointers.q088_merge_sorted_array import Solution
 
 
 class TestMergeSortedArray(unittest.TestCase):

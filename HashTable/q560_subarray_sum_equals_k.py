@@ -24,18 +24,12 @@ class Solution:
 
 class Solution1:
     def subarraySum(self, nums: 'List[int]', k: 'int') -> 'int':
-        count = 0
-        if not nums:
-            return count
-        mapping = {}
-        cur_sum = 0
+        count, cur_sum = 0, 0
+        mapping = defaultdict(int)
         mapping[0] = 1
         for i in range(len(nums)):
             cur_sum += nums[i]
             if cur_sum-k in mapping:
                 count += mapping[cur_sum-k]
-            if cur_sum in mapping:
-                mapping[cur_sum] += 1
-            else:
-                mapping[cur_sum] = 1
+            mapping[cur_sum] += 1
         return count

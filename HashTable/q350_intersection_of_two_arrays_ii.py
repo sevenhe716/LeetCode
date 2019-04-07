@@ -9,6 +9,7 @@
 # 2. 如果已经num1比num2小，如何优化？计数器算法则以小数组来遍历
 # 3. 如果num2无法在内存中存放，该如何完成算法？计数器算法则可以分块计数，并num2的计数器中移除已匹配的数据
 from collections import Counter
+from functools import reduce
 
 
 class Solution:
@@ -25,7 +26,7 @@ class Solution:
                 res += [num] * min(cnt1[num], cnt2[num])
         return res
 
-    def intersect(self, nums1: 'List[int]', nums2: 'List[int]') -> 'List[int]':
+    def intersect2(self, nums1: 'List[int]', nums2: 'List[int]') -> 'List[int]':
         # 优化：选择从小数组中遍历
         if len(nums1) > len(nums2):
             nums1, nums2 = nums2, nums1
@@ -36,3 +37,11 @@ class Solution:
                 res.append(num)
                 cnt[num] -= 1
         return res
+
+    def intersect3(self, nums1: 'List[int]', nums2: 'List[int]') -> 'List[int]':
+        # Counter(nums1).elements()
+        return reduce(lambda x, y: x + [y[0]] * y[1], (Counter(nums1) & Counter(nums2)).items(), [])
+
+    def intersect4(self, nums1: 'List[int]', nums2: 'List[int]') -> 'List[int]':
+        a, b = map(Counter, (nums1, nums2))
+        return list((a & b).elements())

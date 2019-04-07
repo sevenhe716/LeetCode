@@ -1,6 +1,6 @@
 import unittest
 
-from HashTable.q711_number_of_distinct_islands_ii import Solution1
+from Matrix.q711_number_of_distinct_islands_ii import Solution1
 
 
 class TestNumberOfDistinctIslandsIi(unittest.TestCase):

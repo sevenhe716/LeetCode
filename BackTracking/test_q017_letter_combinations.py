@@ -1,6 +1,6 @@
 import unittest
 
-from String.q017_letter_combinations import Solution
+from BackTracking.q017_letter_combinations import Solution
 
 
 class TestLetterCombinations(unittest.TestCase):

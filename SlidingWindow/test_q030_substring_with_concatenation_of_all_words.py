@@ -1,6 +1,6 @@
 import unittest
 
-from HashTable.q030_substring_with_concatenation_of_all_words import Solution
+from SlidingWindow.q030_substring_with_concatenation_of_all_words import Solution
 
 
 class TestSubstringWithConcatenationOfAllWords(unittest.TestCase):

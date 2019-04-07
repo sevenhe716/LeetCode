@@ -47,13 +47,13 @@ class Solution1:
     # Pad with izip_longest with fillvalue=0
     def compareVersion1(self, version1, version2):
         v1, v2 = map(int, version1.split('.')), map(int, version2.split('.'))
-        v1, v2 = zip(*zip_longest(v1, v2, fillvalue = 0))
+        v1, v2 = zip(*zip_longest(v1, v2, fillvalue=0))
         return (v1 > v2) - (v1 < v2)
         # return cmp(*zip(*itertools.izip_longest(*splits, fillvalue=0)))
 
     # Pad with [0] * lengthDifference
     def compareVersion2(self, version1, version2):
-        v1, v2 = map(int, version1.split('.')), map(int, version2.split('.'))
+        v1, v2 = list(map(int, version1.split('.'))), list(map(int, version2.split('.')))
         d = len(v2) - len(v1)
         v1, v2 = v1 + [0] * d, v2 + [0] * -d
         return (v1 > v2) - (v1 < v2)

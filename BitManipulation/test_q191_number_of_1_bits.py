@@ -1,6 +1,6 @@
 import unittest
 
-from String.q191_number_of_1_bits import Solution
+from BitManipulation.q191_number_of_1_bits import Solution
 
 
 class TestNumberOf1Bits(unittest.TestCase):

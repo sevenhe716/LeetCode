@@ -52,3 +52,7 @@ class Solution(object):
                 return False
             pos[c] = new_pos
         return True
+
+class Solution1:
+    def canConstruct(self, ransomNote: str, magazine: str) -> bool:
+        return not Counter(ransomNote) - Counter(magazine)

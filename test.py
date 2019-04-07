@@ -218,7 +218,11 @@ def test():
     # print(counter['d'])
     # print('d' in counter)
 
-    postorder_traversal_iteratively(TreeNode.generate([1, 2, 3, 4, 5, 6, 7]))
+    # postorder_traversal_iteratively(TreeNode.generate([1, 2, 3, 4, 5, 6, 7]))
+
+    s = 'abcab'
+
+    print(','.join(s))
 
 if __name__ == '__main__':
     test()

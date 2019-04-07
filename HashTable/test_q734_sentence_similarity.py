@@ -1,6 +1,6 @@
 import unittest
 
-from Array.q734_sentence_similarity import Solution
+from HashTable.q734_sentence_similarity import Solution
 
 
 class TestSentenceSimilarity(unittest.TestCase):

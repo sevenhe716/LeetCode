@@ -31,7 +31,7 @@ class Solution:
 
 
 class Solution1:
-    # recusively
+    # recursively
     def combine1(self, n: 'int', k: 'int') -> 'List[List[int]]':
         if k == 0:
             return [[]]

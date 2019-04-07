@@ -4,6 +4,7 @@
 # 解题思路：
 #
 from collections import Counter
+import string
 
 
 class Solution:
@@ -30,6 +31,7 @@ class Solution:
                 return pos[c]
         return -1
 
+
 class Solution1:
     # 只需要至多26*2次查找，充分利用了只包含小写字母的优势，find rfind相等即为唯一字符
     def firstUniqChar(self, s):
@@ -37,7 +39,7 @@ class Solution1:
         :type s: str
         :rtype: int
         """
-        alphabet = "abcdefghijklmnopqrstuvwxyz"
+        alphabet = string.ascii_lowercase
         res = len(s)
         for x in alphabet:
             index = s.find(x)

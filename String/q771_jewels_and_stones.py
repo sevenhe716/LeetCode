@@ -23,7 +23,7 @@ class Solution(object):
         return sum(map(J.count, S))
 
     def numJewelsInStones3(self, J, S):
-        return sum(map(S.count, J))               # this one after seeing https://discuss.leetcode.com/post/244105
+        return sum(map(S.count, J))
 
     def numJewelsInStones4(self, J, S):
         return sum(s in J for s in S)
