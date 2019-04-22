@@ -14,6 +14,15 @@
 #         self.right = None
 
 class Solution:
+    def inorderTraversal(self, root):
+        if root.left:
+            self.inorderTraversal(root.left)
+
+        yield root
+
+        if root.right:
+            self.inorderTraversal(root.right)
+
     # recursively
     def inorderTraversal1(self, root: 'TreeNode') -> 'List[int]':
         if not root:
@@ -44,7 +53,7 @@ class Solution:
         return ans
 
     # iteratively
-    def inorderTraversal(self, root: 'TreeNode') -> 'List[int]':
+    def inorderTraversal3(self, root: 'TreeNode') -> 'List[int]':
         stack, ans = [], []
         while stack or root:
             while root:

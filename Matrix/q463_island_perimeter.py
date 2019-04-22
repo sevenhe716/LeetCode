@@ -37,3 +37,9 @@ class Solution1:
                         res += 2  # (1 -> 1), add 2 (4 new edges, but 2 are dup on the left)
                 top[i], pre = cur, cur
         return res
+
+
+    def islandPerimeter(self, grid):
+        import operator
+        return sum(sum(map(operator.ne, [0] + row, row + [0]))
+                   for row in grid + map(list, zip(*grid)))

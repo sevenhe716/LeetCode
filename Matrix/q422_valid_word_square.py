@@ -39,7 +39,8 @@ class Solution:
 
 class Solution1:
     # The map(None, ...) transposes the "matrix", filling missing spots with None
-    def validWordSquare1(self, words):
+    # python 2
+    def validWordSquare(self, words):
         return map(None, *words) == map(None, *map(None, *words))
 
     def validWordSquare2(self, words):

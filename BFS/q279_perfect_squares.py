@@ -122,4 +122,3 @@ class Solution1:
             front = newFront
             if len(front) > len(back):
                 front, back, pm = back, front, -pm # always expand the tree with fewer leaves
-

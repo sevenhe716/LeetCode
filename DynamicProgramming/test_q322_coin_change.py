@@ -9,6 +9,7 @@ class TestCoinChange(unittest.TestCase):
     def test_coin_change(self):
         s = Solution()
 
+        self.assertEqual(2, s.coinChange([1, 2, 5, 8], 7))
         self.assertEqual(3, s.coinChange([1, 2, 5], 11))
         self.assertEqual(-1, s.coinChange([2], 3))
 

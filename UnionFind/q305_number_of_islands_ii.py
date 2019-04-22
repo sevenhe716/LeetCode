@@ -90,7 +90,7 @@ class Solution1:
             ans += [conn]
         return ans
 
-    # 借鉴stephan大神的union find写法
+    # 借鉴stefan大神的union find写法
     def numIslands21(self, m, n, positions):
         parent, rank, count = {}, {}, 0
 

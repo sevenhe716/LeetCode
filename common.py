@@ -40,10 +40,10 @@ class ListNode:
 
 
 class TreeNode:
-    def __init__(self, x):
+    def __init__(self, x, left=None, right=None):
         self.val = x
-        self.left = None
-        self.right = None
+        self.left = left
+        self.right = right
 
     def __eq__(self, obj):
         if obj is None or self.val != obj.val:
@@ -56,7 +56,8 @@ class TreeNode:
         return right_tree + "{}{}\n".format(indent, str(self.val)) + left_tree
 
     def __repr__(self):
-        return self.__str__()
+        return 'TreeNode({})'.format(self.val)
+        # return self.__str__()
         # return "BinaryTree({}, {}, {})".format(repr(self.val),
         #                                        repr(self.left),
         #                                        repr(self.right))
@@ -70,12 +71,55 @@ class TreeNode:
             self.right.generateR(i * 2 + 1, nums)
 
     @staticmethod
+    def drawtree(root):
+        def height(root):
+            return 1 + max(height(root.left), height(root.right)) if root else -1
+
+        def jumpto(x, y):
+            t.penup()
+            t.goto(x, y)
+            t.pendown()
+
+        def draw(node, x, y, dx):
+            if node:
+                t.goto(x, y)
+                jumpto(x, y - 20)
+                t.write(node.val, align='center', font=('Arial', 12, 'normal'))
+                draw(node.left, x - dx, y - 60, dx / 2)
+                jumpto(x, y - 20)
+                draw(node.right, x + dx, y - 60, dx / 2)
+
+        import turtle
+        t = turtle.Turtle()
+        t.speed(0);
+        turtle.delay(0)
+        h = height(root)
+        jumpto(0, 30 * h)
+        draw(root, 0, 30 * h, 40 * h)
+        t.hideturtle()
+        turtle.mainloop()
+
+    @staticmethod
     def generate(nums):
         if not nums:
             return None
 
         root = TreeNode(nums[0])
         root.generateR(1, nums)
+        return root
+
+    @staticmethod
+    def deserialize(string):
+        if string == '{}':
+            return None
+        nodes = [None if val == 'null' else TreeNode(int(val))
+                 for val in string.strip('[]{}').split(',')]
+        kids = nodes[::-1]
+        root = kids.pop()
+        for node in nodes:
+            if node:
+                if kids: node.left = kids.pop()
+                if kids: node.right = kids.pop()
         return root
 
 class Interval:

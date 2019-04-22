@@ -53,3 +53,7 @@ class Solution:
                 stack.append(node.left)
                 stack.append(node.right)
         return root
+
+    import heapq
+
+    heapq.nlargest(2, arr)

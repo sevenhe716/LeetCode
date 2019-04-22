@@ -27,6 +27,25 @@ class Solution:
         return prefix
 
 
+    def longestCommonPrefix2(self, strs):
+        res = ''
+        # base case 1
+        if len(strs) < 1: return res
+        size = min(len(s) for s in strs)
+        # base case 2 one of them is empty
+        if size < 1: return res
+
+        # iteration case
+        for i in range(size):
+            if all(str1[i] == str2[i] for str1, str2 in zip(strs[:-1], strs[1:])):
+                # if strs[0][i] == strs[1][i] == str[2][i]:
+                res += strs[0][i]
+            else:
+                break
+
+        return res
+
+
 # 无需构建新的字符串，直接在原有字符串上slice前缀即可
 class Solution1(object):
     def longestCommonPrefix(self, strs):

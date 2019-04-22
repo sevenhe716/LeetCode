@@ -32,7 +32,7 @@ def login(name='', pwd=''):
                 flag = False
             except WebDriverException:
                 time.sleep(0.5)
-        time.sleep(1)
+        time.sleep(5)
         if (driver.current_url != login_url):
             print('Login succeeded')
             return True
@@ -69,7 +69,6 @@ def get_problem_submission_page_urls():
     # collect problem titles and links
     problemPages = {}
     for row in table.find_elements_by_tag_name("tr"):
-
         title = row.find_element_by_tag_name("a").text
         href = row.find_element_by_tag_name("a").get_attribute("href")
         # don't collect the links to solutions presented on leetcode
@@ -78,7 +77,7 @@ def get_problem_submission_page_urls():
     return problemPages
 
 
-def go_to_discussion(url, res, problem):
+def find_popular_discussions(url, res, problem):
     driver.get(url)
     driver.implicitly_wait(5)
 
@@ -104,15 +103,47 @@ def go_to_discussion(url, res, problem):
             res.append((score, problem, title, link))
 
 
-def write_to_file(res):
+def find_discussion_by_author(url, res, problem, author):
+    driver.get(url)
+    driver.implicitly_wait(5)
+
+    topic_items = driver.find_elements_by_xpath("//div[contains(@class, 'topic-item-wrap')]")
+
+    for item in topic_items:
+        author_element = item.find_element_by_xpath('div/div[1]/div[2]/span/span/a')
+        if author_element.text == author:
+            link_element = item.find_element_by_xpath('div/div[1]/div[1]/a')
+            link = link_element.get_attribute("href")
+
+            title_element = link_element.find_element_by_xpath('div/div')
+            title = title_element.text
+            print(f'{problem}\t{title}\n{link}')
+
+            res.append((problem, title, link))
+
+
+def write_popular_discussion_to_file(res):
     with open('popular discussions.txt', 'w', encoding='utf-8') as file:
         for score, problem, title, link in res:
             file.write('[{}]\t<{}>\t{}\n{}\n'.format(score, problem, title, link))
 
 
+def write_author_discussion_to_file(res, author):
+    with open(f'{author} discussions.txt', 'w', encoding='utf-8') as file:
+        for problem, title, link in res:
+            file.write('<{}>\t{}\n{}\n'.format(problem, title, link))
+
+
 def output_to_file(title, difficulty, content):
     with open("unlock_problems/[{}] {}.html".format(difficulty, title), 'w', encoding='utf-8') as file:
         file.write("<p><strong>[{}] {}</strong></p>\n".format(difficulty, title))
+        file.write(content)
+
+
+def output_to_file2(problem, title, content):
+    with open("StefanPosts/{}.html".format(problem), 'w', encoding='utf-8') as file:
+        file.write("<p><strong>{}</strong></p>\n".format(problem))
+        file.write("<p><strong>{}</strong></p>\n".format(title))
         file.write(content)
 
 
@@ -138,23 +169,54 @@ def scrape_unlock_problems():
         output_to_file(title, difficulty, content.get_attribute('innerHTML'))
 
 
-def scrape_solutions():
+def scrape_popular_discussions():
     driver.get("https://leetcode.com/problemset/algorithms/")
     show_all_problems()
 
-    problemUrls = get_problem_submission_page_urls()
+    problem_urls = get_problem_submission_page_urls()
     res = []
 
-    for problem, url in problemUrls.items():
-        go_to_discussion(url, res, problem)
-
+    for problem, url in problem_urls.items():
+        find_popular_discussions(url, res, problem)
         print('finish: {}'.format(problem))
-    write_to_file(res)
+
+    write_popular_discussion_to_file(res)
+
+
+def scrape_discussion_by_author(author):
+    driver.get("https://leetcode.com/problemset/algorithms/")
+    show_all_problems()
+
+    problem_urls = get_problem_submission_page_urls()
+    res = []
+
+    for problem, url in problem_urls.items():
+        find_discussion_by_author(url, res, problem, author)
+
+    write_author_discussion_to_file(res, author)
+
+
+import re
+
+def scrape_post_by_url():
+    with open('StefanPochmann discussions.md') as f:
+        for i, line in enumerate(f.readlines()):
+            if i % 2:
+                driver.get(line)
+                time.sleep(1)
+                driver.implicitly_wait(5)
+
+                content = driver.find_element_by_xpath("//div[contains(@id, 'discuss-container')]/div/div/div[2]/div[1]/div[2]/div[2]/div")
+                output_to_file2(problem, title, content.get_attribute('innerHTML'))
+            else:
+                problem, title = line.strip('\n').replace('<', '').replace('>', '').split('\t')
 
 
 if __name__ == '__main__':
-    if (login(NAME, PASSWORD)):
-        # scrape_solutions()
-        scrape_unlock_problems()
+    if login(NAME, PASSWORD):
+        scrape_post_by_url()
+        # scrape_discussion_by_author('StefanPochmann')
+        # scrape_popular_discussions()
+        # scrape_unlock_problems()
     else:
         print("Login failed!")
